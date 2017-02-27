@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）]]></title>
+      <url>%2F2017%2F02%2F27%2FHexo-Next%E5%BA%95%E9%83%A8powered-by%E7%9A%84logo%E6%A0%8F%E6%9B%B4%E6%94%B9%E4%BB%A5%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%88%E9%99%84%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E6%96%87%E6%9C%AB%E6%9C%89%E7%A6%8F%E5%88%A9%E9%93%BE%EF%BC%89%2F</url>
+      <content type="text"><![CDATA[Hexo-Next底部logo栏更改以及注意事项（附官方文档）昨晚研究了hexo，搭建博客很方便，主题，插件化功能非常强大。 本篇文章适合对象：各位用的是Next主题，那么适合看本篇文章，如果别的主题想找思路的适合看看练练手。想学习基础更改，优化，简单配置请看 点击官方文档。这里面有基础的教程以及第三方能用到的插件都有介绍，都是傻瓜式操作。PS:做插件化的朋友，请注意，站内搜索swiftype只有老用户才免费，新用户只有14天之后收费，RMB玩家可以略过，其他小伙伴可以选择Local Search，本站右上角就是Local Search，精准度还可以没有swiftype准，用用再说。搭建LocalSearch 方法如下： search 如果有其他好的插件和优化方法，我更新本片博文，当然大家有好点，好工具也希望邮件私信我，一同来分享，帮助大家打造富有个性化的博客。 问题说明用Next主题搭建起来的博客，在底部会有一个特别烦人的官方logo， oldlogo对于强迫症的我必须要改掉、改掉、改掉！查遍了所有文章都没有告诉，遂打算自己写一篇，有需要的可以看看。（含泪阅读了Next所有的源文件，最后不过是两句话能说明白。。却耗费我3,4个小时，让我多说一会废话凑凑字数吧，都是眼泪啊！） 成果展示 newlogo看起来至少比原来的好多了，更有个性化风格。 解决方案重点来啦。 1.首先，找到 \themes\next\layout_partials\下面的footer.swig文件，打开会发现，如下图的语句： config 看到划框的地方了吗？ 第一个框 是下面侧栏的“日期❤ XXX”如果想像我一样加东西，一定要在双大括号外面写。如：xxx,当然你要是想改彻底可以变量都删掉，看个人意愿。 第二个，是图一当中 “由Hexo驱动” 的Hexo链接，先给删掉防止跳转，如果想跳转当然也可以自己写地址，至于中文一会处理。注意删除的时候格式不能错，只把&lt;a&gt;...&lt;/a&gt;标签这部分删除即可，留着两个单引号’’,否则会出错哦。 第三个框也是最后一个了，这个就是更改图一后半部分“主题-Next.XX”,这个比较爽直接将&lt;a&gt;..&lt;/a&gt;都删掉，同样中文“主题”一会处理，删掉之后在上一行 ‘-’后面可以随意加上你想显示的东西，不要显示敏感信息哟，请自重。 2.接下来，处理剩余的中文信息。找到这个地方\themes\next\languages\下面的语言文件zh-Hans.yml（这里以中文为例，有的习惯用英文的配置文件，道理一样，找对应位置即可）打开之后，如图：foot看到了吧，这个就是传值传过去的，你想显示什么就在这里面大肆的去改动吧。其实在第二个框中，就可以把值都改掉，不用接受传值的方式，完全自己可以重写。不过我不建议那样做，因为传值这样只要是后续页面需要这几个值那么就都会通过取值去传过去，要是在刚才footer文件中直接写死，后续不一定哪个页面需要传值，但是值为空了或者还是原来的，可就尴尬了。所以还是这样改动吧。 到此就可以pu上去了，等待2分钟就搞定了。有的时候可能有延迟。快去改掉那些不属于你的元素吧。 更多推荐，打造个性博客更多主题：http://hexo.io/themes/博客图标网（就是我导航条的小图标）：http://fontawesome.io/icons/文章转自Codeagles的简书]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[react学习（1）]]></title>
+      <url>%2F2017%2F02%2F27%2Freact%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89%2F</url>
+      <content type="text"><![CDATA[react特性- 虚拟DOM - 组件化 borwser.js 将JSX语法转换为js语法 react.js 核心库 react-dom.js 提供与dom有关的功能123&lt;script type="text/bable"&gt; //bable 转换编译器 &lt;/script&gt; JSX语法 借助React环境运行 jsx标签就是HTML标签 jsx语法转换， jsx -&gt; js 在jsx中运行js代码，js代码要用｛｝括起来 属性，设置样式，事件绑定 组件类 大写开头，驼峰命名 React.createClass（｛｝）方法创建组建类 每个组件必须实现自己的render方法，输入一个定义好的模版；返回值为null，false，组件模版 只能包含一个顶层标签123456789101112 var HelloReact = React.createClass(&#123; render:function()&#123; return ( &lt;h1&gt;组件&lt;/h1&gt; &lt;p&gt;内容&lt;/p&gt; ) &#125; &#125;) ReactDOM.render（ &lt;HelloReact /&gt;, document.getElementById(&quot;id&quot;);） 组件样式- 内联样式 - 对象样式 - 选择器样式 以，结尾；HTML以；结尾 key，中不能出现“-” key驼峰命名 value如果是字符串要加引号 value是数字，不需要带单位1234567891011121314151617181920212223242526//这个样式需要写在头部的style标签之内.xzq ｛ background: #fff;｝//样式对象var sty = &#123; height: 100, background: &apos;#f0f&apos;&#125;var HelloReact = React.createClass(&#123; render: function()&#123; return ( //内联样式 &lt;div style=&#123;&#123;background:&apos;#f00&apos;,height: 200&#125;&#125;&gt;内联样式和 //对象样式 &lt;div style=&#123;sty&#125;&gt;对象样式&lt;/div&gt; //选择器样式 &lt;div className=&quot;a&quot;&gt;选择器样式&lt;/div&gt; &lt;/div&gt;); &#125;&#125;);//渲染标签ReactDOM.render( &lt;HelloReact /&gt;, document.getElementById(&apos;container&apos;) ) 复合组件创建多个组建合成一个组建，首先定义子组件，然后定义复合组件 12345678910111213141516171819202122232425var WebName = React.createClass(&#123; render: function() &#123; return &lt;h1&gt;蓝天白云&lt;/h1&gt; &#125;&#125;) var WebLink = React.createClass(&#123; render: function()&#123; return &lt;a href=&quot;#&quot;&gt;www.yuanjingzhuang.com&lt;/a&gt; &#125;&#125;)var WenShow = React.createClass(&#123; render: function()&#123; return ( &lt;div&gt; &lt;WebName/&gt; &lt;WebLink/&gt; &lt;/div&gt; ) &#125;&#125;)ReactDOM.render( &lt;WenShow /&gt;, document.getElementById(&quot;container&quot;) )]]></content>
+    </entry>
+
+    
+  
+  
+</search>
