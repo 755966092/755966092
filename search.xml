@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[一段自动转换rem的代码]]></title>
+      <url>%2F2017%2F03%2F08%2F%E4%B8%80%E6%AE%B5%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2rem%E7%9A%84%E4%BB%A3%E7%A0%81%2F</url>
+      <content type="text"><![CDATA[写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&quot;/&gt; js代码12345678910111213(function (doc, win) &#123; var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize', recalc = function () &#123; var clientWidth = docEl.clientWidth; if (!clientWidth) return; docEl.style.fontSize = 100 * (clientWidth / 640) + 'px'; //这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单 &#125;; if (!doc.addEventListener) return; win.addEventListener(resizeEvt, recalc, false); doc.addEventListener('DOMContentLoaded', recalc, false); &#125;)(document, window);]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[自制图标字体]]></title>
       <url>%2F2017%2F03%2F04%2F%E8%87%AA%E5%88%B6%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93%2F</url>
       <content type="text"><![CDATA[生成自定义图标字体借助在线生成工具[IcoMoon](https://icomoon.io/) 单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 ，白色表示选中 自定义的可以用AI直接画出来然后保存为svg格式 还可以用ps的自定义形状工具导出ai路径，然后用ai打开保存为svg文件 png图片就没必要转换了 单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 点击Generate Fonte进入设置页面，图标后面为字体的名字 点击download按钮下载至本地，接下后只需这两个文件，拷贝至项目文件夹下 使用图标字体 在页面引入style.css&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;&gt; 给标签加类名就可以所以图标字体&lt;span class=&quot;icon-dengpao&quot;&gt;&lt;/span&gt; 可以随意修改图标字体的大小颜色文 章 随 便 转 载 ，请 注 明 出 处]]></content>

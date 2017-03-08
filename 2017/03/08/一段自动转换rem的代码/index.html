@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="react," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -87,25 +87,16 @@
 
 
 
-<meta name="description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta name="description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react学习（2）">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/react学习（2）/index.html">
+<meta property="og:title" content="一段自动转换rem的代码">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/一段自动转换rem的代码/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
-<meta property="og:updated_time" content="2017-02-28T07:00:40.687Z">
+<meta property="og:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
+<meta property="og:updated_time" content="2017-03-08T15:41:39.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react学习（2）">
-<meta name="twitter:description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta name="twitter:title" content="一段自动转换rem的代码">
+<meta name="twitter:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
 
 
 
@@ -133,13 +124,13 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/react学习（2）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/08/一段自动转换rem的代码/"/>
 
 
 
 
 
-  <title> react学习（2） | Mr.Yuan </title>
+  <title> 一段自动转换rem的代码 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -310,7 +301,7 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/react学习（2）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/08/一段自动转换rem的代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -331,7 +322,7 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
             
             
               
-                react学习（2）
+                一段自动转换rem的代码
               
             
           </h1>
@@ -346,8 +337,8 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T14:50:23+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T23:38:08+08:00">
+                2017-03-08
               </time>
             
 
@@ -404,76 +395,8 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
       
 
       
-        <ul>
-<li>组件类首字母必须大写</li>
-<li>HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写</li>
-<li>JSX 的基本语法规则：遇到 HTML 标签（以 &lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析</li>
-<li>组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）.只有当它插入文档以后，才会变成真实的 DOM 。根据 React 的设计，所有的 DOM 变动，都先在虚拟 DOM 上发生，然后再将实际发生变动的部分，反映在真实 DOM上，这种算法叫做 DOM diff ，它可以极大提高网页的性能表现。</li>
-</ul>
-<ol>
-<li>React.createClass 方法就用于生成一个组件类<ul>
-<li>组件类只能包含一个顶层标签</li>
-<li>组件的用法与原生的 HTML 标签完全一致，可以任意加入属性，比如 <hellomessage name="John"> ，就是 HelloMessage 组件加入一个 name 属性，值为 John。组件的属性可以在组件类的 this.props 对象上获取，比如 name 属性就可以通过 this.props.name 读取。</hellomessage></li>
-<li>添加组件属性，有一个地方需要注意，就是 class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。</li>
-</ul>
-</li>
-<li>this.props.children<ul>
-<li>this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点</li>
-<li>this.props.children 的值有三种可能：<ul>
-<li>如果当前组件没有子节点，它就是 undefined ;</li>
-<li>如果有一个子节点，数据类型是 object ；</li>
-<li>如果有多个子节点，数据类型就是 array 。</li>
-</ul>
-</li>
-<li>所以，处理 this.props.children 的时候要小心。</li>
-</ul>
-</li>
-<li><p>PropTypes</p>
-<ul>
-<li>组件的属性可以接受任意值，字符串、对象、函数等等都可以。</li>
-<li>组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求</li>
-<li>getDefaultProps 方法可以用来设置组件属性的默认值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var MyTitle = React.createClass(&#123;</div><div class="line">  getDefaultProps : function () &#123;</div><div class="line">    return &#123;</div><div class="line">      title : &apos;Hello World&apos;</div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  render: function() &#123;</div><div class="line">     return &lt;h1&gt; &#123;this.props.title&#125; &lt;/h1&gt;;</div><div class="line">   &#125;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  ReactDOM.render(</div><div class="line">  &lt;MyTitle /&gt;,</div><div class="line">  document.body</div><div class="line">  );</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>获取真实DOM</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var MyComponent = React.createClass(&#123;</div><div class="line">  handleClick: function() &#123;</div><div class="line">    this.refs.myTextInput.focus();</div><div class="line">  &#125;,</div><div class="line">  render: function() &#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;input type=&quot;text&quot; ref=&quot;myTextInput&quot; /&gt;</div><div class="line">        &lt;input type=&quot;button&quot; value=&quot;Focus the text input&quot; onClick=&#123;this.handleClick&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;MyComponent /&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
-<ul>
-<li>组件必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。</li>
-<li>由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。</li>
-</ul>
-</li>
-<li><p>this.stste</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var LikeButton = React.createClass(&#123;</div><div class="line">  getInitialState: function() &#123;</div><div class="line">    return &#123;liked: false&#125;;</div><div class="line">  &#125;,</div><div class="line">  handleClick: function(event) &#123;</div><div class="line">    this.setState(&#123;liked: !this.state.liked&#125;);</div><div class="line">  &#125;,</div><div class="line">  render: function() &#123;</div><div class="line">    var text = this.state.liked ? &apos;like&apos; : &apos;haven\&apos;t liked&apos;;</div><div class="line">    return (</div><div class="line">      &lt;p onClick=&#123;this.handleClick&#125;&gt;</div><div class="line">        You &#123;text&#125; this. Click to toggle.</div><div class="line">      &lt;/p&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;LikeButton /&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
-<ul>
-<li>getInitialState 方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。</li>
-<li>this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。</li>
-</ul>
-</li>
-<li>组件的生命周期<ul>
-<li>组件的生命周期分成三个状态<ul>
-<li>Mounting：已插入真实 DOM</li>
-<li>Updating：正在被重新渲染</li>
-<li>Unmounting：已移出真实 DOM</li>
-</ul>
-</li>
-<li>React 为每个状态都提供了两种处理函数，will 函数在进入状态之前调用，did 函数在进入状态之后调用，三种状态共计五种处理函数<ul>
-<li>componentWillMount()</li>
-<li>componentDidMount()</li>
-<li>componentWillUpdate(object nextProps, object nextState)</li>
-<li>componentDidUpdate(object prevProps, object prevState)</li>
-<li>componentWillUnmount()</li>
-</ul>
-</li>
-<li>React 还提供两种特殊状态的处理函数<ul>
-<li>componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用</li>
-<li>shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
+        <h1 id="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"><a href="#写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了" class="headerlink" title="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"></a>写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了</h1><h1 id="一定要注意，移动端页面头部一定要引入"><a href="#一定要注意，移动端页面头部一定要引入" class="headerlink" title="一定要注意，移动端页面头部一定要引入"></a>一定要注意，移动端页面头部一定要引入</h1><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&quot;/&gt;</code></p>
+<h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">                    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</div><div class="line">                    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                        <span class="keyword">var</span> clientWidth = docEl.clientWidth;</div><div class="line">                        <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</div><div class="line">                        docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">640</span>) + <span class="string">'px'</span>;</div><div class="line">                        <span class="comment">//这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单</span></div><div class="line">                    &#125;;</div><div class="line">            <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">            win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</div><div class="line">            doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</div><div class="line">        &#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -496,7 +419,7 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
       
         <div class="post-tags">
           
-            <a href="/tags/react/" rel="tag"># react</a>
+            <a href="/tags/css/" rel="tag"># css</a>
           
         </div>
       
@@ -509,8 +432,8 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档-文末有福利链）/" rel="next" title="Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）">
-                <i class="fa fa-chevron-left"></i> Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）
+              <a href="/2017/03/04/自制图标字体/" rel="next" title="自制图标字体">
+                <i class="fa fa-chevron-left"></i> 自制图标字体
               </a>
             
           </div>
@@ -518,10 +441,6 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/28/ES6学习（1）/" rel="prev" title="ES6学习（1）">
-                ES6学习（1） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -591,8 +510,17 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg"
@@ -670,6 +598,22 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"><span class="nav-number">1.</span> <span class="nav-text">写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一定要注意，移动端页面头部一定要引入"><span class="nav-number">2.</span> <span class="nav-text">一定要注意，移动端页面头部一定要引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#js代码"><span class="nav-number">2.1.</span> <span class="nav-text">js代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
