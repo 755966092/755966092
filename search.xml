@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[ES6转码工具babel的使用]]></title>
+      <url>%2F2017%2F03%2F14%2FES6%E8%BD%AC%E7%A0%81%E5%B7%A5%E5%85%B7babel%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[Babel工具Babel CLI 是一个可以在命令行编译ES6的工具 安装方法 1npm install babel-cli -g 配置 Babel是通过安装插件(plugin)或者预设(preset)来编译代码的 先创建一个配置文件 .babelrc ,放置在项目根目录下 1234&#123; &quot;presets&quot;: [], &quot;plugins&quot;: []&#125; 安装预设,把ES6编译成ES5 1npm install --save-dev babel-preser-es2015 修改配置文件 1234&#123; &quot;presets&quot;: [&apos;es2015&apos;], &quot;plugins&quot;: []&#125; 配置完毕,新建一个js文件demo.js,写一段代码实验一下 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [...arr, ...arr1];console.log(arr2); 命令窗口执行 1babel demo.js -o demo1.js 执行后代码变为ES5的代码 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [].concat(arr, arr1);console.log(arr2); 配置完毕,借助Babel,在现在的项目中就可以完全释放ES6的魔力了]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[一段自动转换rem的代码]]></title>
       <url>%2F2017%2F03%2F08%2F%E4%B8%80%E6%AE%B5%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2rem%E7%9A%84%E4%BB%A3%E7%A0%81%2F</url>
       <content type="text"><![CDATA[写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&quot;/&gt; js代码12345678910111213(function (doc, win) &#123; var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize', recalc = function () &#123; var clientWidth = docEl.clientWidth; if (!clientWidth) return; docEl.style.fontSize = 100 * (clientWidth / 640) + 'px'; //这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单 &#125;; if (!doc.addEventListener) return; win.addEventListener(resizeEvt, recalc, false); doc.addEventListener('DOMContentLoaded', recalc, false); &#125;)(document, window);]]></content>

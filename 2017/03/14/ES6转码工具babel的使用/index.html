@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo NexT," />
+  <meta name="keywords" content="ES6," />
 
 
 
@@ -87,31 +87,43 @@
 
 
 
-<meta name="description" content="Hexo-Next底部logo栏更改以及注意事项（附官方文档）昨晚研究了hexo，搭建博客很方便，主题，插件化功能非常强大。
+<meta name="description" content="Babel工具Babel CLI 是一个可以在命令行编译ES6的工具
+安装方法
+1npm install babel-cli -g
 
-本篇文章适合对象：各位用的是Next主题，那么适合看本篇文章，如果别的主题想找思路的适合看看练练手。想学习基础更改，优化，简单配置请看
-点击官方文档。这里面有基础的教程以及第三方能用到的插件都有介绍，都是傻瓜式操作。PS:做插件化的朋友，请注意，站内搜索swiftype只">
+配置
+Babel是通过安装插件(plugin)或者预设(preset)来编译代码的
+
+
+先创建一个配置文件 .babelrc ,放置在项目根目录下
+1234&amp;#123;    &amp;quot;presets&amp;quot;: [],    &amp;quot;plugins&amp;quo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）">
-<meta property="og:url" content="http://yoursite.com/2017/02/27/Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档-文末有福利链）/index.html">
+<meta property="og:title" content="ES6转码工具babel的使用">
+<meta property="og:url" content="http://yoursite.com/2017/03/14/ES6转码工具babel的使用/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="Hexo-Next底部logo栏更改以及注意事项（附官方文档）昨晚研究了hexo，搭建博客很方便，主题，插件化功能非常强大。
+<meta property="og:description" content="Babel工具Babel CLI 是一个可以在命令行编译ES6的工具
+安装方法
+1npm install babel-cli -g
 
-本篇文章适合对象：各位用的是Next主题，那么适合看本篇文章，如果别的主题想找思路的适合看看练练手。想学习基础更改，优化，简单配置请看
-点击官方文档。这里面有基础的教程以及第三方能用到的插件都有介绍，都是傻瓜式操作。PS:做插件化的朋友，请注意，站内搜索swiftype只">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-bed546fb42f9a3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-eaf51791d59e9689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-a16771a880590cc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-104a1d0474d84ba7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-cceeefaaed29bc8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-02-28T07:04:55.348Z">
+配置
+Babel是通过安装插件(plugin)或者预设(preset)来编译代码的
+
+
+先创建一个配置文件 .babelrc ,放置在项目根目录下
+1234&amp;#123;    &amp;quot;presets&amp;quot;: [],    &amp;quot;plugins&amp;quo">
+<meta property="og:updated_time" content="2017-03-14T13:32:44.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）">
-<meta name="twitter:description" content="Hexo-Next底部logo栏更改以及注意事项（附官方文档）昨晚研究了hexo，搭建博客很方便，主题，插件化功能非常强大。
+<meta name="twitter:title" content="ES6转码工具babel的使用">
+<meta name="twitter:description" content="Babel工具Babel CLI 是一个可以在命令行编译ES6的工具
+安装方法
+1npm install babel-cli -g
 
-本篇文章适合对象：各位用的是Next主题，那么适合看本篇文章，如果别的主题想找思路的适合看看练练手。想学习基础更改，优化，简单配置请看
-点击官方文档。这里面有基础的教程以及第三方能用到的插件都有介绍，都是傻瓜式操作。PS:做插件化的朋友，请注意，站内搜索swiftype只">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3305482-bed546fb42f9a3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2">
+配置
+Babel是通过安装插件(plugin)或者预设(preset)来编译代码的
+
+
+先创建一个配置文件 .babelrc ,放置在项目根目录下
+1234&amp;#123;    &amp;quot;presets&amp;quot;: [],    &amp;quot;plugins&amp;quo">
 
 
 
@@ -139,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/27/Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档-文末有福利链）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/14/ES6转码工具babel的使用/"/>
 
 
 
 
 
-  <title> Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链） | Mr.Yuan </title>
+  <title> ES6转码工具babel的使用 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +328,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档-文末有福利链）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/ES6转码工具babel的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -337,7 +349,7 @@
             
             
               
-                Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）
+                ES6转码工具babel的使用
               
             
           </h1>
@@ -352,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T10:42:00+08:00">
-                2017-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T21:23:07+08:00">
+                2017-03-14
               </time>
             
 
@@ -375,8 +387,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
                   </a>
                 </span>
 
@@ -410,31 +422,35 @@
       
 
       
-        <h1 id="Hexo-Next底部logo栏更改以及注意事项（附官方文档）"><a href="#Hexo-Next底部logo栏更改以及注意事项（附官方文档）" class="headerlink" title="Hexo-Next底部logo栏更改以及注意事项（附官方文档）"></a>Hexo-Next底部logo栏更改以及注意事项（附官方文档）</h1><p>昨晚研究了hexo，搭建博客很方便，主题，插件化功能非常强大。</p>
+        <h1 id="Babel工具"><a href="#Babel工具" class="headerlink" title="Babel工具"></a>Babel工具</h1><h2 id="Babel-CLI-是一个可以在命令行编译ES6的工具"><a href="#Babel-CLI-是一个可以在命令行编译ES6的工具" class="headerlink" title="Babel CLI 是一个可以在命令行编译ES6的工具"></a>Babel CLI 是一个可以在命令行编译ES6的工具</h2><ol>
+<li><p>安装方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install babel-cli -g</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置</p>
+<h4 id="Babel是通过安装插件-plugin-或者预设-preset-来编译代码的"><a href="#Babel是通过安装插件-plugin-或者预设-preset-来编译代码的" class="headerlink" title="Babel是通过安装插件(plugin)或者预设(preset)来编译代码的"></a>Babel是通过安装插件(plugin)或者预设(preset)来编译代码的</h4></li>
+</ol>
 <ul>
-<li>本篇文章适合对象：<br>各位用的是Next主题，那么适合看本篇文章，如果别的主题想找思路的适合看看练练手。<br>想学习基础更改，优化，简单配置请看</li>
-<li>点击官方文档。这里面有基础的教程以及第三方能用到的插件都有介绍，都是傻瓜式操作。<br>PS:做插件化的朋友，请注意，站内搜索swiftype只有老用户才免费，新用户只有14天之后收费，RMB玩家可以略过，其他小伙伴可以选择Local Search，本站右上角就是Local Search，精准度还可以没有swiftype准，用用再说。搭建LocalSearch 方法如下：</li>
+<li><p>先创建一个配置文件 <code>.babelrc</code> ,放置在项目根目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;presets&quot;: [],</div><div class="line">    &quot;plugins&quot;: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装预设,把ES6编译成ES5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-preser-es2015</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;presets&quot;: [&apos;es2015&apos;],</div><div class="line">    &quot;plugins&quot;: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置完毕,新建一个js文件demo.js,写一段代码实验一下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [...arr, ...arr1];</div><div class="line"><span class="built_in">console</span>.log(arr2);</div></pre></td></tr></table></figure>
+</li>
+<li><p>命令窗口执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">babel demo.js -o demo1.js</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行后代码变为ES5的代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [].concat(arr, arr1);</div><div class="line"><span class="built_in">console</span>.log(arr2);</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置完毕,借助Babel,在现在的项目中就可以完全释放ES6的魔力了</p>
+</li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3305482-bed546fb42f9a3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt="1"><br>search</p>
-<ul>
-<li>如果有其他好的插件和优化方法，我更新本片博文，当然大家有好点，好工具也希望邮件私信我，一同来分享，帮助大家打造富有个性化的博客。</li>
-</ul>
-<h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><p>用Next主题搭建起来的博客，在底部会有一个特别烦人的官方logo，<br><img src="http://upload-images.jianshu.io/upload_images/3305482-eaf51791d59e9689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2"></p>
-<p>oldlogo<br>对于强迫症的我必须要改掉、改掉、改掉！查遍了所有文章都没有告诉，遂打算自己写一篇，有需要的可以看看。（含泪阅读了Next所有的源文件，最后不过是两句话能说明白。。却耗费我3,4个小时，让我多说一会废话凑凑字数吧，都是眼泪啊！）</p>
-<h2 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h2><p><img src="http://upload-images.jianshu.io/upload_images/3305482-a16771a880590cc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3"></p>
-<p>newlogo<br>看起来至少比原来的好多了，更有个性化风格。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>重点来啦。</p>
-<p>1.首先，找到 \themes\next\layout_partials\下面的footer.swig文件，打开会发现，如下图的语句：<br><img src="http://upload-images.jianshu.io/upload_images/3305482-104a1d0474d84ba7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4"></p>
-<p>config</p>
-<p>看到划框的地方了吗？</p>
-<ul>
-<li>第一个框 是下面侧栏的“日期❤ XXX”<br>如果想像我一样加东西，一定要在双大括号外面写。如：<code>xxx</code>,当然你要是想改彻底可以变量都删掉，看个人意愿。</li>
-<li>第二个，是图一当中 “由Hexo驱动” 的Hexo链接，先给删掉防止跳转，如果想跳转当然也可以自己写地址，至于中文一会处理。注意删除的时候格式不能错，只把<code>&lt;a&gt;...&lt;/a&gt;</code>标签这部分删除即可，留着两个单引号’’,否则会出错哦。</li>
-<li>第三个框也是最后一个了，这个就是更改图一后半部分“主题-Next.XX”,这个比较爽直接将<code>&lt;a&gt;..&lt;/a&gt;</code>都删掉，同样中文“主题”一会处理，删掉之后在上一行 ‘-’后面可以随意加上你想显示的东西，不要显示敏感信息哟，请自重。</li>
-</ul>
-<p>2.接下来，处理剩余的中文信息。找到这个地方<code>\themes\next\languages\</code>下面的语言文件zh-Hans.yml（这里以中文为例，有的习惯用英文的配置文件，道理一样，找对应位置即可）<br>打开之后，如图：<br><img src="http://upload-images.jianshu.io/upload_images/3305482-cceeefaaed29bc8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5"><br>foot<br>看到了吧，这个就是传值传过去的，你想显示什么就在这里面大肆的去改动吧。其实在第二个框中，就可以把值都改掉，不用接受传值的方式，完全自己可以重写。不过我不建议那样做，因为传值这样只要是后续页面需要这几个值那么就都会通过取值去传过去，要是在刚才footer文件中直接写死，后续不一定哪个页面需要传值，但是值为空了或者还是原来的，可就尴尬了。所以还是这样改动吧。</p>
-<p>到此就可以pu上去了，等待2分钟就搞定了。有的时候可能有延迟。快去改掉那些不属于你的元素吧。</p>
-<h2 id="更多推荐，打造个性博客"><a href="#更多推荐，打造个性博客" class="headerlink" title="更多推荐，打造个性博客"></a>更多推荐，打造个性博客</h2><p><a href="http://hexo.io/themes/" target="_blank" rel="external">更多主题：http://hexo.io/themes/</a><br><a href="http://fontawesome.io/icons/" target="_blank" rel="external">博客图标网（就是我导航条的小图标）：http://fontawesome.io/icons/</a><br><a href="http://www.jianshu.com/p/4fbc57269f1b" target="_blank" rel="external">文章转自Codeagles的简书</a></p>
 
       
     </div>
@@ -458,7 +474,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo-NexT/" rel="tag"># Hexo NexT</a>
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
           
         </div>
       
@@ -471,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/react学习（1）/" rel="next" title="react学习（1）">
-                <i class="fa fa-chevron-left"></i> react学习（1）
+              <a href="/2017/03/08/一段自动转换rem的代码/" rel="next" title="一段自动转换rem的代码">
+                <i class="fa fa-chevron-left"></i> 一段自动转换rem的代码
               </a>
             
           </div>
@@ -480,10 +496,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/28/react学习（2）/" rel="prev" title="react学习（2）">
-                react学习（2） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-Next底部logo栏更改以及注意事项（附官方文档）"><span class="nav-number">1.</span> <span class="nav-text">Hexo-Next底部logo栏更改以及注意事项（附官方文档）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题说明"><span class="nav-number">1.1.</span> <span class="nav-text">问题说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成果展示"><span class="nav-number">1.2.</span> <span class="nav-text">成果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.3.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多推荐，打造个性博客"><span class="nav-number">1.4.</span> <span class="nav-text">更多推荐，打造个性博客</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Babel工具"><span class="nav-number">1.</span> <span class="nav-text">Babel工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Babel-CLI-是一个可以在命令行编译ES6的工具"><span class="nav-number">1.1.</span> <span class="nav-text">Babel CLI 是一个可以在命令行编译ES6的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Babel是通过安装插件-plugin-或者预设-preset-来编译代码的"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Babel是通过安装插件(plugin)或者预设(preset)来编译代码的</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
