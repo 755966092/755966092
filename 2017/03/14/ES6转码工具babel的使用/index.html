@@ -111,7 +111,7 @@ Babel是通过安装插件(plugin)或者预设(preset)来编译代码的
 
 先创建一个配置文件 .babelrc ,放置在项目根目录下
 1234&amp;#123;    &amp;quot;presets&amp;quot;: [],    &amp;quot;plugins&amp;quo">
-<meta property="og:updated_time" content="2017-03-14T13:32:44.714Z">
+<meta property="og:updated_time" content="2017-03-15T11:30:42.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6转码工具babel的使用">
 <meta name="twitter:description" content="Babel工具Babel CLI 是一个可以在命令行编译ES6的工具
@@ -433,8 +433,11 @@ Babel是通过安装插件(plugin)或者预设(preset)来编译代码的
 <li><p>先创建一个配置文件 <code>.babelrc</code> ,放置在项目根目录下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;presets&quot;: [],</div><div class="line">    &quot;plugins&quot;: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装预设,把ES6编译成ES5</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-preser-es2015</div></pre></td></tr></table></figure>
+<li><p>安装预设,把ES6编译成ES5.</p>
+</li>
+<li>–save 可以把安装的包写进pageage.json的dependencies里,生产环境需要依赖的包</li>
+<li><p>–save-dev 可以把安装的包写进pageage.json的devDependencies里,开发测试环境需要依赖的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-preset-es2015</div></pre></td></tr></table></figure>
 </li>
 <li><p>修改配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;presets&quot;: [&apos;es2015&apos;],</div><div class="line">    &quot;plugins&quot;: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>

@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[ES6转码工具babel的使用]]></title>
       <url>%2F2017%2F03%2F14%2FES6%E8%BD%AC%E7%A0%81%E5%B7%A5%E5%85%B7babel%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
-      <content type="text"><![CDATA[Babel工具Babel CLI 是一个可以在命令行编译ES6的工具 安装方法 1npm install babel-cli -g 配置 Babel是通过安装插件(plugin)或者预设(preset)来编译代码的 先创建一个配置文件 .babelrc ,放置在项目根目录下 1234&#123; &quot;presets&quot;: [], &quot;plugins&quot;: []&#125; 安装预设,把ES6编译成ES5 1npm install --save-dev babel-preser-es2015 修改配置文件 1234&#123; &quot;presets&quot;: [&apos;es2015&apos;], &quot;plugins&quot;: []&#125; 配置完毕,新建一个js文件demo.js,写一段代码实验一下 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [...arr, ...arr1];console.log(arr2); 命令窗口执行 1babel demo.js -o demo1.js 执行后代码变为ES5的代码 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [].concat(arr, arr1);console.log(arr2); 配置完毕,借助Babel,在现在的项目中就可以完全释放ES6的魔力了]]></content>
+      <content type="text"><![CDATA[Babel工具Babel CLI 是一个可以在命令行编译ES6的工具 安装方法 1npm install babel-cli -g 配置 Babel是通过安装插件(plugin)或者预设(preset)来编译代码的 先创建一个配置文件 .babelrc ,放置在项目根目录下 1234&#123; &quot;presets&quot;: [], &quot;plugins&quot;: []&#125; 安装预设,把ES6编译成ES5. –save 可以把安装的包写进pageage.json的dependencies里,生产环境需要依赖的包 –save-dev 可以把安装的包写进pageage.json的devDependencies里,开发测试环境需要依赖的包 1npm install --save-dev babel-preset-es2015 修改配置文件 1234&#123; &quot;presets&quot;: [&apos;es2015&apos;], &quot;plugins&quot;: []&#125; 配置完毕,新建一个js文件demo.js,写一段代码实验一下 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [...arr, ...arr1];console.log(arr2); 命令窗口执行 1babel demo.js -o demo1.js 执行后代码变为ES5的代码 1234var arr = [1, 2, 3];var arr1 = [4, 5, 6];var arr2 = [].concat(arr, arr1);console.log(arr2); 配置完毕,借助Babel,在现在的项目中就可以完全释放ES6的魔力了]]></content>
     </entry>
 
     
