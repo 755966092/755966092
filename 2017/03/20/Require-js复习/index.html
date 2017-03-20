@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="react," />
+  <meta name="keywords" content="RequireJS," />
 
 
 
@@ -87,49 +87,19 @@
 
 
 
-<meta name="description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
+<meta name="description" content="RequireJS解决代码依赖问题,异步加载js,避免页面失去相应
+RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。RequireJS以一个相对于baseUrl的地址来加载所有的代码。 页面顶层&amp;lt;script&amp;gt;标">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react学习（1）">
-<meta property="og:url" content="http://yoursite.com/2017/02/27/react学习（1）/index.html">
+<meta property="og:title" content="Require.js复习">
+<meta property="og:url" content="http://yoursite.com/2017/03/20/Require-js复习/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
-<meta property="og:updated_time" content="2017-02-28T07:02:55.957Z">
+<meta property="og:description" content="RequireJS解决代码依赖问题,异步加载js,避免页面失去相应
+RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。RequireJS以一个相对于baseUrl的地址来加载所有的代码。 页面顶层&amp;lt;script&amp;gt;标">
+<meta property="og:updated_time" content="2017-03-20T12:32:31.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react学习（1）">
-<meta name="twitter:description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
+<meta name="twitter:title" content="Require.js复习">
+<meta name="twitter:description" content="RequireJS解决代码依赖问题,异步加载js,避免页面失去相应
+RequireJS的目标是鼓励代码的模块化，它使用了不同于传统&amp;lt;script&amp;gt;标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。RequireJS以一个相对于baseUrl的地址来加载所有的代码。 页面顶层&amp;lt;script&amp;gt;标">
 
 
 
@@ -157,13 +127,13 @@ jsx语法转换，  j">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/27/react学习（1）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/20/Require-js复习/"/>
 
 
 
 
 
-  <title> react学习（1） | Mr.Yuan </title>
+  <title> Require.js复习 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -334,7 +304,7 @@ jsx语法转换，  j">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/react学习（1）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/20/Require-js复习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -355,7 +325,7 @@ jsx语法转换，  j">
             
             
               
-                react学习（1）
+                Require.js复习
               
             
           </h1>
@@ -370,8 +340,8 @@ jsx语法转换，  j">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T09:06:29+08:00">
-                2017-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T20:31:05+08:00">
+                2017-03-20
               </time>
             
 
@@ -428,41 +398,28 @@ jsx语法转换，  j">
       
 
       
-        <h2 id="react特性"><a href="#react特性" class="headerlink" title="react特性"></a>react特性</h2><pre><code>- 虚拟DOM
-- 组件化
-</code></pre><ul>
-<li><code>borwser.js</code>  将JSX语法转换为js语法</li>
-<li><code>react.js</code> 核心库</li>
-<li><code>react-dom.js</code> 提供与dom有关的功能<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/bable"</span>&gt;</div><div class="line">    <span class="comment">//bable  转换编译器 </span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+        <h1 id="RequireJS解决代码依赖问题-异步加载js-避免页面失去相应"><a href="#RequireJS解决代码依赖问题-异步加载js-避免页面失去相应" class="headerlink" title="RequireJS解决代码依赖问题,异步加载js,避免页面失去相应"></a>RequireJS解决代码依赖问题,异步加载js,避免页面失去相应</h1><blockquote>
+<p>RequireJS的目标是鼓励代码的模块化，它使用了不同于传统<code>&lt;script&gt;</code>标签的脚本加载步骤。可以用它来加速、优化代码，但其主要目的还是为了代码的模块化。它鼓励在使用脚本时以module ID替代URL地址。<br>RequireJS以一个相对于baseUrl的地址来加载所有的代码。 页面顶层<code>&lt;script&gt;</code>标签含有一个特殊的属性data-main，require.js使用它来启动脚本加载过程，而baseUrl一般设置到与该属性相一致的目录。</p>
+</blockquote>
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">data-main</span>=<span class="string">"main"</span> <span class="attr">src</span>=<span class="string">"./require.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这里的mian是脚本的入口，相当于c语言的main()主函数, 所有的模块都要集中在这里被解析. 默认加载的都是js文件,所以就不用加.js<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js1.js"</span>"&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js2.js"</span>"&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js3.js"</span>"&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js4.js"</span>"&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>之前我们引用js代码就会是这样, 依赖顺序不能颠倒, 这样就非常麻烦, </p>
+<h2 id="AMD规范"><a href="#AMD规范" class="headerlink" title="AMD规范"></a>AMD规范</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">//AND规范的写法</span></div><div class="line"><span class="built_in">require</span>([<span class="string">'依赖一'</span>, <span class="string">'依赖二'</span>, <span class="string">'依赖三'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">依赖一的别名, 依赖三的别名, 依赖三的别名</span>)</span>&#123;</div><div class="line">    <span class="comment">//code</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p>require很好的解决了这个代码依赖的问题,它采用AMD(异步模块加载)规范加载脚本文件.<br><br>比如:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">require</span>([<span class="string">'jquery'</span>, <span class="string">'underscore'</span>, <span class="string">'bankbone'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">$, _, Backbone</span>) </span>&#123;</div><div class="line">    <span class="comment">//code</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>有的模块肯定是不符合AMD规范的,那么我们就需要配置一下,shim属性就是配置不符合AMD规范的代码的,require.config()参数是一个对象,写在页面的最顶部.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.config(&#123;</div><div class="line">    <span class="attr">baseUrl</span>: <span class="string">'路径'</span>, <span class="comment">// 设置js文件的根目录,默认是main.js的目录,这里写相对与main.js的相对路径</span></div><div class="line">    paths: &#123;</div><div class="line">        <span class="attr">jquery</span>: <span class="string">'路径'</span> <span class="comment">// 为每个文件单独指定路径, 也可以是网络地址</span></div><div class="line">    &#125;</div><div class="line">    shim: &#123;</div><div class="line">        <span class="string">'模块名'</span>: &#123;</div><div class="line">            <span class="attr">exports</span>: <span class="string">'模块别名'</span>,</div><div class="line">            <span class="attr">deps</span>: [<span class="string">'依赖一'</span>, <span class="string">'依赖二'</span>]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="AMD模块的写法"><a href="#AMD模块的写法" class="headerlink" title="AMD模块的写法"></a>AMD模块的写法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">'依赖'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">依赖别名</span>) </span>&#123;</div><div class="line">    <span class="comment">//code</span></div><div class="line">    </div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> a + b;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> add</div><div class="line">&#125;);</div><div class="line"><span class="comment">//这样写只能返回一个方法</span></div><div class="line"><span class="comment">//在main.js里用该模块的名字(a,b)调用</span></div></pre></td></tr></table></figure>
+<p>还可以用下面的方法写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> a + b;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> x = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> a * b</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">add</span>: add,</div><div class="line">        <span class="attr">x</span>: x</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//这样写只能返回多个方法</span></div><div class="line"><span class="comment">//在main.js里用该模块的名字.add(a,b)或者模块名字.x(a,b)调用</span></div></pre></td></tr></table></figure></p>
+<h2 id="模块的压缩合并"><a href="#模块的压缩合并" class="headerlink" title="模块的压缩合并"></a>模块的压缩合并</h2><blockquote>
+<p>模块化的写法肯定会增加文件数量, 从而增加请求次数, 放慢加载速度, require有自带的压缩工具r.js, 可以合并所有模块为一个js文件. 可以去官网下载也可以使用bower下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bower install r.js</div></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>下载完后在main.js的目录新建一个build.js文件(配置如下)</li>
+<li>在build.js的文件目录下执行node r.js -o build.js</li>
+<li>构建完后会有一个main-built.js文件</li>
+<li><a href="http://www.tuicool.com/articles/iYNJbqZ" target="_blank" rel="external">这里有一篇详细介绍打包的文章</a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">(&#123;</div><div class="line">    <span class="attr">appDir</span>: <span class="string">'./'</span>, 　　 <span class="comment">//项目根目录</span></div><div class="line">    out: <span class="string">'main-build.js'</span>,　　<span class="comment">//输出文件名</span></div><div class="line">    dir: <span class="string">'./outdir'</span>,　　 <span class="comment">//输出目录，全部文件打包后要放入的文件夹（如果没有会自动新建的）</span></div><div class="line">　　　　<span class="comment">/* 有了dir，就不能使用out配置项了，你在编译时它有非常明确的提示 */</span></div><div class="line">    baseUrl: <span class="string">'./js/pages'</span>, 　　 <span class="comment">//相对于appDir，代表要查找js文件的起始文件夹，下文所有文件路径的定义都是基于这个baseUrl的</span></div><div class="line">    modules: [</div><div class="line">　　　　<span class="comment">//要优化的模块 —— 里面的配置项即各页面的 相对baseUrl路径的 省略后缀“.js”的 入口文件(入口文件 ---- 即加载页面时引入require.js的script标签上data-main属性所指定的文件)</span></div><div class="line">　　　　<span class="comment">//该属性必不可少，因为一个程序至少需要有一个入口</span></div><div class="line">        &#123; <span class="attr">name</span>:<span class="string">'main'</span>&#125;,</div><div class="line">        &#123; <span class="attr">name</span>:<span class="string">'index'</span>&#125; </div><div class="line">],</div><div class="line">　　<span class="attr">fileExclusionRegExp</span>: <span class="regexp">/^(r|build)\.js|.*\.scss$/</span>,　　 <span class="comment">//正则匹配过滤文件，匹配到的文件将不会被输出到输出目录去，这里过滤掉的是 r.js、build.js、*.scss三类文件</span></div><div class="line">　　optimizeCss: <span class="string">'standard'</span>,</div><div class="line">　　<span class="attr">removeCombined</span>: <span class="literal">true</span>, <span class="comment">//如果为true，优化器将从输出目录中删除已合并的文件</span></div><div class="line">　　paths: &#123; <span class="comment">//各模块相对baseUrl的路径，直接从require.config的path配置中烤取即可</span></div><div class="line">        <span class="string">"underscore"</span>: <span class="string">"../libs/underscore/underscore-min"</span>,</div><div class="line">        <span class="string">"backbone"</span>: <span class="string">"../libs/backbone/backbone-min"</span>,</div><div class="line">　　&#125;,</div><div class="line">    <span class="attr">shim</span>:&#123;<span class="comment">// 配置不符合AMD规范的模块，直接从require.config的shim配置中烤取即可</span></div><div class="line">        <span class="string">"underscore"</span>: &#123;</div><div class="line">　　        <span class="attr">exports</span>: <span class="string">"_"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="string">"backbone"</span>: &#123;</div><div class="line">　　        <span class="attr">deps</span>: [<span class="string">"underscore"</span>, <span class="string">"jquery"</span>],</div><div class="line">　　        <span class="attr">exports</span>: <span class="string">"Backbone"</span></div><div class="line">        &#125;,</div><div class="line">    &#125; </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="JSX语法"><a href="#JSX语法" class="headerlink" title="JSX语法"></a>JSX语法</h2><ol>
-<li>借助React环境运行</li>
-<li>jsx标签就是HTML标签</li>
-<li>jsx语法转换，  jsx -&gt; js</li>
-<li>在jsx中运行js代码，js代码要用｛｝括起来</li>
-<li><p>属性，设置样式，事件绑定</p>
-<h2 id="组件类"><a href="#组件类" class="headerlink" title="组件类"></a>组件类</h2></li>
-<li><p>大写开头，驼峰命名</p>
-</li>
-<li>React.createClass（｛｝）方法创建组建类</li>
-<li>每个组件必须实现自己的render方法，输入一个定义好的模版；返回值为null，false，组件模版</li>
-<li>只能包含一个顶层标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> var HelloReact = React.createClass(&#123;</div><div class="line">     render:function()&#123;</div><div class="line">         return (</div><div class="line">                &lt;h1&gt;组件&lt;/h1&gt;</div><div class="line">                &lt;p&gt;内容&lt;/p&gt;</div><div class="line">            )</div><div class="line">     &#125;</div><div class="line"> &#125;)</div><div class="line"> ReactDOM.render（</div><div class="line">    &lt;HelloReact /&gt;,</div><div class="line">    document.getElementById(&quot;id&quot;);</div><div class="line">）</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="组件样式"><a href="#组件样式" class="headerlink" title="组件样式"></a>组件样式</h2><pre><code>- 内联样式
-- 对象样式
-- 选择器样式
-</code></pre><ol>
-<li>以，结尾；HTML以；结尾</li>
-<li>key，中不能出现“-”</li>
-<li>key驼峰命名</li>
-<li>value如果是字符串要加引号</li>
-<li>value是数字，不需要带单位<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//这个样式需要写在头部的style标签之内</div><div class="line">.xzq ｛</div><div class="line">    background: #fff;</div><div class="line">｝</div><div class="line">//样式对象</div><div class="line">var sty = &#123;</div><div class="line">    height: 100,</div><div class="line">    background: &apos;#f0f&apos;</div><div class="line">&#125;</div><div class="line">var HelloReact = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return ( </div><div class="line">            //内联样式</div><div class="line">            &lt;div style=&#123;&#123;background:&apos;#f00&apos;,height: 200&#125;&#125;&gt;内联样式和</div><div class="line">                //对象样式</div><div class="line">                &lt;div style=&#123;sty&#125;&gt;对象样式&lt;/div&gt;</div><div class="line">                //选择器样式</div><div class="line">                &lt;div className=&quot;a&quot;&gt;选择器样式&lt;/div&gt;</div><div class="line">            &lt;/div&gt;);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//渲染标签</div><div class="line">ReactDOM.render(</div><div class="line">    &lt;HelloReact /&gt;,</div><div class="line">    document.getElementById(&apos;container&apos;)</div><div class="line">    )</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="复合组件"><a href="#复合组件" class="headerlink" title="复合组件"></a>复合组件</h2><pre><code>创建多个组建合成一个组建，首先定义子组件，然后定义复合组件
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var WebName = React.createClass(&#123;</div><div class="line">    render: function() &#123;</div><div class="line">        return &lt;h1&gt;蓝天白云&lt;/h1&gt;</div><div class="line">    &#125;</div><div class="line">&#125;)  </div><div class="line">var WebLink = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return &lt;a href=&quot;#&quot;&gt;www.yuanjingzhuang.com&lt;/a&gt;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">var WenShow = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;WebName/&gt;</div><div class="line">                &lt;WebLink/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">ReactDOM.render(</div><div class="line">    &lt;WenShow /&gt;,</div><div class="line">    document.getElementById(&quot;container&quot;)</div><div class="line">    )</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -486,7 +443,7 @@ jsx语法转换，  j">
       
         <div class="post-tags">
           
-            <a href="/tags/react/" rel="tag"># react</a>
+            <a href="/tags/RequireJS/" rel="tag"># RequireJS</a>
           
         </div>
       
@@ -499,15 +456,15 @@ jsx语法转换，  j">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/14/ES6转码工具babel的使用/" rel="next" title="ES6转码工具babel的使用">
+                <i class="fa fa-chevron-left"></i> ES6转码工具babel的使用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/27/Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档-文末有福利链）/" rel="prev" title="Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链）">
-                Hexo-Next底部powered-by的logo栏更改以及注意事项（附官方文档,文末有福利链） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +632,7 @@ jsx语法转换，  j">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#react特性"><span class="nav-number">1.</span> <span class="nav-text">react特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX语法"><span class="nav-number">2.</span> <span class="nav-text">JSX语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件类"><span class="nav-number">3.</span> <span class="nav-text">组件类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件样式"><span class="nav-number">4.</span> <span class="nav-text">组件样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合组件"><span class="nav-number">5.</span> <span class="nav-text">复合组件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RequireJS解决代码依赖问题-异步加载js-避免页面失去相应"><span class="nav-number">1.</span> <span class="nav-text">RequireJS解决代码依赖问题,异步加载js,避免页面失去相应</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加载"><span class="nav-number">1.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD规范"><span class="nav-number">1.2.</span> <span class="nav-text">AMD规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD模块的写法"><span class="nav-number">1.4.</span> <span class="nav-text">AMD模块的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块的压缩合并"><span class="nav-number">1.5.</span> <span class="nav-text">模块的压缩合并</span></a></li></ol></li></ol></div>
             
 
           </div>
