@@ -1,0 +1,1094 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML5,CSS3," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="H5新特性总览移除的元素纯表现的元素： basefont、big、center、font等 
+对可用性产生负面影响的元素： frame、frameset、noframes
+新增的API语义： 能够让你更恰当地描述你的内容是什么。 
+连通性： 能够让你和服务器之间通过创新的新技术方法进行通信（web sockets等）。 
+离线 &amp;amp; 存储：能够让网页在客户端本地存储数据以及更高效地离线运行（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5C3新特性">
+<meta property="og:url" content="http://yoursite.com/2017/04/09/H5C3新特性/index.html">
+<meta property="og:site_name" content="Mr.Yuan">
+<meta property="og:description" content="H5新特性总览移除的元素纯表现的元素： basefont、big、center、font等 
+对可用性产生负面影响的元素： frame、frameset、noframes
+新增的API语义： 能够让你更恰当地描述你的内容是什么。 
+连通性： 能够让你和服务器之间通过创新的新技术方法进行通信（web sockets等）。 
+离线 &amp;amp; 存储：能够让网页在客户端本地存储数据以及更高效地离线运行（">
+<meta property="og:updated_time" content="2017-04-09T04:06:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5C3新特性">
+<meta name="twitter:description" content="H5新特性总览移除的元素纯表现的元素： basefont、big、center、font等 
+对可用性产生负面影响的元素： frame、frameset、noframes
+新增的API语义： 能够让你更恰当地描述你的内容是什么。 
+连通性： 能够让你和服务器之间通过创新的新技术方法进行通信（web sockets等）。 
+离线 &amp;amp; 存储：能够让网页在客户端本地存储数据以及更高效地离线运行（">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/09/H5C3新特性/"/>
+
+
+
+
+
+  <title> H5C3新特性 | Mr.Yuan </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b2e221af5084d08de25e43bf4b489f81";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mr.Yuan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端路上的一只小菜鸟</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="http://www.yuanjingzhuang.com/myresume/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/H5C3新特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Yuan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                H5C3新特性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T07:32:05+08:00">
+                2017-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/04/09/H5C3新特性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="H5新特性总览"><a href="#H5新特性总览" class="headerlink" title="H5新特性总览"></a>H5新特性总览</h1><h2 id="移除的元素"><a href="#移除的元素" class="headerlink" title="移除的元素"></a>移除的元素</h2><p>纯表现的元素： basefont、big、center、font等 </p>
+<p>对可用性产生负面影响的元素： frame、frameset、noframes</p>
+<h2 id="新增的API"><a href="#新增的API" class="headerlink" title="新增的API"></a>新增的API</h2><p>语义： 能够让你更恰当地描述你的内容是什么。 </p>
+<p>连通性： 能够让你和服务器之间通过创新的新技术方法进行通信（web sockets等）。 </p>
+<p>离线 &amp; 存储：能够让网页在客户端本地存储数据以及更高效地离线运行（离线资源、在线和离线事件、DOM存储、IndexDB、自web应用程序中使用文件[FileReader]）。</p>
+<p>多媒体：使 video 和 audio 成为了在所有 Web 中的一等公民。<br>2D/3D 绘图 &amp; 效果：提供了一个更加分化范围的呈现选择(canvas、webGL)。 </p>
+<p>性能 &amp; 集成：提供了非常显著的性能优化和更有效的计算机硬件使用（WebWorkers、XMLHttpRequest2、HistoryAPI、拖放、requestAnimationFrame、全屏API、指针锁定API、在线和离线事件）。 </p>
+<p>设备访问 Device Access：能够处理各种输入和输出设备（触控事件touch、使用地理位置定位、检测设备方向）。</p>
+<h2 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h2><p>history对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。 </p>
+<p>使用Go()方法可以在用户的历史记录中任意跳转，可以向后也可以向前。这个方法接受一个参数，表示向后或向前跳转的页面数的一个整数值。负数表示向后跳转（类似于单击浏览器的‘后退’按钮），正数表示向前跳转（类似于单击浏览器的“前进”按钮）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">history.go(<span class="number">-1</span>);<span class="comment">//后退一页</span></div><div class="line">history.go(<span class="number">1</span>);<span class="comment">//前进一页</span></div><div class="line">history.go(<span class="number">2</span>);<span class="comment">//前进两页</span></div></pre></td></tr></table></figure>
+<p>也可以给go()方法传递一个字符串参数，此时浏览器会跳转到历史记录中包含该字符串的第一个位置–可能后退，也可能前进，具体看那个位置最近。如果历史记录中不包含该字符串，那么这个方法什么也不做<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">history.go(<span class="string">'wrox.com'</span>);<span class="comment">//跳到最近的wrox.com页面</span></div></pre></td></tr></table></figure></p>
+<p>另外，还可以使用两个简写方法back()和forward()来代替go()。这两个方法都可以模仿浏览器的‘后退’和‘前进’按钮。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">history.back();<span class="comment">//后退一页</span></div><div class="line">history.forward();<span class="comment">//前进一页</span></div></pre></td></tr></table></figure>
+<p>history对象还有一个length属性，保存着历史记录的数量。这个数量包括所有的历史记录，即所有向后和向前的记录。</p>
+<blockquote>
+<p>history在h5中新增的属性和方法</p>
+</blockquote>
+<p>h5中的history对象新增了两个新方法：history.pushState()和history.replaeState(); </p>
+<p>两种方法都允许我们添加和更新历史记录，它们的工作原理相同并且可以添加数量相同的参数。但是pushState()是在history栈中添加一个新的条目，replaceState()是替换当前的记录值。除了方法之外，还有popstate 事件<br>pushState(data，title[,url])和replaceState(data，title[,url])参数一样，参数说明如下：</p>
+<ul>
+<li>data:一个表示状态的对象，json格式数据</li>
+<li>title：一个string格式的标题（大多数浏览器不支持或忽略这个参数，最好用null代替）</li>
+<li>url：一个url（用于替换当前URL）</li>
+</ul>
+<p>当浏览会话记录的时候，不管点击前进或者后退按钮，还是使用history.go和history.back方法，popstate事件都会被触发。当事件发生时，浏览器会从history中取出URL和对应的state对象替换当前的URL和history.state。通过event.state也可以获取history.state </p>
+<p>需要说明的是pushState只是将当前页面保存到history的历史记录中（并作为最近的一个记录），并且将当前浏览器的地址栏改为参数url指定的值，但并不会加载它。这点与普通的通过链接打开或浏览器地址输入url完全不一样。所以如果想在url改变的时候需要监听popstate事件。</p>
+<p>利用history可以弥补ajax无法回退的缺陷。如下方法是模拟ajax操作的实现方法。</p>
+<h2 id="2D绘图（canvas和svg）"><a href="#2D绘图（canvas和svg）" class="headerlink" title="2D绘图（canvas和svg）"></a>2D绘图（canvas和svg）</h2><blockquote>
+<p>SVG</p>
+</blockquote>
+<p>SVG 是一种使用 XML 描述 2D 图形的语言。 </p>
+<p>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。</p>
+<p>您可以为某个元素附加 JavaScript 事件处理器。 </p>
+<p>在 SVG 中，每个被绘制的图形均被视为对象。</p>
+<p>如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。</p>
+<blockquote>
+<p>canvas</p>
+</blockquote>
+<p>Canvas 通过 JavaScript 来绘制 2D 图形。 </p>
+<p>Canvas 是逐像素进行渲染的。 </p>
+<p>在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。</p>
+<p>如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+<blockquote>
+<p>Canvas 与 SVG 的比较</p>
+</blockquote>
+<p>下表列出了 canvas 与 SVG 之间的一些不同之处。<br>Canvas</p>
+<pre><code>依赖分辨率
+不支持事件处理器
+弱的文本渲染能力
+能够以 .png 或 .jpg 格式保存结果图像
+最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+</code></pre><p>SVG</p>
+<pre><code>不依赖分辨率
+支持事件处理器
+最适合带有大型渲染区域的应用程序（比如谷歌地图）
+复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+不适合游戏应用
+</code></pre><h1 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h1><h2 id="CSS3-选择器（Selector）"><a href="#CSS3-选择器（Selector）" class="headerlink" title="CSS3 选择器（Selector）"></a>CSS3 选择器（Selector）</h2><pre><code>E:nth-last-child(n) 
+E:nth-child(n)
+E:nth-of-type(n) 
+E:nth-last-of-type(n) 
+E:last-child 
+E:first-of-type 
+E:only-child 
+E:only-of-type 
+E:empty 
+E:checked 
+E:enabled 
+E:disabled 
+E::selection 
+E:not(s)
+</code></pre><h2 id="Font-face-特性"><a href="#Font-face-特性" class="headerlink" title="@Font-face 特性"></a>@Font-face 特性</h2><p>Font-face 可以用来加载字体样式，而且它还能够加载服务器端的字体文件，让客户端显示客户端所没有安装的字体。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123; </div><div class="line"><span class="attribute">font-family</span>: BorderWeb; </div><div class="line"><span class="attribute">src</span>:<span class="built_in">url</span>(BORDERW0.eot); </div><div class="line">&#125; </div><div class="line">@<span class="keyword">font-face</span> &#123; </div><div class="line"><span class="attribute">font-family</span>: Runic; </div><div class="line"><span class="attribute">src</span>:<span class="built_in">url</span>(RUNICMT0.eot); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.border</span> &#123; <span class="attribute">FONT-SIZE</span>: <span class="number">35px</span>; <span class="attribute">COLOR</span>: black; <span class="attribute">FONT-FAMILY</span>: <span class="string">"BorderWeb"</span> &#125; </div><div class="line"><span class="selector-class">.event</span> &#123; <span class="attribute">FONT-SIZE</span>: <span class="number">110px</span>; <span class="attribute">COLOR</span>: black; <span class="attribute">FONT-FAMILY</span>: <span class="string">"Runic"</span> &#125;</div></pre></td></tr></table></figure>
+<p> 声明的两个服务端字体，其字体源指向“BORDERW0.eot”和“RUNICMT0.eot”文件，并分别冠以“BorderWeb”和“Runic”的字体名称。声明之后，我们就可以在页面中使用了：“ FONT-FAMILY: “BorderWeb” ” 和 “ FONT-FAMILY: “Runic” ”。</p>
+<p>这种做法使得我们在开发中如果需要使用一些特殊字体，而又不确定客户端是否已安装时，便可以使用这种方式。</p>
+<h2 id="Word-wrap-amp-Text-overflow-样式"><a href="#Word-wrap-amp-Text-overflow-样式" class="headerlink" title="Word-wrap &amp; Text-overflow 样式"></a>Word-wrap &amp; Text-overflow 样式</h2><p>加入了“word-wrap: break-word”，设置或检索当当前行超过指定容器的边界时是否断开转行。</p>
+<ul>
+<li>Text-overflow: clip|ellipsis 则设置或检索当当前行超过指定容器的边界时如何显示</li>
+</ul>
+<h2 id="文字渲染（Text-decoration）"><a href="#文字渲染（Text-decoration）" class="headerlink" title="文字渲染（Text-decoration）"></a>文字渲染（Text-decoration）</h2><pre><code>Text-fill-color: 文字内部填充颜色
+Text-stroke-color: 文字边界填充颜色
+Text-stroke-width: 文字边界宽度
+</code></pre><h2 id="CSS3-的多列布局（multi-column-layout）"><a href="#CSS3-的多列布局（multi-column-layout）" class="headerlink" title="CSS3 的多列布局（multi-column layout）"></a>CSS3 的多列布局（multi-column layout）</h2><pre><code>Column-count：表示布局几列。
+Column-rule：表示列与列之间的间隔条的样式
+Column-gap：表示列于列之间的间隔
+</code></pre><h2 id="边框和颜色（color-border）"><a href="#边框和颜色（color-border）" class="headerlink" title="边框和颜色（color, border）"></a>边框和颜色（color, border）</h2><p>关于颜色，CSS3 已经提供透明度的支持了：</p>
+<h2 id="CSS3-的渐变效果（Gradient）"><a href="#CSS3-的渐变效果（Gradient）" class="headerlink" title="CSS3 的渐变效果（Gradient）"></a>CSS3 的渐变效果（Gradient）</h2><blockquote>
+<p>线性渐变<br>左上（0% 0%）到右上（0% 100%）即从左到右水平渐变：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:-webkit-gradient(linear</span>,0% 0%,100% 0%,<span class="selector-tag">from</span>(<span class="selector-id">#2A8BBE</span>),<span class="selector-tag">to</span>(<span class="selector-id">#FE280E</span>));</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p> 这里 linear 表示线性渐变，从左到右，由蓝色（#2A8BBE）到红色（#FE280E）的渐变。</p>
+<blockquote>
+<p>复杂线性渐变</p>
+</blockquote>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:-webkit-gradient(linear</span>,0% 0%,100% 0%,<span class="selector-tag">from</span>(<span class="selector-id">#2A8BBE</span>),<span class="selector-tag">color-stop</span>(0<span class="selector-class">.33</span>,<span class="selector-id">#AAD010</span>),<span class="selector-tag">color-stop</span>(0<span class="selector-class">.33</span>,<span class="selector-id">#FF7F00</span>),<span class="selector-tag">to</span>(<span class="selector-id">#FE280E</span>));</div></pre></td></tr></table></figure>
+<blockquote>
+<p>径向渐变</p>
+</blockquote>
+<p>径向渐变（radial），这不是从一个点到一个点的渐变，而从一个圆到一个圆的渐变。不是放射渐变而是径向渐变。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">backgroud</span>: <span class="selector-tag">-webkit-gradient</span>(<span class="selector-tag">radial</span>,50 50,50,50 50,0,<span class="selector-tag">from</span>(<span class="selector-tag">black</span>),<span class="selector-tag">color-stop</span>(0<span class="selector-class">.5</span>,<span class="selector-tag">red</span>),<span class="selector-tag">to</span>(<span class="selector-tag">blue</span>));</div></pre></td></tr></table></figure>
+<p>前面“50,50,50”是起始圆的圆心坐标和半径，“50,50,0”蓝色是目标圆的圆心坐标和半径，“color-stop(0.5,red)”是断点的位置和色彩。这里需要说明一下，和放射由内至外不一样，径向渐变刚好相反，是由外到内的渐变。清单 15 标识的是两个同心圆，外圆半径为 50px，内圆半径为 0，那么就是从黑色到红色再到蓝色的正圆形渐变。</p>
+<h2 id="CSS3-的阴影（Shadow）和反射（Reflect）效果"><a href="#CSS3-的阴影（Shadow）和反射（Reflect）效果" class="headerlink" title="CSS3 的阴影（Shadow）和反射（Reflect）效果"></a>CSS3 的阴影（Shadow）和反射（Reflect）效果</h2><blockquote>
+<p>阴影效果，阴影效果既可用于普通元素，也可用于文字，</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.class1</span>&#123; </div><div class="line"><span class="attribute">text-shadow</span>:<span class="number">5px</span> <span class="number">2px</span> <span class="number">6px</span> <span class="built_in">rgba</span>(64, 64, 64, 0.5); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.class2</span>&#123; </div><div class="line"><span class="attribute">box-shadow</span>:<span class="number">3px</span> <span class="number">3px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 64, 128, 0.3); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>反射</p>
+</blockquote>
+<p> 反射，他看起来像水中的倒影，其设置也很简单<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> <span class="selector-class">.classReflect</span>&#123; </div><div class="line"><span class="attribute">-webkit-box-reflect</span>: below <span class="number">10px</span> </div><div class="line"><span class="built_in">-webkit-gradient</span>(linear, left top, left bottom, from(transparent), </div><div class="line">     <span class="built_in">to</span>(rgba(255, 255, 255, 0.51))); </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="CSS3-的背景效果"><a href="#CSS3-的背景效果" class="headerlink" title="CSS3 的背景效果"></a>CSS3 的背景效果</h2><p> CSS3 多出了几种关于背景（background）的属性，我们这里会简单介绍一下：<br>首先：“<code>Background Clip</code>”，该属确定背景画区，有以下几种可能的属性：</p>
+<pre><code>background-clip: border-box; 背景从 border 开始显示 ;
+background-clip: padding-box; 背景从 padding 开始显示 ;
+background-clip: content-box; 背景显 content 区域开始显示 ;
+background-clip: no-clip; 默认属性，等同于 border-box;
+</code></pre><p>通常情况，我们的背景都是覆盖整个元素的，现在 CSS3 让您可以设置是否一定要这样做。这里您可以设定背景颜色或图片的覆盖范围。</p>
+<p>其次：“<code>Background Origin</code>”，用于确定背景的位置，它通常与 background-position 联合使用，您可以从 border、padding、content 来计算 background-position（就像 background-clip）。</p>
+<pre><code>background-origin: border-box; 从 border. 开始计算 background-position;
+background-origin: padding-box; 从 padding. 开始计算 background-position;
+background-origin: content-box; 从 content. 开始计算 background-position;
+</code></pre><p>还有，“<code>Background Size</code>”，常用来调整背景图片的大小，注意别和 clip 弄混，这个主要用于设定图片本身。有以下可能的属性：</p>
+<pre><code>background-size: contain; 缩小图片以适合元素（维持像素长宽比）
+background-size: cover; 扩展元素以填补元素（维持像素长宽比）
+background-size: 100px 100px; 缩小图片至指定的大小 .
+background-size: 50% 100%; 缩小图片至指定的大小，百分比是相对包    含元素的尺寸 .
+</code></pre><p>最后，“<code>Background Break</code>”属性，CSS3 中，元素可以被分成几个独立的盒子（如使内联元素 span 跨越多行），background-break 属性用来控制背景怎样在这些不同的盒子中显示。</p>
+<pre><code>background-break: continuous; 默认值。忽略盒之间的距离（也就是像元    素没有分成多个盒子，依然是一个整体一    样）
+background-break: bounding-box; 把盒之间的距离计算在内；
+background-break: each-box; 为每个盒子单独重绘背景。
+</code></pre><p>这种属性让您可以设定复杂元素的背景属性。<br>最为重要的一点，CSS3 中支持多背景图片</p>
+<h2 id="CSS3-的-Transitions-Transforms-和-Animation-Transitions"><a href="#CSS3-的-Transitions-Transforms-和-Animation-Transitions" class="headerlink" title="CSS3 的 Transitions, Transforms 和 Animation, Transitions"></a>CSS3 的 Transitions, Transforms 和 Animation, Transitions</h2><blockquote>
+<p>Transitions</p>
+</blockquote>
+<p> <code>Transition</code> 有下面些具体属性：</p>
+<pre><code>transition-property：用于指定过渡的性质，比如 transition-property:backgrond 就是指 backgound 参与这个过渡
+transition-duration：用于指定这个过渡的持续时间
+transition-delay：用于制定延迟过渡的时间
+transition-timing-function：用于指定过渡类型，有 ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"transDiv"</span> <span class="attr">class</span>=<span class="string">"transStart"</span>&gt;</span> transition <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </div><div class="line"></div><div class="line">.transStart &#123; </div><div class="line">   background-color: white; </div><div class="line">   -webkit-transition: background-color 0.3s linear; </div><div class="line">   -moz-transition: background-color 0.3s linear; </div><div class="line">   -o-transition: background-color 0.3s linear; </div><div class="line">   transition: background-color 0.3s linear; </div><div class="line">&#125; </div><div class="line">.transEnd &#123; </div><div class="line">   background-color: red; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 这里他说明的是，这里 id 为“transDiv”的 div，当它的初始“background-color”属性变化时（被 JavaScript 修改），会呈现出一种变化效果，持续时间为 0.3 秒，效果为均匀变换（linear）。如：该 div 的 class 属性由“transStart”改为“transEnd”，其背景会由白（white）渐变到红（red）。</p>
+<blockquote>
+<p>Transform</p>
+</blockquote>
+<p> 再来看看 Transform，其实就是指拉伸，压缩，旋转，偏移等等一些图形学里面的基本变换。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.skew</span> &#123; </div><div class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">skew</span>(50deg); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.scale</span> &#123; </div><div class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(2, 0.5); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.rotate</span> &#123; </div><div class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(30deg); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.translate</span> &#123; </div><div class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(50px, 50px); </div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="selector-class">.all_in_one_transform</span> &#123; </div><div class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">skew</span>(20deg) <span class="built_in">scale</span>(1.1, 1.1) <span class="built_in">rotate</span>(40deg) <span class="built_in">translate</span>(10px, 15px); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> “skew”是倾斜，“scale”是缩放，“rotate”是旋转，“translate”是平移。最后需要说明一点，transform 支持综合变换。</p>
+<blockquote>
+<p>Animation<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> anim1 &#123; </div><div class="line">   0% &#123; </div><div class="line">       <span class="attribute">Opacity</span>: <span class="number">0</span>; </div><div class="line"><span class="attribute">Font-size</span>: <span class="number">12px</span>; </div><div class="line">   &#125; </div><div class="line">   100% &#123; </div><div class="line">       <span class="attribute">Opacity</span>: <span class="number">1</span>; </div><div class="line"><span class="attribute">Font-size</span>: <span class="number">24px</span>; </div><div class="line">   &#125; </div><div class="line">&#125; </div><div class="line"><span class="selector-class">.anim1Div</span> &#123; </div><div class="line">   <span class="attribute">-webkit-animation-name</span>: anim1 ; </div><div class="line">   <span class="attribute">-webkit-animation-duration</span>: <span class="number">1.5s</span>; </div><div class="line">   <span class="attribute">-webkit-animation-iteration-count</span>: <span class="number">4</span>; </div><div class="line">   <span class="attribute">-webkit-animation-direction</span>: alternate; </div><div class="line">   <span class="attribute">-webkit-animation-timing-function</span>: ease-in-out; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p> 首先，定义动画的内容，如清单 28 所示，定义动画“anim1”，变化方式为由“透明”（opacity: 0）变到“不透明”（opacity: 1），同时，内部字体大小由“12px”变到“24px”。然后，再来定义 animation 的变化参数，其中，“duration”表示动画持续时间，“iteration-count”表示动画重复次数，direction 表示动画执行完一次后方向的变化方式（如第一次从右向左，第二次则从左向右），最后，“timing-function”表示变化的模式。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5-CSS3/" rel="tag"># HTML5,CSS3</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/08/碰到的一些面试问题/" rel="next" title="碰到的一些面试问题">
+                <i class="fa fa-chevron-left"></i> 碰到的一些面试问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg"
+               alt="Mr.Yuan" />
+          <p class="site-author-name" itemprop="name">Mr.Yuan</p>
+           
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/mr-yuan/" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/qq_22844483" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#H5新特性总览"><span class="nav-number">1.</span> <span class="nav-text">H5新特性总览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移除的元素"><span class="nav-number">1.1.</span> <span class="nav-text">移除的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增的API"><span class="nav-number">1.2.</span> <span class="nav-text">新增的API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#history对象"><span class="nav-number">1.3.</span> <span class="nav-text">history对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2D绘图（canvas和svg）"><span class="nav-number">1.4.</span> <span class="nav-text">2D绘图（canvas和svg）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3新特性"><span class="nav-number">2.</span> <span class="nav-text">CSS3新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-选择器（Selector）"><span class="nav-number">2.1.</span> <span class="nav-text">CSS3 选择器（Selector）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Font-face-特性"><span class="nav-number">2.2.</span> <span class="nav-text">@Font-face 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Word-wrap-amp-Text-overflow-样式"><span class="nav-number">2.3.</span> <span class="nav-text">Word-wrap & Text-overflow 样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字渲染（Text-decoration）"><span class="nav-number">2.4.</span> <span class="nav-text">文字渲染（Text-decoration）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-的多列布局（multi-column-layout）"><span class="nav-number">2.5.</span> <span class="nav-text">CSS3 的多列布局（multi-column layout）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边框和颜色（color-border）"><span class="nav-number">2.6.</span> <span class="nav-text">边框和颜色（color, border）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-的渐变效果（Gradient）"><span class="nav-number">2.7.</span> <span class="nav-text">CSS3 的渐变效果（Gradient）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-的阴影（Shadow）和反射（Reflect）效果"><span class="nav-number">2.8.</span> <span class="nav-text">CSS3 的阴影（Shadow）和反射（Reflect）效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-的背景效果"><span class="nav-number">2.9.</span> <span class="nav-text">CSS3 的背景效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-的-Transitions-Transforms-和-Animation-Transitions"><span class="nav-number">2.10.</span> <span class="nav-text">CSS3 的 Transitions, Transforms 和 Animation, Transitions</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Yuan</span>
+</div>
+
+
+<div class="powered-by">
+  <a class="theme-link" href="/"></a> 开放空间
+</div>
+
+<div class="theme-info">
+  个人专属
+  
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "bf3632f1760d452db966d2e5ab9d0ca1",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="local-search-pop-overlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
