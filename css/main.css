@@ -1702,7 +1702,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #099ab6;
+  background: #ffc;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2497,6 +2497,9 @@ pre .javascript .function {
   .header {
     width: auto;
   }
+}
+#yun-tie-sdk-wrap {
+  background-color: transparent;
 }
 .header-inner {
   position: absolute;
