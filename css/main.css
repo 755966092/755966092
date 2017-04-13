@@ -1702,7 +1702,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4049;
+  background: #cbab81;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2500,6 +2500,18 @@ pre .javascript .function {
 }
 #yun-tie-sdk-wrap {
   background-color: transparent !important;
+}
+#yun-tie-sdk-wrap .input-box .tie-textarea {
+  background-color: transparent !important;
+}
+#yun-tie-sdk-wrap .single-tie {
+  background-color: transparent !important;
+}
+#yun-tie-sdk-wrap .tie-tab-bar li.z-fcs {
+  background-color: rgba(100,120,161,0.5) !important;
+}
+#yun-tie-sdk-wrap .input-box.z-fcs {
+  border-color: #aaa !important;
 }
 .header-inner {
   position: absolute;
