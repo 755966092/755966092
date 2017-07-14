@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ES6,JavaScript," />
+  <meta name="keywords" content="APICloud," />
 
 
 
@@ -87,37 +87,19 @@
 
 
 
-<meta name="description" content="ES6解构赋值1var [a, b, c] = [1,2,3]
-
-左右要严格一一对应
-
-左边格式不正确，var [a,d] = [1,2,3]可以解构成功，属于不完全解构
-右边格式不正确，var [a,b,c,d] = [1,2,3] 解构成功，左边对应的值为undefined
-如果右边的不是数组（不可遍历的解构）var [a] = 12; ，会报错
-只要某种数据结构具有 Iterator(迭代器">
+<meta name="description" content="高度自适应flex布局 允许子元素伸缩
+手机号正则123456789101112function checkPhone(data)&amp;#123;     if(!(/^1[34578]\d&amp;#123;9&amp;#125;$/.test(data)))&amp;#123;         alert(&quot;手机号码有误，请重填&quot;);          return false;     &amp;#125; &amp;#125;fun">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6学习（1）">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/ES6学习（1）/index.html">
+<meta property="og:title" content="APICloud框架——总结一下最近开发APP遇到的一些问题-2">
+<meta property="og:url" content="http://yoursite.com/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="ES6解构赋值1var [a, b, c] = [1,2,3]
-
-左右要严格一一对应
-
-左边格式不正确，var [a,d] = [1,2,3]可以解构成功，属于不完全解构
-右边格式不正确，var [a,b,c,d] = [1,2,3] 解构成功，左边对应的值为undefined
-如果右边的不是数组（不可遍历的解构）var [a] = 12; ，会报错
-只要某种数据结构具有 Iterator(迭代器">
-<meta property="og:updated_time" content="2017-02-28T14:41:02.967Z">
+<meta property="og:description" content="高度自适应flex布局 允许子元素伸缩
+手机号正则123456789101112function checkPhone(data)&amp;#123;     if(!(/^1[34578]\d&amp;#123;9&amp;#125;$/.test(data)))&amp;#123;         alert(&quot;手机号码有误，请重填&quot;);          return false;     &amp;#125; &amp;#125;fun">
+<meta property="og:updated_time" content="2017-07-14T23:34:37.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6学习（1）">
-<meta name="twitter:description" content="ES6解构赋值1var [a, b, c] = [1,2,3]
-
-左右要严格一一对应
-
-左边格式不正确，var [a,d] = [1,2,3]可以解构成功，属于不完全解构
-右边格式不正确，var [a,b,c,d] = [1,2,3] 解构成功，左边对应的值为undefined
-如果右边的不是数组（不可遍历的解构）var [a] = 12; ，会报错
-只要某种数据结构具有 Iterator(迭代器">
+<meta name="twitter:title" content="APICloud框架——总结一下最近开发APP遇到的一些问题-2">
+<meta name="twitter:description" content="高度自适应flex布局 允许子元素伸缩
+手机号正则123456789101112function checkPhone(data)&amp;#123;     if(!(/^1[34578]\d&amp;#123;9&amp;#125;$/.test(data)))&amp;#123;         alert(&quot;手机号码有误，请重填&quot;);          return false;     &amp;#125; &amp;#125;fun">
 
 
 
@@ -145,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/ES6学习（1）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/"/>
 
 
 
 
 
-  <title> ES6学习（1） | Mr.Yuan </title>
+  <title> APICloud框架——总结一下最近开发APP遇到的一些问题-2 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -332,7 +314,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/ES6学习（1）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -353,7 +335,7 @@
             
             
               
-                ES6学习（1）
+                APICloud框架——总结一下最近开发APP遇到的一些问题-2
               
             
           </h1>
@@ -368,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T22:35:49+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T07:33:51+08:00">
+                2017-07-15
               </time>
             
 
@@ -391,8 +373,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/APICloud框架/" itemprop="url" rel="index">
+                    <span itemprop="name">APICloud框架</span>
                   </a>
                 </span>
 
@@ -409,7 +391,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/02/28/ES6学习（1）/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -418,7 +400,7 @@
 
           
           
-             <span id="/2017/02/28/ES6学习（1）/" class="leancloud_visitors" data-flag-title="ES6学习（1）">
+             <span id="/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/" class="leancloud_visitors" data-flag-title="APICloud框架——总结一下最近开发APP遇到的一些问题-2">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -442,7 +424,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      1,506
+                      1,237
                     </span>
               
 
@@ -458,7 +440,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      6
+                      5
                     </span>
               
             </div>
@@ -477,111 +459,68 @@
       
 
       
-        <h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [a, b, c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div></pre></td></tr></table></figure>
-<ul>
-<li><p>左右要严格一一对应</p>
-<ul>
-<li>左边格式不正确，<code>var [a,d] = [1,2,3]</code>可以解构成功，属于不完全解构</li>
-<li>右边格式不正确，<code>var [a,b,c,d] = [1,2,3]</code> 解构成功，左边对应的值为undefined</li>
-<li>如果右边的不是数组（不可遍历的解构）<code>var [a] = 12;</code> ，会报错</li>
-<li>只要某种数据结构具有 Iterator(迭代器) 接口，都可以采用数组形式的解构赋值</li>
-<li>Iterator(迭代器) 接口：在ES6中，有三类数据结构原生具备Iterator接口：数组、某些类似数组的对象、Set和Map结构</li>
-<li>默认值 <code>var [a = 1] = [undefined] // a = 1</code> , <code>var [a = 1] = [null]; // a = null</code><br>ES6 内部使用严格相等运算符（===），判断一个位置是否有值。所以，如果一个数组成员不严格等于undefined，默认值是不会生效的。</li>
-<li><p>如果默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'aaa'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">let</span> [x = f()] = [<span class="number">1</span>]; <span class="comment">//x可以取到值，f()不会执行</span></div></pre></td></tr></table></figure>
+        <h1 id="高度自适应"><a href="#高度自适应" class="headerlink" title="高度自适应"></a>高度自适应</h1><p>flex布局 允许子元素伸缩</p>
+<h1 id="手机号正则"><a href="#手机号正则" class="headerlink" title="手机号正则"></a>手机号正则</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkPhone</span>(<span class="params">data</span>)</span>&#123; </div><div class="line">    <span class="keyword">if</span>(!(<span class="regexp">/^1[34578]\d&#123;9&#125;$/</span>.test(data)))&#123; </div><div class="line">        alert(<span class="string">"手机号码有误，请重填"</span>);  </div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>; </div><div class="line">    &#125; </div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkTel</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="regexp">/^(\(\d&#123;3,4&#125;\)|\d&#123;3,4&#125;-|\s)?\d&#123;7,14&#125;$/</span>.test(data))&#123;</div><div class="line">        alert(<span class="string">'固定电话有误，请重填'</span>);</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="db模块执行sql语句"><a href="#db模块执行sql语句" class="headerlink" title="db模块执行sql语句"></a>db模块执行sql语句</h1><blockquote>
+<p>一句一句执行,不能以;号隔开,否则后面的会不执行</p>
+</blockquote>
+<h1 id="vscode汉化"><a href="#vscode汉化" class="headerlink" title="vscode汉化"></a>vscode汉化</h1><p>快捷键F1, 输入Configure Language 回车, 把en改成zh-CN, 保存, 重启vscode.</p>
+<h1 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new Date().toISOString().match(/(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;)/)[1];</div></pre></td></tr></table></figure>
+<h1 id="创建数据库操作"><a href="#创建数据库操作" class="headerlink" title="创建数据库操作"></a>创建数据库操作</h1><ul>
+<li><p>创建数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DROP TABLE IF EXISTS addressList; CREATE TABLE addressList(user_id int)</div><div class="line">// 如果有addressList这个表就不执行新建命令</div></pre></td></tr></table></figure>
 </li>
-<li><p>默认值可以引用解构赋值的其他变量，但该变量必须已经声明。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [x = <span class="number">1</span>, y = x] = [];     <span class="comment">// x=1; y=1</span></div><div class="line"><span class="keyword">let</span> [x = <span class="number">1</span>, y = x] = [<span class="number">2</span>];    <span class="comment">// x=2; y=2</span></div><div class="line"><span class="keyword">let</span> [x = <span class="number">1</span>, y = x] = [<span class="number">1</span>, <span class="number">2</span>]; <span class="comment">// x=1; y=2</span></div><div class="line"><span class="keyword">let</span> [x = y, y = <span class="number">1</span>] = [];     <span class="comment">// ReferenceError</span></div></pre></td></tr></table></figure>
-<ul>
-<li>上面最后一个表达式之所以会报错，是因为x用到默认值y时，y还没有声明</li>
-</ul>
+<li><p>设置唯一索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CREATE UNIQUE INDEX IF NOT EXISTS user_id_idx ON addressList (user_id)</div><div class="line">// 在addresslist表中的user_id这个列设置唯一索引user_id_idx</div></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-<li><p>对象也可以解构赋值</p>
+<h1 id="IOS系统下输入框字体数量"><a href="#IOS系统下输入框字体数量" class="headerlink" title="IOS系统下输入框字体数量"></a>IOS系统下输入框字体数量</h1><p>使用onkeup事件有BUG, 如果点击键盘上面的文字输入到输入框,onkeyup不会触发,统计不了字体数量</p>
+<p>使用oninput这个事件可以解决这个问题</p>
+<h1 id="android和ios行高不兼容"><a href="#android和ios行高不兼容" class="headerlink" title="android和ios行高不兼容"></a>android和ios行高不兼容</h1><p>使用js判断 android比ios大9px</p>
+<h1 id="去掉input-type-number-的箭头"><a href="#去掉input-type-number-的箭头" class="headerlink" title="去掉input[type=number]的箭头"></a>去掉input[type=number]的箭头</h1><p>-webkit-appearance：none</p>
+<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>在使用git的时候，每次执行</p>
+<p><code>#git add *</code></p>
+<p>都会提示这样一个警告消息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX.</div></pre></td></tr></table></figure></p>
+<p>虽然说没有什么影响吧。</p>
+<p>不过就是觉得太碍眼了，</p>
+<p>按照这样设置就没有问题了:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config core.autocrlf false</div><div class="line">// 禁止自动转换</div></pre></td></tr></table></figure>
+<p>这样设置git的配置后在执行add操作就没有问题了。</p>
+<h1 id="删除指定字符串"><a href="#删除指定字符串" class="headerlink" title="删除指定字符串"></a>删除指定字符串</h1><p>把指定字符串替换成空<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str = str.replace(&apos;a&apos;,&apos;&apos;)</div></pre></td></tr></table></figure></p>
+<h1 id="查找指定字符串是否含有某个子字符串"><a href="#查找指定字符串是否含有某个子字符串" class="headerlink" title="查找指定字符串是否含有某个子字符串"></a>查找指定字符串是否含有某个子字符串</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">str.indexOf(&apos;aa&apos;) == -1</div><div class="line">不含有指定字符串</div><div class="line">str.indexOf(&apos;aa&apos;) &gt;=0</div><div class="line">含有</div></pre></td></tr></table></figure>
+<h1 id="slice和splice"><a href="#slice和splice" class="headerlink" title="slice和splice"></a>slice和splice</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slice(start,end);剪切数组</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">splice(start, howmany, item1, ..., itemX); 方法用于插入、删除或替换数组的元素。</div><div class="line"></div><div class="line">// start 开始插入/删除的位置</div><div class="line">// howmany 插入/删除几项,必须是数字</div><div class="line">// item1, ..., itemX 插入的内容, 不传的时候为删除</div></pre></td></tr></table></figure>
+<h1 id="listContact模块在小米5s下的bug"><a href="#listContact模块在小米5s下的bug" class="headerlink" title="listContact模块在小米5s下的bug"></a>listContact模块在小米5s下的bug</h1><p>每个页面第一次打开listContact列表会出现点击返回的index不正确, 右边字母导航也会出现重复</p>
+<blockquote>
+<p>解决方法, 在打开正式有数据的列表之前打开一个空的列表,然后立马关闭</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">listContact.open(&#123;</div><div class="line">    x: -1000,</div><div class="line">    y: -1000,</div><div class="line">    w: 5,</div><div class="line">    h: 5,</div><div class="line">    data: [],</div><div class="line">    fixedOn: api.frameName</div><div class="line">&#125;,function(ret,err)&#123;</div><div class="line">&#125;)</div><div class="line">listContact.close();</div><div class="line"></div><div class="line">listContact.open(&#123;</div><div class="line">    // 有数据的列表</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>安卓下第二个bug</p>
 <ul>
-<li><p>对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> &#123; bar, foo &#125; = &#123; <span class="attr">foo</span>: <span class="string">"aaa"</span>, <span class="attr">bar</span>: <span class="string">"bbb"</span> &#125;;</div><div class="line">foo <span class="comment">// "aaa"</span></div><div class="line">bar <span class="comment">// "bbb"</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> &#123; baz &#125; = &#123; <span class="attr">foo</span>: <span class="string">"aaa"</span>, <span class="attr">bar</span>: <span class="string">"bbb"</span> &#125;;</div><div class="line">baz <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的解构也可以指定默认值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> &#123;x = <span class="number">3</span>&#125; = &#123;&#125;;</div><div class="line">x <span class="comment">// 3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> &#123;x, y = <span class="number">5</span>&#125; = &#123;<span class="attr">x</span>: <span class="number">1</span>&#125;;</div><div class="line">x <span class="comment">// 1</span></div><div class="line">y <span class="comment">// 5</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> &#123;<span class="attr">x</span>:y = <span class="number">3</span>&#125; = &#123;&#125;;</div><div class="line">y <span class="comment">// 3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> &#123;<span class="attr">x</span>:y = <span class="number">3</span>&#125; = &#123;<span class="attr">x</span>: <span class="number">5</span>&#125;;</div><div class="line">y <span class="comment">// 5</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> &#123; <span class="attr">message</span>: msg = <span class="string">'Something went wrong'</span> &#125; = &#123;&#125;;</div><div class="line">msg <span class="comment">// "Something went wrong"</span></div></pre></td></tr></table></figure>
-</li>
+<li>设置选中的项, 安卓不起作用</li>
 </ul>
+<blockquote>
+<p>解决办法: 在设置数据源的时候, 处理以选择数据</p>
+</blockquote>
+<h1 id="清除角标"><a href="#清除角标" class="headerlink" title="清除角标"></a>清除角标</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">api.setAppIconBadge(&#123;</div><div class="line">    badge: 1</div><div class="line">&#125;);</div><div class="line">// 为0时表示清除</div></pre></td></tr></table></figure>
+<h1 id="css三角形带边框"><a href="#css三角形带边框" class="headerlink" title="css三角形带边框"></a>css三角形带边框</h1><blockquote>
+<p>原理: 写两个三角形, 一个覆盖另一个, 错开一个像素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"> p:after &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    display: inline-block;</div><div class="line">    width: 0;</div><div class="line">    height: 0;</div><div class="line">    border-top: .15rem solid transparent;</div><div class="line">    border-right: .22rem solid #fff;</div><div class="line">    border-bottom: .15rem solid transparent;</div><div class="line">    position: absolute;</div><div class="line">    top: .25rem;</div><div class="line">    left: -.20rem;</div><div class="line">&#125;</div><div class="line"> p:before &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    display: inline-block;</div><div class="line">    width: 0;</div><div class="line">    height: 0;</div><div class="line">    border-top: .15rem solid transparent;</div><div class="line">    border-right: .22rem solid #E3E3E3;</div><div class="line">    border-bottom: .15rem solid transparent;</div><div class="line">    position: absolute;</div><div class="line">    top: .25rem;</div><div class="line">    left: -.22rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="Deferred-long-running-timer-task的问题"><a href="#Deferred-long-running-timer-task的问题" class="headerlink" title="Deferred long-running timer task的问题"></a>Deferred long-running timer task的问题</h1><blockquote>
+<p>Deferred long-running timer task(s) to improve scrolling smoothness. See crbug.com/574343. at frame1.html : 0</p>
+</blockquote>
+<p>延时函数使用不当</p>
+<h1 id="ios下创建时间对象"><a href="#ios下创建时间对象" class="headerlink" title="ios下创建时间对象"></a>ios下创建时间对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">// 处理时间显示</div><div class="line">    function initTime(time) &#123;</div><div class="line">        var timeRep = time;</div><div class="line">        time=time.replace(/-/g,&apos;:&apos;).replace(&apos; &apos;,&apos;:&apos;);</div><div class="line">        time=time.split(&apos;:&apos;);</div><div class="line">        var nowTime = new Date();</div><div class="line">        var pageTime = new Date(time[0],(time[1]-1),time[2],time[3],time[4],time[5]);</div><div class="line">        if ((pageTime.getDate() != nowTime.getDate()) || (pageTime.getFullYear() != nowTime.getFullYear()) || ((pageTime.getMonth()+1) != (nowTime.getMonth()+1))) &#123;</div><div class="line">            // 不是今天</div><div class="line">            return timeRep;</div><div class="line">        &#125; else &#123;</div><div class="line">            // 今天</div><div class="line">            if (nowTime.getHours() != pageTime.getHours()) &#123;</div><div class="line">                return nowTime.getHours() - pageTime.getHours()+ &apos;小时之前&apos;</div><div class="line">            &#125; else &#123;</div><div class="line">                return nowTime.getMinutes() - pageTime.getMinutes() + &apos;分钟之前&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h1 id="长按事件"><a href="#长按事件" class="headerlink" title="长按事件"></a>长按事件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var timeOutEvent=0;//定时器   </div><div class="line">		//开始按   </div><div class="line">		function gtouchstart(ele)&#123;</div><div class="line">			var e = window.event</div><div class="line">			var x = e.touches[0].pageX,y=e.touches[0].pageY</div><div class="line">		    timeOutEvent = setTimeout(&quot;longPress(&quot;+x+&quot;,&quot;+y+&quot;)&quot;,500);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   </div><div class="line">		    return false;   </div><div class="line">		&#125;;   </div><div class="line">		//手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   </div><div class="line">		function gtouchend()&#123;   </div><div class="line">		    clearTimeout(timeOutEvent);//清除定时器   </div><div class="line">		    if(timeOutEvent!=0)&#123;   </div><div class="line">		        //这里写要执行的内容（尤如onclick事件）   </div><div class="line">		    &#125;   </div><div class="line">		    return false;   </div><div class="line">		&#125;;   </div><div class="line">		//如果手指有移动，则取消所有事件，此时说明用户只是要移动而不是长按   </div><div class="line">		function gtouchmove()&#123;   </div><div class="line">		    clearTimeout(timeOutEvent);//清除定时器   </div><div class="line">		    timeOutEvent = 0;   </div><div class="line">		      </div><div class="line">		&#125;;   </div><div class="line">		//真正长按后应该执行的内容   </div><div class="line">		function longPress(x,y)&#123;</div><div class="line">		    timeOutEvent = 0; </div><div class="line">		    $api.css($api.dom(&apos;.shadow&apos;), &apos;display:inline-block;top:&apos; + y + &apos;px;left:&apos; + x + &apos;px;&apos;);</div><div class="line">		    //执行长按要执行的内容，如弹出菜单   </div><div class="line">		    console.log(&quot;长按事件触发发&quot;);   </div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<h1 id="两次往数据库插入同一条数据"><a href="#两次往数据库插入同一条数据" class="headerlink" title="两次往数据库插入同一条数据"></a>两次往数据库插入同一条数据</h1><ol>
+<li>首先查询数据所在的行(需要有一个唯一索引)</li>
+<li><p>如果有数据就更新数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UPDATE 表名 SET 列名 = 数据,列2 = 数据2 WHERE 唯一索引 = 索引</div></pre></td></tr></table></figure>
 </li>
-<li><p>字符串的解构赋值</p>
+<li><p>没有该数据就插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INSERT OR REPLACE INTO 表名(列名1, 列名2, 列名3, 列名14)  VALUES (值1, 值2 ...)</div></pre></td></tr></table></figure>
 </li>
-<li>数值和布尔值的解构赋值</li>
-<li>解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。</li>
-<li>函数参数的解构赋值</li>
-<li><p>圆括号问题</p>
-<ol>
-<li><p>变量声明语句中，不能带有圆括号。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 全部报错</span></div><div class="line"><span class="keyword">let</span> [(a)] = [<span class="number">1</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> &#123;<span class="attr">x</span>: (c)&#125; = &#123;&#125;;</div><div class="line"><span class="keyword">let</span> (&#123;<span class="attr">x</span>: c&#125;) = &#123;&#125;;</div><div class="line"><span class="keyword">let</span> &#123;(x: c)&#125; = &#123;&#125;;</div><div class="line"><span class="keyword">let</span> &#123;(x): c&#125; = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">let</span> &#123; <span class="attr">o</span>: (&#123; <span class="attr">p</span>: p &#125;) &#125; = &#123; <span class="attr">o</span>: &#123; <span class="attr">p</span>: <span class="number">2</span> &#125; &#125;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数参数中，模式不能带有圆括号。</p>
-</li>
-<li>赋值语句中，不能将整个模式，或嵌套模式中的一层，放在圆括号之中。</li>
 </ol>
-</li>
-</ul>
-<h3 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h3><ul>
-<li>includes()：返回布尔值，表示是否找到了参数字符串。</li>
-<li>startsWith()：返回布尔值，表示参数字符串是否在源字符串的头部。</li>
-<li>endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾部。</li>
-<li>这三个方法都支持第二个参数，表示开始搜索的位置。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'Hello world!'</span>;</div><div class="line"></div><div class="line">s.startsWith(<span class="string">'world'</span>, <span class="number">6</span>) <span class="comment">// true</span></div><div class="line">s.endsWith(<span class="string">'Hello'</span>, <span class="number">5</span>) <span class="comment">// true</span></div><div class="line">s.includes(<span class="string">'Hello'</span>, <span class="number">6</span>) <span class="comment">// false</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>使用第二个参数n时，endsWith的行为与其他两个方法有所不同。它针对前n个字符，而其他两个方法针对从第n个位置直到字符串结束。</p>
-<ul>
-<li>repeat();返回一个新字符串，表示将原字符串重复n次。<ul>
-<li><code>&#39;hello&#39;.repeat(2) // &quot;hellohello&quot;</code></li>
-<li>参数如果是小数，会被取整。<code>&#39;na&#39;.repeat(2.9) // &quot;nana&quot;</code></li>
-<li>如果repeat的参数是负数或者Infinity(无限大)，会报错。</li>
-<li>参数NaN等同于0</li>
-<li>如果repeat的参数是字符串，则会先转换成数字。</li>
-</ul>
-</li>
-<li><p>padStart()，padEnd()</p>
-<ul>
-<li><p>字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'x'</span>.padStart(<span class="number">5</span>, <span class="string">'ab'</span>) <span class="comment">// 'ababx'</span></div><div class="line"><span class="string">'x'</span>.padStart(<span class="number">4</span>, <span class="string">'ab'</span>) <span class="comment">// 'abax'</span></div><div class="line"></div><div class="line"><span class="string">'x'</span>.padEnd(<span class="number">5</span>, <span class="string">'ab'</span>) <span class="comment">// 'xabab'</span></div><div class="line"><span class="string">'x'</span>.padEnd(<span class="number">4</span>, <span class="string">'ab'</span>) <span class="comment">// 'xaba'</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>如果原字符串的长度，等于或大于指定的最小长度，则返回原字符串。</p>
-</li>
-<li><p>如果用来补全的字符串与原字符串，两者的长度之和超过了指定的最小长度，则会截去超出位数的补全字符串。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'abc'</span>.padStart(<span class="number">10</span>, <span class="string">'0123456789'</span>)</div><div class="line"><span class="comment">// '0123456abc'</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>如果省略第二个参数，默认使用空格补全长度。</p>
-</li>
-<li><p>padStart的常见用途是为数值补全指定位数。下面代码生成10位的数值字符串。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">'1'</span>.padStart(<span class="number">10</span>, <span class="string">'0'</span>) <span class="comment">// "0000000001"</span></div><div class="line"><span class="string">'12'</span>.padStart(<span class="number">10</span>, <span class="string">'0'</span>) <span class="comment">// "0000000012"</span></div><div class="line"><span class="string">'123456'</span>.padStart(<span class="number">10</span>, <span class="string">'0'</span>) <span class="comment">// "0000123456"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>另一个用途是提示字符串格式。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'12'</span>.padStart(<span class="number">10</span>, <span class="string">'YYYY-MM-DD'</span>) <span class="comment">// "YYYY-MM-12"</span></div><div class="line"><span class="string">'09-12'</span>.padStart(<span class="number">10</span>, <span class="string">'YYYY-MM-DD'</span>) <span class="comment">// "YYYY-09-12"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>模板字符串</p>
-<ul>
-<li><p>传统模版字符串</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> $(<span class="string">'#result'</span>).append(</div><div class="line">  <span class="string">'There are &lt;b&gt;'</span> + basket.count + <span class="string">'&lt;/b&gt; '</span> +</div><div class="line">  <span class="string">'items in your basket, '</span> +</div><div class="line">  <span class="string">'&lt;em&gt;'</span> + basket.onSale +</div><div class="line">  <span class="string">'&lt;/em&gt; are on sale!'</span></div><div class="line">);</div></pre></td></tr></table></figure>
-</li>
-<li><p>ES6模版字符串</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> $(<span class="string">'#result'</span>).append(<span class="string">`</span></div><div class="line">  There are &lt;b&gt;<span class="subst">$&#123;basket.count&#125;</span>&lt;/b&gt; items</div><div class="line">   in your basket, &lt;em&gt;<span class="subst">$&#123;basket.onSale&#125;</span>&lt;/em&gt;</div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure>
-</li>
-<li><p>模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// 普通字符串</span></div><div class="line"><span class="string">`In JavaScript '\n' is a line-feed.`</span></div><div class="line"></div><div class="line"><span class="comment">// 多行字符串</span></div><div class="line"><span class="string">`In JavaScript this is</span></div><div class="line"> not legal.`</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`string text line 1</span></div><div class="line">string text line 2`);</div><div class="line"></div><div class="line"><span class="comment">// 字符串中嵌入变量,</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">"Bob"</span>, time = <span class="string">"today"</span>;</div><div class="line"><span class="string">`Hello <span class="subst">$&#123;name&#125;</span>, how are you <span class="subst">$&#123;time&#125;</span>?`</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>如果使用模板字符串表示多行字符串，所有的空格和缩进都会被保留在输出之中。如果你不想要这个换行，可以使用trim方法消除它。</p>
-</li>
-<li>模板字符串中嵌入变量，需要将变量名写在${}之中。</li>
-<li>大括号内部可以放入任意的JavaScript表达式，可以进行运算，以及引用对象属性。</li>
-<li>模板字符串之中还能调用函数。</li>
-<li>如果大括号中的值不是字符串，将按照一般的规则转为字符串</li>
-<li>模板字符串甚至还能嵌套</li>
-</ul>
-</li>
-</ul>
 
       
     </div>
@@ -605,7 +544,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6-JavaScript/" rel="tag"># ES6,JavaScript</a>
+            <a href="/tags/APICloud/" rel="tag"># APICloud</a>
           
         </div>
       
@@ -618,8 +557,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/react学习（2）/" rel="next" title="react学习（2）">
-                <i class="fa fa-chevron-left"></i> react学习（2）
+              <a href="/2017/06/30/JavaScript创建对象的七种方式/" rel="next" title="JavaScript创建对象的七种方式">
+                <i class="fa fa-chevron-left"></i> JavaScript创建对象的七种方式
               </a>
             
           </div>
@@ -627,10 +566,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/04/自制图标字体/" rel="prev" title="自制图标字体">
-                自制图标字体 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -809,7 +744,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6"><span class="nav-number">1.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解构赋值"><span class="nav-number">1.0.1.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串拓展"><span class="nav-number">1.0.2.</span> <span class="nav-text">字符串拓展</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高度自适应"><span class="nav-number">1.</span> <span class="nav-text">高度自适应</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#手机号正则"><span class="nav-number">2.</span> <span class="nav-text">手机号正则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#db模块执行sql语句"><span class="nav-number">3.</span> <span class="nav-text">db模块执行sql语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode汉化"><span class="nav-number">4.</span> <span class="nav-text">vscode汉化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#格式化时间"><span class="nav-number">5.</span> <span class="nav-text">格式化时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建数据库操作"><span class="nav-number">6.</span> <span class="nav-text">创建数据库操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IOS系统下输入框字体数量"><span class="nav-number">7.</span> <span class="nav-text">IOS系统下输入框字体数量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android和ios行高不兼容"><span class="nav-number">8.</span> <span class="nav-text">android和ios行高不兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉input-type-number-的箭头"><span class="nav-number">9.</span> <span class="nav-text">去掉input[type=number]的箭头</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-number">10.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除指定字符串"><span class="nav-number">11.</span> <span class="nav-text">删除指定字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找指定字符串是否含有某个子字符串"><span class="nav-number">12.</span> <span class="nav-text">查找指定字符串是否含有某个子字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slice和splice"><span class="nav-number">13.</span> <span class="nav-text">slice和splice</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#listContact模块在小米5s下的bug"><span class="nav-number">14.</span> <span class="nav-text">listContact模块在小米5s下的bug</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#清除角标"><span class="nav-number">15.</span> <span class="nav-text">清除角标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css三角形带边框"><span class="nav-number">16.</span> <span class="nav-text">css三角形带边框</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deferred-long-running-timer-task的问题"><span class="nav-number">17.</span> <span class="nav-text">Deferred long-running timer task的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ios下创建时间对象"><span class="nav-number">18.</span> <span class="nav-text">ios下创建时间对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#长按事件"><span class="nav-number">19.</span> <span class="nav-text">长按事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#两次往数据库插入同一条数据"><span class="nav-number">20.</span> <span class="nav-text">两次往数据库插入同一条数据</span></a></li></ol></div>
             
 
           </div>
