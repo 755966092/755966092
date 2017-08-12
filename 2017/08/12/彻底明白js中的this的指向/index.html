@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="html css," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,38 +87,19 @@
 
 
 
-<meta name="description" content="生成自定义图标字体借助在线生成工具[IcoMoon](https://icomoon.io/)
-
-单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 ，白色表示选中
-自定义的可以用AI直接画出来然后保存为svg格式
-还可以用ps的自定义形状工具导出ai路径，然后用ai打开保存为svg文件
-png图片就没必">
+<meta name="description" content="首先必须要说的是，this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象（这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉），那么接下来我会深入的探讨这个问题。
+为什么要学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自制图标字体">
-<meta property="og:url" content="http://yoursite.com/2017/03/04/自制图标字体/index.html">
+<meta property="og:title" content="彻底明白js中的this的指向">
+<meta property="og:url" content="http://yoursite.com/2017/08/12/彻底明白js中的this的指向/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="生成自定义图标字体借助在线生成工具[IcoMoon](https://icomoon.io/)
-
-单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 ，白色表示选中
-自定义的可以用AI直接画出来然后保存为svg格式
-还可以用ps的自定义形状工具导出ai路径，然后用ai打开保存为svg文件
-png图片就没必">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304172937409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304173124456?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304173345040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304173542835?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304173757515?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170304174043143?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-03-04T09:48:30.165Z">
+<meta property="og:description" content="首先必须要说的是，this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象（这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉），那么接下来我会深入的探讨这个问题。
+为什么要学习">
+<meta property="og:updated_time" content="2017-08-12T14:00:30.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自制图标字体">
-<meta name="twitter:description" content="生成自定义图标字体借助在线生成工具[IcoMoon](https://icomoon.io/)
-
-单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 ，白色表示选中
-自定义的可以用AI直接画出来然后保存为svg格式
-还可以用ps的自定义形状工具导出ai路径，然后用ai打开保存为svg文件
-png图片就没必">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170304172937409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="彻底明白js中的this的指向">
+<meta name="twitter:description" content="首先必须要说的是，this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象（这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉），那么接下来我会深入的探讨这个问题。
+为什么要学习">
 
 
 
@@ -146,13 +127,13 @@ png图片就没必">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/04/自制图标字体/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/12/彻底明白js中的this的指向/"/>
 
 
 
 
 
-  <title> 自制图标字体 | Mr.Yuan </title>
+  <title> 彻底明白js中的this的指向 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -333,7 +314,7 @@ png图片就没必">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/04/自制图标字体/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/彻底明白js中的this的指向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -354,7 +335,7 @@ png图片就没必">
             
             
               
-                自制图标字体
+                彻底明白js中的this的指向
               
             
           </h1>
@@ -369,8 +350,8 @@ png图片就没必">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-04T16:54:22+08:00">
-                2017-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T21:59:10+08:00">
+                2017-08-12
               </time>
             
 
@@ -392,8 +373,8 @@ png图片就没必">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
                   </a>
                 </span>
 
@@ -410,7 +391,7 @@ png图片就没必">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/03/04/自制图标字体/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/08/12/彻底明白js中的this的指向/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -419,7 +400,7 @@ png图片就没必">
 
           
           
-             <span id="/2017/03/04/自制图标字体/" class="leancloud_visitors" data-flag-title="自制图标字体">
+             <span id="/2017/08/12/彻底明白js中的this的指向/" class="leancloud_visitors" data-flag-title="彻底明白js中的this的指向">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -443,7 +424,7 @@ png图片就没必">
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      285
+                      1,978
                     </span>
               
 
@@ -459,7 +440,7 @@ png图片就没必">
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      1
+                      8
                     </span>
               
             </div>
@@ -478,30 +459,52 @@ png图片就没必">
       
 
       
-        <h1 id="生成自定义图标字体"><a href="#生成自定义图标字体" class="headerlink" title="生成自定义图标字体"></a>生成自定义图标字体</h1><pre><code>借助在线生成工具[IcoMoon](https://icomoon.io/)
-</code></pre><ol>
-<li>单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标 ，白色表示选中<ol>
-<li>自定义的可以用AI直接画出来然后保存为svg格式</li>
-<li>还可以用ps的自定义形状工具导出ai路径，然后用ai打开保存为svg文件</li>
-<li>png图片就没必要转换了<br><img src="http://img.blog.csdn.net/20170304172937409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></li>
-</ol>
-</li>
-</ol>
+        <p>首先必须要说的是，this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象（这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉），那么接下来我会深入的探讨这个问题。</p>
+<p>为什么要学习this？如果你学过函数式编程，面向对象编程，那你肯定知道干什么用的，如果你没有学过，那么暂时可以不用看这篇文章，当然如果你有兴趣也可以看看，毕竟这是js中必须要掌握的东西。</p>
+<h2 id="例子1："><a href="#例子1：" class="headerlink" title="例子1："></a>例子1：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function a()&#123;</div><div class="line">    var user = &quot;追梦子&quot;;</div><div class="line">    console.log(this.user); //undefined</div><div class="line">    console.log(this); //Window</div><div class="line">&#125;</div><div class="line">a();</div></pre></td></tr></table></figure>
+<p>按照我们上面说的this最终指向的是调用它的对象，这里的函数a实际是被Window对象所点出来的，下面的代码就可以证明。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function a()&#123;</div><div class="line">    var user = &quot;追梦子&quot;;</div><div class="line">    console.log(this.user); //undefined</div><div class="line">    console.log(this);　　//Window</div><div class="line">&#125;</div><div class="line">window.a();</div></pre></td></tr></table></figure>
+<p>和上面代码一样吧，其实alert也是window的一个属性，也是window点出来的。</p>
+<h2 id="例子2："><a href="#例子2：" class="headerlink" title="例子2："></a>例子2：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    user:&quot;追梦子&quot;,</div><div class="line">    fn:function()&#123;</div><div class="line">        console.log(this.user);  //追梦子</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">o.fn();</div></pre></td></tr></table></figure>
+<p>这里的this指向的是对象o，因为你调用这个fn是通过o.fn()执行的，那自然指向就是对象o，这里再次强调一点，this的指向在函数创建的时候是决定不了的，在调用的时候才能决定，谁调用的就指向谁，一定要搞清楚这个。</p>
+<p>其实例子1和例子2说的并不够准确，下面这个例子就可以推翻上面的理论。</p>
+<p>如果要彻底的搞懂this必须看接下来的几个例子</p>
+<h2 id="例子3："><a href="#例子3：" class="headerlink" title="例子3："></a>例子3：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    user:&quot;追梦子&quot;,</div><div class="line">    fn:function()&#123;</div><div class="line">        console.log(this.user); //追梦子</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">window.o.fn();</div></pre></td></tr></table></figure>
+<p>这段代码和上面的那段代码几乎是一样的，但是这里的this为什么不是指向window，如果按照上面的理论，最终this指向的是调用它的对象，这里先说个而外话，window是js中的全局对象，我们创建的变量实际上是给window添加属性，所以这里可以用window点o对象。</p>
+<p>这里先不解释为什么上面的那段代码this为什么没有指向window，我们再来看一段代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    a:10,</div><div class="line">    b:&#123;</div><div class="line">        a:12,</div><div class="line">        fn:function()&#123;</div><div class="line">            console.log(this.a); //12</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">o.b.fn();</div></pre></td></tr></table></figure>
+<p>这里同样也是对象o点出来的，但是同样this并没有执行它，那你肯定会说我一开始说的那些不就都是错误的吗？其实也不是，只是一开始说的不准确，接下来我将补充一句话，我相信你就可以彻底的理解this的指向的问题。</p>
+<p>情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在js的严格版中this指向的不是window，但是我们这里不探讨严格版的问题，你想了解可以自行上网查找。</p>
+<p>情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。</p>
+<p>情况3：如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象，例子3可以证明，如果不相信，那么接下来我们继续看几个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    a:10,</div><div class="line">    b:&#123;</div><div class="line">        // a:12,</div><div class="line">        fn:function()&#123;</div><div class="line">            console.log(this.a); //undefined</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">o.b.fn();</div></pre></td></tr></table></figure>
+<p>尽管对象b中没有属性a，这个this指向的也是对象b，因为this只会指向它的上一级对象，不管这个对象中有没有this要的东西。</p>
+<h2 id="例子4："><a href="#例子4：" class="headerlink" title="例子4："></a>例子4：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var o = &#123;</div><div class="line">    a:10,</div><div class="line">    b:&#123;</div><div class="line">        a:12,</div><div class="line">        fn:function()&#123;</div><div class="line">            console.log(this.a); //undefined</div><div class="line">            console.log(this); //window</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var j = o.b.fn;</div><div class="line">j();</div></pre></td></tr></table></figure>
+<p>这里this指向的是window，是不是有些蒙了？其实是因为你没有理解一句话，这句话同样至关重要。</p>
+<p>this永远指向的是最后调用它的对象，也就是看它执行的时候是谁调用的，例子4中虽然函数fn是被对象b所引用，但是在将fn赋值给变量j的时候并没有执行所以最终指向的是window，这和例子3是不一样的，例子3是直接执行了fn。</p>
+<p>this讲来讲去其实就是那么一回事，只不过在不同的情况下指向的会有些不同，上面的总结每个地方都有些小错误，也不能说是错误，而是在不同环境下情况就会有不同，所以我也没有办法一次解释清楚，只能你慢慢地的去体会。</p>
+<h2 id="构造函数版this："><a href="#构造函数版this：" class="headerlink" title="构造函数版this："></a>构造函数版this：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function Fn()&#123;</div><div class="line">    this.user = &quot;追梦子&quot;;</div><div class="line">&#125;</div><div class="line">var a = new Fn();</div><div class="line">console.log(a.user); //追梦子</div></pre></td></tr></table></figure>
+<p>这里之所以对象a可以点出函数Fn里面的user是因为new关键字可以改变this的指向，将这个this指向对象a，为什么我说a是对象，因为用了new关键字就是创建一个对象实例，理解这句话可以想想我们的例子3，我们这里用变量a创建了一个Fn的实例（相当于复制了一份Fn到对象a里面），此时仅仅只是创建，并没有执行，而调用这个函数Fn的是对象a，那么this指向的自然是对象a，那么为什么对象Fn中会有user，因为你已经复制了一份Fn函数到对象a中，用了new关键字就等同于复制了一份。</p>
+<p>除了上面的这些以外，我们还可以自行改变this的指向，关于自行改变this的指向请看JavaScript中call,apply,bind方法的总结这篇文章，详细的说明了我们如何手动更改this的指向。</p>
+<p>更新一个小问题当this碰到return时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return &#123;&#125;;  </div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a.user); //undefined</div></pre></td></tr></table></figure>
+<p>再看一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return function()&#123;&#125;;</div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a.user); //undefined</div></pre></td></tr></table></figure>
+<p>再来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return 1;</div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a.user); //追梦子</div><div class="line"></div><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return undefined;</div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a.user); //追梦子</div></pre></td></tr></table></figure>
+<p>什么意思呢？</p>
+<p>如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么this还是指向函数的实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return undefined;</div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a); //fn &#123;user: &quot;追梦子&quot;&#125;</div></pre></td></tr></table></figure>
+<p>还有一点就是虽然null也是对象，但是在这里this还是指向那个函数的实例，因为null比较特殊。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function fn()  </div><div class="line">&#123;  </div><div class="line">    this.user = &apos;追梦子&apos;;  </div><div class="line">    return null;</div><div class="line">&#125;</div><div class="line">var a = new fn;  </div><div class="line">console.log(a.user); //追梦子</div></pre></td></tr></table></figure>
+<p>知识点补充：</p>
 <ol>
-<li>单击 import icons 按钮 导入我们准备好的svg 图标，或者Add Icons From Library引用这个网站上的一些现成图标<br><img src="http://img.blog.csdn.net/20170304173124456?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></li>
-<li>点击Generate Fonte进入设置页面，图标后面为字体的名字<br><img src="http://img.blog.csdn.net/20170304173345040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></li>
-<li>点击download按钮下载至本地，接下后只需这两个文件，拷贝至项目文件夹下<br><img src="http://img.blog.csdn.net/20170304173542835?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></li>
-<li><p>使用图标字体<br><img src="http://img.blog.csdn.net/20170304173757515?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>在页面引入<code>style.css</code><br><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;&gt;</code></li>
-</ul>
-<ul>
-<li>给标签加类名就可以所以图标字体<br><code>&lt;span class=&quot;icon-dengpao&quot;&gt;&lt;/span&gt;</code><br><img src="http://img.blog.csdn.net/20170304174043143?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></li>
-</ul>
-</li>
+<li>在严格版中的默认的this不再是window，而是undefined。</li>
+<li>new操作符会改变函数this的指向问题，虽然我们上面讲解过了，但是并没有深入的讨论这个问题，网上也很少说，所以在这里有必要说一下。</li>
 </ol>
-<h3 id="可以随意修改图标字体的大小颜色"><a href="#可以随意修改图标字体的大小颜色" class="headerlink" title="可以随意修改图标字体的大小颜色"></a>可以随意修改图标字体的大小颜色</h3><pre><code>文 章 随 便 转 载 ，请 注 明 出 处
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function fn()&#123;</div><div class="line">    this.num = 1;</div><div class="line">&#125;</div><div class="line">var a = new fn();</div><div class="line">console.log(a.num); //1</div></pre></td></tr></table></figure>
+<p>为什么this会指向a？首先new关键字会创建一个空的对象，然后会自动调用一个函数apply方法，将this指向这个空对象，这样的话函数内部的this就会被这个空的对象替代。</p>
+<h1 id="函数由谁接收执行，this就指向谁。"><a href="#函数由谁接收执行，this就指向谁。" class="headerlink" title="函数由谁接收执行，this就指向谁。"></a>函数由谁接收执行，this就指向谁。</h1>
       
     </div>
 
@@ -524,7 +527,7 @@ png图片就没必">
       
         <div class="post-tags">
           
-            <a href="/tags/html-css/" rel="tag"># html css</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -537,8 +540,8 @@ png图片就没必">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/ES6学习（1）/" rel="next" title="ES6学习（1）">
-                <i class="fa fa-chevron-left"></i> ES6学习（1）
+              <a href="/2017/07/15/APICloud框架——总结一下最近开发APP遇到的一些问题-2/" rel="next" title="APICloud框架——总结一下最近开发APP遇到的一些问题-2">
+                <i class="fa fa-chevron-left"></i> APICloud框架——总结一下最近开发APP遇到的一些问题-2
               </a>
             
           </div>
@@ -546,10 +549,6 @@ png图片就没必">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/08/一段自动转换rem的代码/" rel="prev" title="一段自动转换rem的代码">
-                一段自动转换rem的代码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -728,7 +727,7 @@ png图片就没必">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#生成自定义图标字体"><span class="nav-number">1.</span> <span class="nav-text">生成自定义图标字体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可以随意修改图标字体的大小颜色"><span class="nav-number">1.0.1.</span> <span class="nav-text">可以随意修改图标字体的大小颜色</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#例子1："><span class="nav-number">1.</span> <span class="nav-text">例子1：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子2："><span class="nav-number">2.</span> <span class="nav-text">例子2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子3："><span class="nav-number">3.</span> <span class="nav-text">例子3：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子4："><span class="nav-number">4.</span> <span class="nav-text">例子4：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数版this："><span class="nav-number">5.</span> <span class="nav-text">构造函数版this：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数由谁接收执行，this就指向谁。"><span class="nav-number"></span> <span class="nav-text">函数由谁接收执行，this就指向谁。</span></a></div>
             
 
           </div>
