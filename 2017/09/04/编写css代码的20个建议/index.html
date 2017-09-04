@@ -1,0 +1,1180 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="明白何谓Margin Collapse不同于其他很多属性，盒模型中垂直方向上的Margin会在相遇时发生崩塌，也就是说当某个元素的底部Margin与另一个元素的顶部Margin相邻时，只有二者中的较大值会被保留下来，可以从下面这个简单的例子来学习:
+1234567891011121314.square &amp;#123;       width: 80px;       height: 80px;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编写css代码的20个建议">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/编写css代码的20个建议/index.html">
+<meta property="og:site_name" content="Mr.Yuan">
+<meta property="og:description" content="明白何谓Margin Collapse不同于其他很多属性，盒模型中垂直方向上的Margin会在相遇时发生崩塌，也就是说当某个元素的底部Margin与另一个元素的顶部Margin相邻时，只有二者中的较大值会被保留下来，可以从下面这个简单的例子来学习:
+1234567891011121314.square &amp;#123;       width: 80px;       height: 80px;">
+<meta property="og:updated_time" content="2017-09-04T13:42:23.961Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编写css代码的20个建议">
+<meta name="twitter:description" content="明白何谓Margin Collapse不同于其他很多属性，盒模型中垂直方向上的Margin会在相遇时发生崩塌，也就是说当某个元素的底部Margin与另一个元素的顶部Margin相邻时，只有二者中的较大值会被保留下来，可以从下面这个简单的例子来学习:
+1234567891011121314.square &amp;#123;       width: 80px;       height: 80px;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/04/编写css代码的20个建议/"/>
+
+
+
+
+
+  <title> 编写css代码的20个建议 | Mr.Yuan </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b2e221af5084d08de25e43bf4b489f81";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mr.Yuan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端路上的一只小菜鸟</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/04/编写css代码的20个建议/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Yuan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                编写css代码的20个建议
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-04T21:41:17+08:00">
+                2017-09-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/09/04/编写css代码的20个建议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/04/编写css代码的20个建议/" class="leancloud_visitors" data-flag-title="编写css代码的20个建议">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">字数统计</span>
+                  
+                    <span title="字数统计" }}">
+                      2,958
+                    </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">阅读时长</span>
+                  
+                    <span title="阅读时长" }}">
+                      11
+                    </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="明白何谓Margin-Collapse"><a href="#明白何谓Margin-Collapse" class="headerlink" title="明白何谓Margin Collapse"></a>明白何谓Margin Collapse</h1><p>不同于其他很多属性，盒模型中垂直方向上的Margin会在相遇时发生崩塌，也就是说当某个元素的底部Margin与另一个元素的顶部Margin相邻时，只有二者中的较大值会被保留下来，可以从下面这个简单的例子来学习:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.square &#123;   </div><div class="line">    width: 80px;   </div><div class="line">    height: 80px;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">.red &#123;   </div><div class="line">    background-color: #F44336;   </div><div class="line">    margin-bottom: 40px;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">.blue &#123;   </div><div class="line">    background-color: #2196F3;   </div><div class="line">    margin-top: 30px;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在上述例子中我们会发现，红色和蓝色方块的外边距并没有相加得到70px，而是只有红色的下外边距保留了下来。我们可以使用一些方法来避免这种行为，不过建议来说还是尽量统一使用margin-bottom属性，这样就显得和谐多了。</p>
+<h1 id="使用Flexbox进行布局"><a href="#使用Flexbox进行布局" class="headerlink" title="使用Flexbox进行布局"></a>使用Flexbox进行布局</h1><p>在传统的布局中我们习惯使用Floats或者inline-blocks，不过它们更适合于格式化文档，而不是整个网站。而Flexbox则是专门的用于进行布局的工具。Flexbox模型允许开发者使用很多便捷可扩展的属性来进行布局，估计你一旦用上就舍不得了:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container &#123;   </div><div class="line">    display: flex;   </div><div class="line">    /* Don&apos;t forget to add prefixes for Safari */display: -webkit-flex;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们已经在Tutorialzine上提供了很多的关于Flexbox的介绍与小技巧，譬如5 Flexbox Techniques You Need to Know About。</p>
+<h1 id="使用CSS-Reset"><a href="#使用CSS-Reset" class="headerlink" title="使用CSS Reset"></a>使用CSS Reset</h1><p> 虽然这些年来随着浏览器的迅速发展与规范的统一，浏览器特性碎片化的情况有所改善，但是在不同的浏览器之间仍然存在着很多的行为差异。而解决这种问题的最好的办法就是使用某个CSS Reset来为所有的元素设置统一的样式，保证你能在相对统一干净的样式表的基础上开始工作。目前流行的Reset库有 normalize.css, minireset以及 ress ，它们都可以修正很多已知的浏览器之间的差异性。而如果你不打算用某个外在的库，那么建议可以使用如下的基本规则:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">* &#123;   </div><div class="line">    margin: 0;   </div><div class="line">    padding: 0;   </div><div class="line">    box-sizing: border-box;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面的规则看起来没啥用，不过如果不同的浏览器在默认情况下为你设置了不同的外边距/内边距的默认值，还是会挺麻烦的。</p>
+<h1 id="一切应为Border-box"><a href="#一切应为Border-box" class="headerlink" title="一切应为Border-box"></a>一切应为Border-box</h1><p>虽然很多初学者并不了解box-sizing这个属性，但是它确实相当的重要。而最好的理解它的方式就是看看它的两种取值:</p>
+<ul>
+<li>默认值为content-box，即当我们设置某个元素的heght/width属性时，仅仅会作用于其内容尺寸。而所有的内边距与边都是在其之上的累加，譬如某个<code>&lt;div&gt;</code>标签设置为宽100，内边距为10，那么最终元素会占用120(100 + 2*10)的像素。</li>
+<li>border-box:内边距与边是包含在了width/height之内，譬如设置了width:100px的<code>&lt;div&gt;</code>无论其内边距或者边长设置为多少，其占有的大小都是100px。</li>
+</ul>
+<p>将元素设置为border-box会很方便你进行样式布局，这样的话你就可以在父元素设置高宽限制而不担心子元素的内边距或者边打破了这种限制。</p>
+<h1 id="以背景图方式使用Images"><a href="#以背景图方式使用Images" class="headerlink" title="以背景图方式使用Images"></a>以背景图方式使用Images</h1><p>如果需要在响应式的环境下展示图片，有个简单的小技巧就是使用该图片作为某个<code>&lt;div&gt;</code>的背景图而不是直接使用img标签。基于这种方式配合上background-size与background-position这两个属性，可以很方便地按比例缩放:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">img &#123;   </div><div class="line">    width: 300px;   </div><div class="line">    height: 200px;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">div &#123;   </div><div class="line">    width: 300px;   </div><div class="line">    height: 200px;   </div><div class="line">    background: url(&apos;http://cdn.tutorialzine.com/wp-content/uploads/2016/08/bicycle.jpg&apos;);   </div><div class="line">    background-position: center center;   </div><div class="line">    background-size: cover;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">section&#123;   </div><div class="line">    float: left;   </div><div class="line">    margin: 15px;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>不过这种方式也是存在缺陷的，譬如你无法设置图片的懒加载、图片无法被搜索引擎或者其他类似的工具抓取到，有个不错的属性叫object-fit可以解决这个问题，不过该属性目前的浏览器支持并不是很完善。</p>
+<h1 id="注释格式优化"><a href="#注释格式优化" class="headerlink" title="注释格式优化"></a>注释格式优化</h1><p>CSS虽然谈不上一门编程语言但是其仍然需要添加注释以保障整体代码的可读性，只要添加些简单的注释不仅可以方便你更好地组织整个样式表还能够让你的同事或者未来的自己更好地理解。对于CSS中整块的注释或者使用在Media-Query中的注释，建议是使用如下形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/*---------------   </div><div class="line">    #Header   </div><div class="line">---------------*/header &#123; &#125;header nav &#123; &#125;/*---------------   </div><div class="line">    #Slideshow   </div><div class="line">---------------*/.slideshow &#123; &#125;</div></pre></td></tr></table></figure>
+<p>而设计的细节说明或者一些不重要的组件可以用如下单行注释的方式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/*   Footer Buttons   */   .footer button &#123; &#125;   </div><div class="line"></div><div class="line">.footer button:hover &#123; &#125;</div></pre></td></tr></table></figure>
+<p>同时，不要忘了CSS中是没有//这种注释方式的:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/*  Do  */p &#123;   </div><div class="line">    padding: 15px;   </div><div class="line">    /*border: 1px solid #222;*/   &#125;/*  Don&apos;t  */p &#123;   </div><div class="line">    padding: 15px;   </div><div class="line">    // border: 1px solid #222;     &#125;</div></pre></td></tr></table></figure>
+<h1 id="使用Kebab-case命名变量"><a href="#使用Kebab-case命名变量" class="headerlink" title="使用Kebab-case命名变量"></a>使用Kebab-case命名变量</h1><p>对于样式类名或者ID名的命名都需要在多个单词之间添加-符号，CSS本身是大小写不敏感的因此你是用不了camelCase的，另一方面，很久之前也不支持下划线，所以现在的默认的命名方式就是使用-:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/*  Do     */   .footer-column-left &#123; &#125;   </div><div class="line"></div><div class="line">/*  Don&apos;t  */   .footerColumnLeft &#123; &#125;   </div><div class="line"></div><div class="line">.footer_column_left &#123; &#125;</div></pre></td></tr></table></figure>
+<p>而涉及到具体的变量命名规范时，建议是使用BEM规范，只要遵循一些简单的原则即可以保证基于组件风格的命名一致性。你也可以参考CSS Tricks来获得更多的细节描述。</p>
+<h1 id="避免重复代码"><a href="#避免重复代码" class="headerlink" title="避免重复代码"></a>避免重复代码</h1><p>大部分元素的CSS属性都是从DOM树根部继承而来，这也是其命名为级联样式表的由来。我们以font属性为例，该属性往往是继承自父属性，因此我们并不需要再单独地为元素设置该属性。我们只需要在html或者body中添加该属性然后使其层次传递下去即可:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html &#123;   </div><div class="line">    font: normal 16px/1.4 sans-serif;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="使用transform添加CSS-Animations"><a href="#使用transform添加CSS-Animations" class="headerlink" title="使用transform添加CSS Animations"></a>使用transform添加CSS Animations</h1><p>不建议直接改变元素的width与height属性或者left/top/bottom/right这些属性来达到动画效果，而应该优先使用transform()属性来提供更平滑的变换效果，并且能使得代码的可读性会更好:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.ball &#123;   </div><div class="line">    left: 50px;   </div><div class="line">    transition: 0.4s ease-out;   </div><div class="line">&#125;/* Not Cool*/.ball.slide-out &#123;   </div><div class="line">    left: 500px;   </div><div class="line">&#125;/* Cool*/.ball.slide-out &#123;   </div><div class="line">    transform: translateX(450px);   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Transform的几个属性translate、rotate、scale都具有比较好的浏览器兼容性可以放心使用。</p>
+<h1 id="不要重复造轮子"><a href="#不要重复造轮子" class="headerlink" title="不要重复造轮子"></a>不要重复造轮子</h1><p>现在CSS社区已经非常庞大，并且不断地有新的各式各样的库开源出来。这些库可以帮助我们解决从小的代码片到用于构建完整的响应式应用的全框架。所以如果下次你再碰到什么CSS问题的时候，在打算撸起袖子自己上之前可以尝试在GitHUB或者CodePen上搜索可行方案。</p>
+<h1 id="尽可能使用低优先级的选择器"><a href="#尽可能使用低优先级的选择器" class="headerlink" title="尽可能使用低优先级的选择器"></a>尽可能使用低优先级的选择器</h1><p>并不是所有的CSS选择器的优先级都一样，很多初学者在使用CSS选择器的时候都是考虑以新的特性去复写全部的继承特性，不过这一点在某个元素多状态时就麻烦了，譬如下面这个例子:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">a&#123;   </div><div class="line">    color: #fff;   </div><div class="line">    padding: 15px;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">a#blue-btn &#123;   </div><div class="line">    background-color: blue;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">a.active &#123;   </div><div class="line">    background-color: red;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们本来希望将.active类添加到按钮上然后使其显示为红色，不过在上面这个例子中很明显起不了作用，因为button已经以ID选择器设置过了背景色，也就是所谓的Higher Selector Specificity。一般来说，选择器的优先级顺序为：ID(#id) &gt; Class(.class) &gt; Type(header)</p>
+<h1 id="避免使用-important"><a href="#避免使用-important" class="headerlink" title="避免使用!important"></a>避免使用!important</h1><p>认真的说，千万要避免使用!important，这可能会导致你在未来的开发中无尽的属性重写，你应该选择更合适的CSS选择器。而唯一的可以使用!important属性的场景就是当你想去复写某些行内样式的时候，不过行内样式本身也是需要避免的。</p>
+<p>使用text-transform属性设置文本大写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;movie-poster&quot;&gt;Star Wars: The Force Awakens&lt;/div&gt;   </div><div class="line"></div><div class="line">.movie-poster &#123;   </div><div class="line">    text-transform: uppercase;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Em-Rem-以及-Pixel"><a href="#Em-Rem-以及-Pixel" class="headerlink" title="Em, Rem, 以及 Pixel"></a>Em, Rem, 以及 Pixel</h1><p>已经有很多关于人们应该如何使用em，rem，以及px作为元素尺寸与文本尺寸的讨论，而笔者认为，这三个尺寸单位都有其适用与不适用的地方。不同的开发与项目都有其特定的设置，因此并没有通用的规则来决定应该使用哪个单位，这里是我总结的几个考虑:</p>
+<ul>
+<li>em – 其基本单位即为当前元素的font-size值，经常适用于media-queries中，em是特别适用于响应式开发中。</li>
+<li>rem – 其是相对于html属性的单位，可以保证文本段落真正的响应式尺寸特性。</li>
+<li>px – Pixels 并没有任何的动态扩展性，它们往往用于描述绝对单位，并且可以在设置值与最终的显示效果之间保留一定的一致性。</li>
+</ul>
+<h1 id="在大型项目中使用预处理器"><a href="#在大型项目中使用预处理器" class="headerlink" title="在大型项目中使用预处理器"></a>在大型项目中使用预处理器</h1><p>估计你肯定听说过 Sass, Less, PostCSS, Stylus这些预处理器与对应的语法。Preprocessors可以允许我们将未来的CSS特性应用在当前的代码开发中，譬如变量支持、函数、嵌套式的选择器以及很多其他的特性，这里我们以Sass为例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$accent-color: #2196F3;   </div><div class="line"></div><div class="line">a &#123;   </div><div class="line">    padding: 10px 15px;   </div><div class="line">    background-color: $accent-color;   </div><div class="line">&#125;   </div><div class="line"></div><div class="line">a:hover &#123;   </div><div class="line">    background-color: darken($accent-color,10%);   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="使用Autoprefixers来提升浏览器兼容性"><a href="#使用Autoprefixers来提升浏览器兼容性" class="headerlink" title="使用Autoprefixers来提升浏览器兼容性"></a>使用Autoprefixers来提升浏览器兼容性</h1><p>使用特定的浏览器前缀是CSS开发中常见的工作之一，不同的浏览器、不同的属性对于前缀的要求也不一样，这就使得我们无法在编码过程中记住所有的前缀规则。并且在写样式代码的时候还需要加上特定的浏览器前缀支持也是个麻烦活，幸亏现在也是有很多工具可以辅助我们进行这样的开发:</p>
+<ul>
+<li>Online tools: Autoprefixer</li>
+<li>Text editor plugins: Sublime Text, Atom</li>
+<li>Libraries: Autoprefixer (PostCSS)</li>
+</ul>
+<h1 id="在生产环境下使用Minified代码"><a href="#在生产环境下使用Minified代码" class="headerlink" title="在生产环境下使用Minified代码"></a>在生产环境下使用Minified代码</h1><p>为了提升页面的加载速度，在生产环境下我们应该默认使用压缩之后的资源代码。在压缩的过程中，会将所有的空白与重复剔除掉从而减少整个文件的体积大小。当然，经过压缩之后的代码毫无可读性，因此在开发阶段我们还是应该使用普通的版本。对于CSS的压缩有很多的现行工具:</p>
+<ul>
+<li>Online tools – CSS Minifier (API included), CSS Compressor</li>
+<li>Text editor plugins: Sublime Text, Atom</li>
+<li>Libraries: Minfiy (PHP), CSSO and CSSNano (PostCSS, Grunt, Gulp)</li>
+</ul>
+<h1 id="多参阅Caniuse"><a href="#多参阅Caniuse" class="headerlink" title="多参阅Caniuse"></a>多参阅Caniuse</h1><p>不同的浏览器在兼容性上差异很大，因此如果我们可以针对我们所需要适配的浏览器，在caniuse上我们可以查询某个特性的浏览器版本适配性，是否需要添加特定的前缀或者在某个平台上是否存在Bug等等。不过光光使用caniuse肯定是不够的，我们还需要使用些额外的服务来进行检测。</p>
+<h1 id="Validate-校验"><a href="#Validate-校验" class="headerlink" title="Validate:校验"></a>Validate:校验</h1><p>对于CSS的校验可能不如HTML校验或者JavaScript校验那么重要，不过在正式发布之前用Lint工具校验一波你的CSS代码还是很有意义的。它会告诉你代码中潜在的错误，提示你一些不符合最佳实践的代码以及给你一些提升代码性能的建议。就像Minifers与Autoprefixers，也有很多可用的工具:</p>
+<ul>
+<li>Online tools: W3 Validator, CSS Lint</li>
+<li>Text editor plugins: Sublime Text, Atom</li>
+<li>Libraries: stylelint (Node.js, PostCSS), css-validator (Node.js)</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/15/仿微信联系人列表滑动字母索引/" rel="next" title="仿微信联系人列表滑动字母索引">
+                <i class="fa fa-chevron-left"></i> 仿微信联系人列表滑动字母索引
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg"
+               alt="Mr.Yuan" />
+          <p class="site-author-name" itemprop="name">Mr.Yuan</p>
+           
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/mr-yuan/" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/qq_22844483" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://shop206012892.taobao.com/" target="_blank" title="IT资源库">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  IT资源库
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#明白何谓Margin-Collapse"><span class="nav-number">1.</span> <span class="nav-text">明白何谓Margin Collapse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Flexbox进行布局"><span class="nav-number">2.</span> <span class="nav-text">使用Flexbox进行布局</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用CSS-Reset"><span class="nav-number">3.</span> <span class="nav-text">使用CSS Reset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一切应为Border-box"><span class="nav-number">4.</span> <span class="nav-text">一切应为Border-box</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以背景图方式使用Images"><span class="nav-number">5.</span> <span class="nav-text">以背景图方式使用Images</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释格式优化"><span class="nav-number">6.</span> <span class="nav-text">注释格式优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Kebab-case命名变量"><span class="nav-number">7.</span> <span class="nav-text">使用Kebab-case命名变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#避免重复代码"><span class="nav-number">8.</span> <span class="nav-text">避免重复代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用transform添加CSS-Animations"><span class="nav-number">9.</span> <span class="nav-text">使用transform添加CSS Animations</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不要重复造轮子"><span class="nav-number">10.</span> <span class="nav-text">不要重复造轮子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尽可能使用低优先级的选择器"><span class="nav-number">11.</span> <span class="nav-text">尽可能使用低优先级的选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#避免使用-important"><span class="nav-number">12.</span> <span class="nav-text">避免使用!important</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Em-Rem-以及-Pixel"><span class="nav-number">13.</span> <span class="nav-text">Em, Rem, 以及 Pixel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在大型项目中使用预处理器"><span class="nav-number">14.</span> <span class="nav-text">在大型项目中使用预处理器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Autoprefixers来提升浏览器兼容性"><span class="nav-number">15.</span> <span class="nav-text">使用Autoprefixers来提升浏览器兼容性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在生产环境下使用Minified代码"><span class="nav-number">16.</span> <span class="nav-text">在生产环境下使用Minified代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多参阅Caniuse"><span class="nav-number">17.</span> <span class="nav-text">多参阅Caniuse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Validate-校验"><span class="nav-number">18.</span> <span class="nav-text">Validate:校验</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Yuan</span>
+</div>
+
+
+<div class="powered-by">
+  <a class="theme-link" href="/"></a> 开放空间
+</div>
+
+<div class="theme-info">
+  个人专属
+  
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "bf3632f1760d452db966d2e5ab9d0ca1",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="local-search-pop-overlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("kcp1BbR8w1z6ewMXzL5dcfjj-gzGzoHsz", "wNooKxS00kub9AoYNOo61oui");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
