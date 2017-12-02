@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="VUE," />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -87,46 +87,22 @@
 
 
 
-<meta name="description" content="安装
-1npm i vue-resource --save-dev
-
-引入
-1import Vueresource from &amp;apos;vue-resource&amp;apos;
-
-注册
-1Vue.use(Vueresource)
-
-使用
-123456789101112131415161718192021// 便捷方法this.$http.get(&amp;#123;url:&amp;apos;api/index&amp;">
+<meta name="description" content="axios现在以及是尤大大推荐使用的了,官方不在维护vue-reresource.
+由于是地第一次使用axios, 在使用过程中猜了很大的坑
+首先我们使用vue-cli创建的项目, 访问接口肯定是跨域了, 因为我们的本地服务默认的地址一般是localhost:8080   我们的服务器端肯定不是这个, 所以就形成跨域访问, axios不支持jsonp, 所以我们就要使用http-proxy-mid">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue-rsource的使用">
-<meta property="og:url" content="http://yoursite.com/2017/11/21/vue-rsource的使用/index.html">
+<meta property="og:title" content="关于vue2.x使用axios以及http-proxy-middleware代理处理跨域的问题">
+<meta property="og:url" content="http://yoursite.com/2017/12/02/关于vue2-x使用axios以及http-proxy-middleware代理处理跨域的问题/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="安装
-1npm i vue-resource --save-dev
-
-引入
-1import Vueresource from &amp;apos;vue-resource&amp;apos;
-
-注册
-1Vue.use(Vueresource)
-
-使用
-123456789101112131415161718192021// 便捷方法this.$http.get(&amp;#123;url:&amp;apos;api/index&amp;">
-<meta property="og:updated_time" content="2017-11-21T14:47:27.898Z">
+<meta property="og:description" content="axios现在以及是尤大大推荐使用的了,官方不在维护vue-reresource.
+由于是地第一次使用axios, 在使用过程中猜了很大的坑
+首先我们使用vue-cli创建的项目, 访问接口肯定是跨域了, 因为我们的本地服务默认的地址一般是localhost:8080   我们的服务器端肯定不是这个, 所以就形成跨域访问, axios不支持jsonp, 所以我们就要使用http-proxy-mid">
+<meta property="og:updated_time" content="2017-12-02T09:46:46.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue-rsource的使用">
-<meta name="twitter:description" content="安装
-1npm i vue-resource --save-dev
-
-引入
-1import Vueresource from &amp;apos;vue-resource&amp;apos;
-
-注册
-1Vue.use(Vueresource)
-
-使用
-123456789101112131415161718192021// 便捷方法this.$http.get(&amp;#123;url:&amp;apos;api/index&amp;">
+<meta name="twitter:title" content="关于vue2.x使用axios以及http-proxy-middleware代理处理跨域的问题">
+<meta name="twitter:description" content="axios现在以及是尤大大推荐使用的了,官方不在维护vue-reresource.
+由于是地第一次使用axios, 在使用过程中猜了很大的坑
+首先我们使用vue-cli创建的项目, 访问接口肯定是跨域了, 因为我们的本地服务默认的地址一般是localhost:8080   我们的服务器端肯定不是这个, 所以就形成跨域访问, axios不支持jsonp, 所以我们就要使用http-proxy-mid">
 
 
 
@@ -154,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/21/vue-rsource的使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/02/关于vue2-x使用axios以及http-proxy-middleware代理处理跨域的问题/"/>
 
 
 
 
 
-  <title> vue-rsource的使用 | Mr.Yuan </title>
+  <title> 关于vue2.x使用axios以及http-proxy-middleware代理处理跨域的问题 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -350,7 +326,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/21/vue-rsource的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/关于vue2-x使用axios以及http-proxy-middleware代理处理跨域的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -371,7 +347,7 @@
             
             
               
-                vue-rsource的使用
+                关于vue2.x使用axios以及http-proxy-middleware代理处理跨域的问题
               
             
           </h1>
@@ -386,8 +362,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T22:46:51+08:00">
-                2017-11-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T17:43:09+08:00">
+                2017-12-02
               </time>
             
 
@@ -427,7 +403,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/11/21/vue-rsource的使用/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/12/02/关于vue2-x使用axios以及http-proxy-middleware代理处理跨域的问题/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -436,7 +412,7 @@
 
           
           
-             <span id="/2017/11/21/vue-rsource的使用/" class="leancloud_visitors" data-flag-title="vue-rsource的使用">
+             <span id="/2017/12/02/关于vue2-x使用axios以及http-proxy-middleware代理处理跨域的问题/" class="leancloud_visitors" data-flag-title="关于vue2.x使用axios以及http-proxy-middleware代理处理跨域的问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -460,7 +436,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      430
+                      666
                     </span>
               
 
@@ -476,7 +452,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      2
+                      3
                     </span>
               
             </div>
@@ -495,66 +471,18 @@
       
 
       
-        <ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i vue-resource --save-dev</div></pre></td></tr></table></figure>
-</li>
-<li><p>引入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import Vueresource from &apos;vue-resource&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>注册</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.use(Vueresource)</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 便捷方法</div><div class="line">this.$http.get(&#123;url:&apos;api/index&apos;, headers:&#123;Authorization:&apos;Basic Yxsdlfjui&apos;&#125;&#125;)</div><div class="line">.them((data) =&gt; &#123;</div><div class="line">    // 请求成功</div><div class="line">&#125;, (error) =&gt; &#123;</div><div class="line">    // 请求失败</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 底层方法</div><div class="line">Vue.http(&#123;</div><div class="line">    url:&apos;api/index2&apos;,</div><div class="line">    method: &apos;POST&apos;,</div><div class="line">    data: &#123;</div><div class="line">        param: 1</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">.then((data) =&gt; &#123;</div><div class="line">    // 请求成功</div><div class="line">&#125;, (error) =&gt; &#123;</div><div class="line">    // 请求失败</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>便捷方法</p>
-</li>
-</ul>
-<p>便捷方法是对底层方法的封装</p>
-<p><code>this.$http.get(url,{data},{opation})</code></p>
-<ul>
-<li><p>参数</p>
-<ul>
-<li>url: 字符串, 请求地址</li>
-<li>data: 对象或者字符串</li>
-<li>opation: 对象, 传入的对象来控制请求</li>
-</ul>
-</li>
-<li><p>返回的response对象</p>
-<ul>
-<li>data(对象或者字符串): 服务器返回的数据, 已用JSON.parse解析</li>
-<li>ok(布尔值):   当HTTP响应码在200-299区间是true, 表示响应成功</li>
-<li>status(数值): HTTP响应码</li>
-<li>statusText(字符串): HTTP响应状态文本描述</li>
-<li>headers(函数): 响应头信息</li>
-<li></li>
-</ul>
-</li>
-<li><p>返回Promise对象<br>执行HTTP调用后会返回一个Promise对象, 该对象提供了then, catch, finally注册回调函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var promise = this.$http.post(&apos;api/index&apos;);</div><div class="line">promise.this(function(response)&#123;</div><div class="line">    // 成功回调</div><div class="line">&#125;, function(error)&#123;</div><div class="line">    // 失败回调</div><div class="line">&#125;)</div><div class="line"></div><div class="line">promise.catch(function(error)&#123;</div><div class="line">    // 失败回调</div><div class="line">&#125;)</div><div class="line">promise.finally(function()&#123;</div><div class="line">    // 失败或者成功后都会执行此函数</div><div class="line">&#125;)</div><div class="line">// 所有回调函数的`this`都指向组件实例</div></pre></td></tr></table></figure>
-</li>
-<li><p>JSONP请求</p>
-<ul>
-<li>设置<code>methos</code>的值为<code>JSONP</code>即可</li>
-<li><code>this.$http.jsonp()</code>也可以</li>
-</ul>
-</li>
-<li><p>修改发给服务器端的数据类型</p>
-</li>
-</ul>
-<p>默认情况下, 发送给服务器请求头的<code>Content-Type</code>为<code>application/json</code></p>
-<p>有时我们需要将数据提交为指定的类型</p>
-<ol>
-<li><p>全局headers配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.http.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>实例配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">this.$http.post(</div><div class="line">    &apos;api/index&apos;,</div><div class="line">    // 成功回调</div><div class="line">    function(data, status, request) &#123;</div><div class="line">        if(status === 200) &#123;</div><div class="line">            // 成功</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // 实例配置</div><div class="line">    &#123;</div><div class="line">        headers: &#123;</div><div class="line">            &apos;Content-Type&apos;:&apos;multipart/form-data&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>实力配置优先于全局配置</p>
-
+        <p>axios现在以及是尤大大推荐使用的了,官方不在维护vue-reresource.</p>
+<p>由于是地第一次使用axios, 在使用过程中猜了很大的坑</p>
+<p>首先我们使用vue-cli创建的项目, 访问接口肯定是跨域了, 因为我们的本地服务默认的地址一般是localhost:8080   我们的服务器端肯定不是这个, 所以就形成跨域访问, axios不支持jsonp, 所以我们就要使用http-proxy-middleware中间件做代理,<br><a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="external">http-proxy-middleware的github</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm i axios --save-dev</div><div class="line"></div><div class="line">npm install --save-dev http-proxy-middleware</div><div class="line"></div><div class="line">// vue-cli 已经把http-proxy-middleware写在项目依赖里面了</div></pre></td></tr></table></figure>
+<h1 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h1><p>在项目的<code>src/main.js</code>引入axios<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import axios from &apos;axios&apos;</div><div class="line"></div><div class="line">Vue.prototype.$axios = axios;</div><div class="line">// axios 不支持Vue.use(axios)</div></pre></td></tr></table></figure></p>
+<h1 id="配置http-proxy-middleware本地代理"><a href="#配置http-proxy-middleware本地代理" class="headerlink" title="配置http-proxy-middleware本地代理"></a>配置http-proxy-middleware本地代理</h1><p>打开<code>config/index.js</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;)</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">    build: &#123;</div><div class="line">        env: require(&apos;./prod.env&apos;),</div><div class="line">        index: path.resolve(__dirname, &apos;../dist/index.html&apos;),</div><div class="line">        assetsRoot: path.resolve(__dirname, &apos;../dist&apos;),</div><div class="line">        assetsSubDirectory: &apos;static&apos;,</div><div class="line">        assetsPublicPath: &apos;./&apos;,</div><div class="line">        productionSourceMap: false,</div><div class="line">        // Gzip off by default as many popular static hosts such as</div><div class="line">        // Surge or Netlify already gzip all static assets for you.</div><div class="line">        // Before setting to `true`, make sure to:</div><div class="line">        // npm install --save-dev compression-webpack-plugin</div><div class="line">        productionGzip: false,</div><div class="line">        productionGzipExtensions: [&apos;js&apos;, &apos;css&apos;],</div><div class="line">        // Run the build command with an extra argument to</div><div class="line">        // View the bundle analyzer report after build finishes:</div><div class="line">        // `npm run build --report`</div><div class="line">        // Set to `true` or `false` to always turn it on or off</div><div class="line">        bundleAnalyzerReport: process.env.npm_config_report</div><div class="line">    &#125;,</div><div class="line">    dev: &#123;</div><div class="line">        env: require(&apos;./dev.env&apos;),</div><div class="line">        port: 8080,</div><div class="line">        autoOpenBrowser: true,</div><div class="line">        assetsSubDirectory: &apos;static&apos;,</div><div class="line">        assetsPublicPath: &apos;/&apos;,</div><div class="line">        proxyTable: &#123;</div><div class="line">	        修改这里修改这里修改这里</div><div class="line">	    &#125;,</div><div class="line">        // CSS Sourcemaps off by default because relative paths are &quot;buggy&quot;</div><div class="line">        // with this option, according to the CSS-Loader README</div><div class="line">        // (https://github.com/webpack/css-loader#sourcemaps)</div><div class="line">        // In our experience, they generally work as expected,</div><div class="line">        // just be aware of this issue when enabling this option.</div><div class="line">        cssSourceMap: false</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 这里是默认的配置, 找到线面的dev对象里面的proxyTable修改 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">proxyTable: &#123;</div><div class="line">   &apos;/api&apos;: &#123;</div><div class="line">         target:&apos;http://www.baidu.com/api&apos;,</div><div class="line">         changeOrigin:true,</div><div class="line">         pathRewrite:&#123;</div><div class="line">             &apos;^/api&apos;: &apos;&apos;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p><code>target</code> 的参数就是你要访问的服务器地址, 你在代码里面写<code>/api</code>就等于写了这个地址 , 比如我要访问<code>http://www.baidu.com/api/login</code>这个接口在代码里面只需写<code>/api/login</code>就可以了 </p>
+<p>至于<code>build/dev.server.js</code> 已经无需修改了, 里面已经有封装好了方法了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// proxy api requests</div><div class="line">Object.keys(proxyTable).forEach(function (context) &#123;</div><div class="line">  var options = proxyTable[context]</div><div class="line">  if (typeof options === &apos;string&apos;) &#123;</div><div class="line">    options = &#123; target: options &#125;</div><div class="line">  &#125;</div><div class="line">  app.use(proxyMiddleware(options.filter || context, options))</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>网上好多的解决方案都是在<code>build/dev.server.js</code>里面自己在加内容, 完全不用了</p>
+<h1 id="做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev"><a href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev" class="headerlink" title="做完上述操作之后一定要重启服务ctrl+c然后npm run dev"></a>做完上述操作之后一定要重启服务<code>ctrl+c</code>然后<code>npm run dev</code></h1><h1 id="做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-1"><a href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-1" class="headerlink" title="做完上述操作之后一定要重启服务ctrl+c然后npm run dev"></a>做完上述操作之后一定要重启服务<code>ctrl+c</code>然后<code>npm run dev</code></h1><h1 id="做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-2"><a href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-2" class="headerlink" title="做完上述操作之后一定要重启服务ctrl+c然后npm run dev"></a>做完上述操作之后一定要重启服务<code>ctrl+c</code>然后<code>npm run dev</code></h1><h1 id="然后我们就可以用axios访问接口了"><a href="#然后我们就可以用axios访问接口了" class="headerlink" title="然后我们就可以用axios访问接口了"></a>然后我们就可以用axios访问接口了</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">this.$axios(&#123;</div><div class="line">	method: &quot;POST&quot;,</div><div class="line">	withCredentials: false,</div><div class="line">	url: &quot;/api/login&quot;,</div><div class="line">	data: &#123;</div><div class="line">		name: &quot;1511328705UZVQ&quot;,</div><div class="line">		psd: &quot;123456&quot;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">   .then(function(res) &#123;</div><div class="line">     console.log(res);</div><div class="line">   &#125;)</div><div class="line">   .catch(function(err) &#123;</div><div class="line">     console.log(err);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -598,7 +526,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/VUE/" rel="tag"># VUE</a>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
         </div>
       
@@ -611,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/19/从头开始开发一个vue幻灯片组件/" rel="next" title="从头开始开发一个vue幻灯片组件">
-                <i class="fa fa-chevron-left"></i> 从头开始开发一个vue幻灯片组件
+              <a href="/2017/12/02/mock-js模拟生成i假数据/" rel="next" title="mock.js模拟生成i假数据">
+                <i class="fa fa-chevron-left"></i> mock.js模拟生成i假数据
               </a>
             
           </div>
@@ -620,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/02/mock-js模拟生成i假数据/" rel="prev" title="mock.js模拟生成i假数据">
-                mock.js模拟生成i假数据 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -695,8 +619,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/32fa828ba61ea8d31ddb8e26940a304e251f5813.jpg"
@@ -783,6 +716,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引入axios"><span class="nav-number">2.</span> <span class="nav-text">引入axios</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置http-proxy-middleware本地代理"><span class="nav-number">3.</span> <span class="nav-text">配置http-proxy-middleware本地代理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev"><span class="nav-number">4.</span> <span class="nav-text">做完上述操作之后一定要重启服务ctrl+c然后npm run dev</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-1"><span class="nav-number">5.</span> <span class="nav-text">做完上述操作之后一定要重启服务ctrl+c然后npm run dev</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做完上述操作之后一定要重启服务ctrl-c然后npm-run-dev-2"><span class="nav-number">6.</span> <span class="nav-text">做完上述操作之后一定要重启服务ctrl+c然后npm run dev</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#然后我们就可以用axios访问接口了"><span class="nav-number">7.</span> <span class="nav-text">然后我们就可以用axios访问接口了</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
