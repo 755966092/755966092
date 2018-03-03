@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="JS," />
 
 
 
@@ -87,16 +87,31 @@
 
 
 
-<meta name="description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
+<meta name="description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
+
+基本类型值传递如同基本类型变量复制一样
+引用类型则同引用类型变量的复制一样
+
+基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一段自动转换rem的代码">
-<meta property="og:url" content="http://yoursite.com/2017/03/08/一段自动转换rem的代码/index.html">
+<meta property="og:title" content="js函数参数传递问题">
+<meta property="og:url" content="http://yoursite.com/2018/03/03/js函数参数传递问题/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
-<meta property="og:updated_time" content="2017-03-08T15:41:39.459Z">
+<meta property="og:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
+
+基本类型值传递如同基本类型变量复制一样
+引用类型则同引用类型变量的复制一样
+
+基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
+<meta property="og:updated_time" content="2018-03-03T05:47:33.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一段自动转换rem的代码">
-<meta name="twitter:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
+<meta name="twitter:title" content="js函数参数传递问题">
+<meta name="twitter:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
+
+基本类型值传递如同基本类型变量复制一样
+引用类型则同引用类型变量的复制一样
+
+基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
 
 
 
@@ -124,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/08/一段自动转换rem的代码/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/03/js函数参数传递问题/"/>
 
 
 
 
 
-  <title> 一段自动转换rem的代码 | Mr.Yuan </title>
+  <title> js函数参数传递问题 | Mr.Yuan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -320,7 +335,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/08/一段自动转换rem的代码/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/js函数参数传递问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -341,7 +356,7 @@
             
             
               
-                一段自动转换rem的代码
+                js函数参数传递问题
               
             
           </h1>
@@ -356,8 +371,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T23:38:08+08:00">
-                2017-03-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-03T13:46:51+08:00">
+                2018-03-03
               </time>
             
 
@@ -397,7 +412,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/03/08/一段自动转换rem的代码/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2018/03/03/js函数参数传递问题/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -406,7 +421,7 @@
 
           
           
-             <span id="/2017/03/08/一段自动转换rem的代码/" class="leancloud_visitors" data-flag-title="一段自动转换rem的代码">
+             <span id="/2018/03/03/js函数参数传递问题/" class="leancloud_visitors" data-flag-title="js函数参数传递问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -430,7 +445,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      152
+                      485
                     </span>
               
 
@@ -446,7 +461,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      1
+                      2
                     </span>
               
             </div>
@@ -465,8 +480,20 @@
       
 
       
-        <h1 id="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"><a href="#写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了" class="headerlink" title="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"></a>写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了</h1><h1 id="一定要注意，移动端页面头部一定要引入"><a href="#一定要注意，移动端页面头部一定要引入" class="headerlink" title="一定要注意，移动端页面头部一定要引入"></a>一定要注意，移动端页面头部一定要引入</h1><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&quot;/&gt;</code></p>
-<h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">                    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</div><div class="line">                    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                        <span class="keyword">var</span> clientWidth = docEl.clientWidth;</div><div class="line">                        <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</div><div class="line">                        docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">640</span>) + <span class="string">'px'</span>;</div><div class="line">                        <span class="comment">//这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单</span></div><div class="line">                    &#125;;</div><div class="line">            <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">            win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</div><div class="line">            doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</div><div class="line">        &#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</div></pre></td></tr></table></figure>
+        <h1 id="JS函数传递参数问题"><a href="#JS函数传递参数问题" class="headerlink" title="JS函数传递参数问题"></a>JS函数传递参数问题</h1><p>js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. </p>
+<ul>
+<li>基本类型值传递如同基本类型变量复制一样</li>
+<li>引用类型则同引用类型变量的复制一样</li>
+</ul>
+<h2 id="基本类型值传递"><a href="#基本类型值传递" class="headerlink" title="基本类型值传递"></a>基本类型值传递</h2><p>定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function handleNum(num) &#123;</div><div class="line">    num++;</div><div class="line">    console.log(&apos;FNnum:&apos;+num); // 11</div><div class="line">&#125;</div><div class="line">var num = 10;</div><div class="line">handleNum(num);</div><div class="line">console.log(&apos;num:&apos;+num); // 10</div></pre></td></tr></table></figure></p>
+<h2 id="引用类型值传递"><a href="#引用类型值传递" class="headerlink" title="引用类型值传递"></a>引用类型值传递</h2><p>对象传递的是地址, 函数内外的变量会根据引用访问同一个对象, 因为堆中对应的地址只有一个.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function handleObj(obj) &#123;</div><div class="line">    obj.name = &apos;jack&apos;;</div><div class="line">    console.log(&apos;FNobj:&apos;+JSON.stringify(obj.name)); // jack</div><div class="line">&#125;</div><div class="line">var parson = new Object();</div><div class="line">handleObj(parson);</div><div class="line">console.log(&apos;parson:&apos;+JSON.stringify(parson.name)); // jack</div></pre></td></tr></table></figure></p>
+<p>看到这个例子后, 很多人会认为, 在局部作用域修改的对象会在全局作用域中反映出来, 就说明引用类型是按引用传递的, 再看接下来一个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function handleObj(obj) &#123;</div><div class="line">    obj.name = &apos;jack&apos;;</div><div class="line">    // -------------------------</div><div class="line">    obj = new Object();</div><div class="line">    obj.name = &apos;ruth&apos;</div><div class="line">    // -------------------------</div><div class="line">    console.log(&apos;FNobj:&apos; + JSON.stringify(obj.name)); // ruth</div><div class="line">&#125;</div><div class="line">var person = new Object();</div><div class="line">handleObj(person);</div><div class="line">console.log(&apos;person:&apos; + JSON.stringify(person.name)); // jack</div></pre></td></tr></table></figure></p>
+<p>这个例子与上面的例子唯一的不同就是添加了两行代码, 一行是为obj重新定义了一个新的对象, 另一行是为这个新对象重新设置了name的属性为’ruth’.</p>
+<p> 如果引用类型是按照引用传递的话, 全局变量的person的name属性也会修改为’ruth’才对, 但是person的name属性值依然是’jack’;</p>
+<blockquote>
+<p>实际上, 当函数内部重写obj的时候, 这个变量引用就是一个局部对象了, 再函数执行完毕后会立即销毁</p>
+</blockquote>
+
       
     </div>
 
@@ -510,7 +537,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"># css</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
           
         </div>
       
@@ -523,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/04/自制图标字体/" rel="next" title="自制图标字体">
-                <i class="fa fa-chevron-left"></i> 自制图标字体
+              <a href="/2018/03/01/cookie、localStroage与sessionStorage的区别以及用法/" rel="next" title="cookie、localStroage与sessionStorage的区别以及用法">
+                <i class="fa fa-chevron-left"></i> cookie、localStroage与sessionStorage的区别以及用法
               </a>
             
           </div>
@@ -532,10 +559,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/14/ES6转码工具babel的使用/" rel="prev" title="ES6转码工具babel的使用">
-                ES6转码工具babel的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -714,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"><span class="nav-number">1.</span> <span class="nav-text">写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一定要注意，移动端页面头部一定要引入"><span class="nav-number">2.</span> <span class="nav-text">一定要注意，移动端页面头部一定要引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#js代码"><span class="nav-number">2.1.</span> <span class="nav-text">js代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS函数传递参数问题"><span class="nav-number">1.</span> <span class="nav-text">JS函数传递参数问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本类型值传递"><span class="nav-number">1.1.</span> <span class="nav-text">基本类型值传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用类型值传递"><span class="nav-number">1.2.</span> <span class="nav-text">引用类型值传递</span></a></li></ol></li></ol></div>
             
 
           </div>
