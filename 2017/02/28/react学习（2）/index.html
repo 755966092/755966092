@@ -87,25 +87,18 @@
 
 
 
-<meta name="description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta name="description" content="组件类首字母必须大写 HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写 JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react学习（2）">
 <meta property="og:url" content="http://yoursite.com/2017/02/28/react学习（2）/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
-<meta property="og:updated_time" content="2017-02-28T07:00:40.687Z">
+<meta property="og:description" content="组件类首字母必须大写 HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写 JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react学习（2）">
-<meta name="twitter:description" content="组件类首字母必须大写
-HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写
-JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
-组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
+<meta name="twitter:description" content="组件类首字母必须大写 HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写 JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做">
 
 
 
@@ -439,7 +432,7 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      1,018
+                      1,070
                     </span>
               
 
@@ -502,19 +495,19 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
 <ul>
 <li>组件的属性可以接受任意值，字符串、对象、函数等等都可以。</li>
 <li>组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求</li>
-<li>getDefaultProps 方法可以用来设置组件属性的默认值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var MyTitle = React.createClass(&#123;</div><div class="line">  getDefaultProps : function () &#123;</div><div class="line">    return &#123;</div><div class="line">      title : &apos;Hello World&apos;</div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  render: function() &#123;</div><div class="line">     return &lt;h1&gt; &#123;this.props.title&#125; &lt;/h1&gt;;</div><div class="line">   &#125;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  ReactDOM.render(</div><div class="line">  &lt;MyTitle /&gt;,</div><div class="line">  document.body</div><div class="line">  );</div></pre></td></tr></table></figure>
+<li>getDefaultProps 方法可以用来设置组件属性的默认值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var MyTitle = React.createClass(&#123;</span><br><span class="line">  getDefaultProps : function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      title : &apos;Hello World&apos;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  render: function() &#123;</span><br><span class="line">     return &lt;h1&gt; &#123;this.props.title&#125; &lt;/h1&gt;;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  ReactDOM.render(</span><br><span class="line">  &lt;MyTitle /&gt;,</span><br><span class="line">  document.body</span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>获取真实DOM</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var MyComponent = React.createClass(&#123;</div><div class="line">  handleClick: function() &#123;</div><div class="line">    this.refs.myTextInput.focus();</div><div class="line">  &#125;,</div><div class="line">  render: function() &#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;input type=&quot;text&quot; ref=&quot;myTextInput&quot; /&gt;</div><div class="line">        &lt;input type=&quot;button&quot; value=&quot;Focus the text input&quot; onClick=&#123;this.handleClick&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;MyComponent /&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var MyComponent = React.createClass(&#123;</span><br><span class="line">  handleClick: function() &#123;</span><br><span class="line">    this.refs.myTextInput.focus();</span><br><span class="line">  &#125;,</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; ref=&quot;myTextInput&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;Focus the text input&quot; onClick=&#123;this.handleClick&#125; /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;MyComponent /&gt;,</span><br><span class="line">  document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>组件必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。</li>
 <li>由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。</li>
 </ul>
 </li>
 <li><p>this.stste</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var LikeButton = React.createClass(&#123;</div><div class="line">  getInitialState: function() &#123;</div><div class="line">    return &#123;liked: false&#125;;</div><div class="line">  &#125;,</div><div class="line">  handleClick: function(event) &#123;</div><div class="line">    this.setState(&#123;liked: !this.state.liked&#125;);</div><div class="line">  &#125;,</div><div class="line">  render: function() &#123;</div><div class="line">    var text = this.state.liked ? &apos;like&apos; : &apos;haven\&apos;t liked&apos;;</div><div class="line">    return (</div><div class="line">      &lt;p onClick=&#123;this.handleClick&#125;&gt;</div><div class="line">        You &#123;text&#125; this. Click to toggle.</div><div class="line">      &lt;/p&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;LikeButton /&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var LikeButton = React.createClass(&#123;</span><br><span class="line">  getInitialState: function() &#123;</span><br><span class="line">    return &#123;liked: false&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  handleClick: function(event) &#123;</span><br><span class="line">    this.setState(&#123;liked: !this.state.liked&#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    var text = this.state.liked ? &apos;like&apos; : &apos;haven\&apos;t liked&apos;;</span><br><span class="line">    return (</span><br><span class="line">      &lt;p onClick=&#123;this.handleClick&#125;&gt;</span><br><span class="line">        You &#123;text&#125; this. Click to toggle.</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;LikeButton /&gt;,</span><br><span class="line">  document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>getInitialState 方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。</li>
 <li>this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。</li>
@@ -700,7 +693,7 @@ JSX 的基本语法规则：遇到 HTML 标签（以 &amp;lt; 开头），就用
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -93,6 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/tags/vue/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
 <meta property="og:description" content="胡编一通，乱写一气">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mr.Yuan">
 <meta name="twitter:description" content="胡编一通，乱写一气">
@@ -391,7 +392,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -883,7 +884,24 @@
 
 </body>
 </html>
-       }
+var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
             });
           } else {
             var newcounter = new Counter();

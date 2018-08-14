@@ -87,46 +87,18 @@
 
 
 
-<meta name="description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。
-apply()apply()接受两个参数，
-
-第一个就是指定运行函数的作用域(就是this的指向)
-第二个是参数数组, 
-Array实例
-arguments对象
-
-
-
-1234567891011function sum(sum1, sum2)">
+<meta name="description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。 apply()apply()接受两个参数，  第一个就是指定运行函数的作用域(就是this的指向) 第二个是参数数组,  Array实例 arguments对象    1234567891011function sum(sum1, sum2)">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数的call、apply以及bind的作用与区别">
 <meta property="og:url" content="http://yoursite.com/2018/03/06/函数的call、apply以及bind的作用与区别/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。
-apply()apply()接受两个参数，
-
-第一个就是指定运行函数的作用域(就是this的指向)
-第二个是参数数组, 
-Array实例
-arguments对象
-
-
-
-1234567891011function sum(sum1, sum2)">
-<meta property="og:updated_time" content="2018-03-06T15:36:27.301Z">
+<meta property="og:description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。 apply()apply()接受两个参数，  第一个就是指定运行函数的作用域(就是this的指向) 第二个是参数数组,  Array实例 arguments对象    1234567891011function sum(sum1, sum2)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数的call、apply以及bind的作用与区别">
-<meta name="twitter:description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。
-apply()apply()接受两个参数，
-
-第一个就是指定运行函数的作用域(就是this的指向)
-第二个是参数数组, 
-Array实例
-arguments对象
-
-
-
-1234567891011function sum(sum1, sum2)">
+<meta name="twitter:description" content="每个函数都包含两个非继承而来的方法: apply()和call(), 这两个方法的用途就是在特定的作用域中调用函数,实际上就是设置函数体内this对象的值。 apply()apply()接受两个参数，  第一个就是指定运行函数的作用域(就是this的指向) 第二个是参数数组,  Array实例 arguments对象    1234567891011function sum(sum1, sum2)">
 
 
 
@@ -460,7 +432,7 @@ arguments对象
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      540
+                      576
                     </span>
               
 
@@ -505,16 +477,16 @@ arguments对象
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function sum(sum1, sum2) &#123;</div><div class="line">   return sum1 + sum2</div><div class="line">&#125;</div><div class="line">function sumApply1(sum1, sum2) &#123;</div><div class="line">    return sum.apply(this, arguments) // 传如arguments对象</div><div class="line">&#125;</div><div class="line">function sumApply2(sum1, sum2) &#123;</div><div class="line">    return sum.apply(this, [sum1, sum2]) // 传入数组</div><div class="line">&#125;</div><div class="line">console.log(sumApply1(10,20)) // =&gt; 30</div><div class="line">console.log(sumApply2(10,20)) // =&gt; 30</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function sum(sum1, sum2) &#123;</span><br><span class="line">   return sum1 + sum2</span><br><span class="line">&#125;</span><br><span class="line">function sumApply1(sum1, sum2) &#123;</span><br><span class="line">    return sum.apply(this, arguments) // 传如arguments对象</span><br><span class="line">&#125;</span><br><span class="line">function sumApply2(sum1, sum2) &#123;</span><br><span class="line">    return sum.apply(this, [sum1, sum2]) // 传入数组</span><br><span class="line">&#125;</span><br><span class="line">console.log(sumApply1(10,20)) // =&gt; 30</span><br><span class="line">console.log(sumApply2(10,20)) // =&gt; 30</span><br></pre></td></tr></table></figure>
 <p>上面的例子, <code>sumApply1()</code>执行<code>sum()</code>的时候传入了<code>this</code>作为<code>this</code>值(因为是在全局作用域中调用的, 所以<code>this</code>指向<code>window</code>对象)和arguments对象, 而<code>sumApply2()</code>传入了<code>this</code>和一个参数数组, 返回的结果是相同的;</p>
 <h1 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h1><p><code>call()</code> 方法和<code>apply()</code> 方法作用相同, 区别在于接收参数的方式不同, <code>call()</code> 需要列举所有传入的所有参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function sum(sum1, sum2) &#123;</div><div class="line">  return sum1 + sum2</div><div class="line">&#125;</div><div class="line">function sumCall1(sum1, sum2) &#123;</div><div class="line">    return sum.call(this, sum1, sum2)</div><div class="line">&#125;</div><div class="line">console.log(sumCall1(10,20)); // =&gt; 30</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function sum(sum1, sum2) &#123;</span><br><span class="line">  return sum1 + sum2</span><br><span class="line">&#125;</span><br><span class="line">function sumCall1(sum1, sum2) &#123;</span><br><span class="line">    return sum.call(this, sum1, sum2)</span><br><span class="line">&#125;</span><br><span class="line">console.log(sumCall1(10,20)); // =&gt; 30</span><br></pre></td></tr></table></figure>
 <p><code>apply()</code>和<code>call()</code> 的真正强大的地方是能扩充作用域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var color = &apos;red&apos;;</div><div class="line">var o = &#123;</div><div class="line">    color: &apos;blue&apos;</div><div class="line">&#125;</div><div class="line">function sayColor() &#123;</div><div class="line">    console.log(this.color);</div><div class="line">&#125;</div><div class="line">sayColor.call(this) // =&gt; red</div><div class="line">sayColor.call(window) // =&gt; red</div><div class="line">sayColor.call(o); // =&gt; blue</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var color = &apos;red&apos;;</span><br><span class="line">var o = &#123;</span><br><span class="line">    color: &apos;blue&apos;</span><br><span class="line">&#125;</span><br><span class="line">function sayColor() &#123;</span><br><span class="line">    console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor.call(this) // =&gt; red</span><br><span class="line">sayColor.call(window) // =&gt; red</span><br><span class="line">sayColor.call(o); // =&gt; blue</span><br></pre></td></tr></table></figure>
 <p>定义一个全局函数<code>sayColor()</code>, 一个全局变量<code>color=&#39;red&#39;</code>和一个对象<code>o</code>, 第一个<code>sayColor.claa(this)</code>由于是在全局作用域调用的, 所以<code>this</code>指向<code>window</code>, <code>this.color</code>就转换成了<code>window.color</code> 所以就是<code>red</code>, 第二个同第一个, <code>sayColor.call(o)</code>把执行环境改成了<code>o</code>, 因此函数内的<code>this</code>就指向了对象<code>o</code>, 所以结果是<code>blue</code>;</p>
 <p>使用<code>call()</code>或<code>apply()</code>扩充作用域最大的好处厹, 对象不需要与方法有任何耦合关系,</p>
 <h1 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h1><p>这个方法会创建一个函数实例, 其<code>this</code>的值指向传给<code>bind()</code>函数的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">window.color = &apos;red&apos;</div><div class="line">var o = &#123;</div><div class="line">	color: &apos;blue&apos;</div><div class="line">&#125;</div><div class="line">function sayColor() &#123;</div><div class="line">	console.log(this.color)</div><div class="line">&#125;</div><div class="line">var bindSayColor = sayColor.bind(o);</div><div class="line">bindSayColor() // =&gt; blue</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">window.color = &apos;red&apos;</span><br><span class="line">var o = &#123;</span><br><span class="line">	color: &apos;blue&apos;</span><br><span class="line">&#125;</span><br><span class="line">function sayColor() &#123;</span><br><span class="line">	console.log(this.color)</span><br><span class="line">&#125;</span><br><span class="line">var bindSayColor = sayColor.bind(o);</span><br><span class="line">bindSayColor() // =&gt; blue</span><br></pre></td></tr></table></figure>
 <p>这里<code>sayColor()</code>调用了<code>bind()</code>并传入了参数<code>o</code>, 创建了<code>bindSayColor</code>函数, <code>bindSayColor()</code> 的this就指向了<code>o</code>, 因此在全局作用域中调用这个函数, 也会指向<code>o</code></p>
 
       
@@ -682,7 +654,7 @@ arguments对象
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

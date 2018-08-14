@@ -87,31 +87,18 @@
 
 
 
-<meta name="description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
-
-基本类型值传递如同基本类型变量复制一样
-引用类型则同引用类型变量的复制一样
-
-基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
+<meta name="description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样.   基本类型值传递如同基本类型变量复制一样 引用类型则同引用类型变量的复制一样  基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js函数参数传递问题">
 <meta property="og:url" content="http://yoursite.com/2018/03/03/js函数参数传递问题/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
-
-基本类型值传递如同基本类型变量复制一样
-引用类型则同引用类型变量的复制一样
-
-基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
-<meta property="og:updated_time" content="2018-03-03T05:47:33.935Z">
+<meta property="og:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样.   基本类型值传递如同基本类型变量复制一样 引用类型则同引用类型变量的复制一样  基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js函数参数传递问题">
-<meta name="twitter:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样. 
-
-基本类型值传递如同基本类型变量复制一样
-引用类型则同引用类型变量的复制一样
-
-基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
+<meta name="twitter:description" content="JS函数传递参数问题js中所有函数的参数都是按值传递的, 也就是说把函数外部的值复制给函数内部的参数, 就如同把一个变量赋值给另一个变量一样.   基本类型值传递如同基本类型变量复制一样 引用类型则同引用类型变量的复制一样  基本类型值传递定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量1234567function handleNum(num) &amp;">
 
 
 
@@ -445,7 +432,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      485
+                      507
                     </span>
               
 
@@ -485,9 +472,9 @@
 <li>基本类型值传递如同基本类型变量复制一样</li>
 <li>引用类型则同引用类型变量的复制一样</li>
 </ul>
-<h2 id="基本类型值传递"><a href="#基本类型值传递" class="headerlink" title="基本类型值传递"></a>基本类型值传递</h2><p>定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function handleNum(num) &#123;</div><div class="line">    num++;</div><div class="line">    console.log(&apos;FNnum:&apos;+num); // 11</div><div class="line">&#125;</div><div class="line">var num = 10;</div><div class="line">handleNum(num);</div><div class="line">console.log(&apos;num:&apos;+num); // 10</div></pre></td></tr></table></figure></p>
-<h2 id="引用类型值传递"><a href="#引用类型值传递" class="headerlink" title="引用类型值传递"></a>引用类型值传递</h2><p>对象传递的是地址, 函数内外的变量会根据引用访问同一个对象, 因为堆中对应的地址只有一个.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function handleObj(obj) &#123;</div><div class="line">    obj.name = &apos;jack&apos;;</div><div class="line">    console.log(&apos;FNobj:&apos;+JSON.stringify(obj.name)); // jack</div><div class="line">&#125;</div><div class="line">var parson = new Object();</div><div class="line">handleObj(parson);</div><div class="line">console.log(&apos;parson:&apos;+JSON.stringify(parson.name)); // jack</div></pre></td></tr></table></figure></p>
-<p>看到这个例子后, 很多人会认为, 在局部作用域修改的对象会在全局作用域中反映出来, 就说明引用类型是按引用传递的, 再看接下来一个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function handleObj(obj) &#123;</div><div class="line">    obj.name = &apos;jack&apos;;</div><div class="line">    // -------------------------</div><div class="line">    obj = new Object();</div><div class="line">    obj.name = &apos;ruth&apos;</div><div class="line">    // -------------------------</div><div class="line">    console.log(&apos;FNobj:&apos; + JSON.stringify(obj.name)); // ruth</div><div class="line">&#125;</div><div class="line">var person = new Object();</div><div class="line">handleObj(person);</div><div class="line">console.log(&apos;person:&apos; + JSON.stringify(person.name)); // jack</div></pre></td></tr></table></figure></p>
+<h2 id="基本类型值传递"><a href="#基本类型值传递" class="headerlink" title="基本类型值传递"></a>基本类型值传递</h2><p>定义一个处理函数, 传递给函数一个数值类型的值, 只会修改韩顺局部变量的值. 而不会修改外部变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function handleNum(num) &#123;</span><br><span class="line">    num++;</span><br><span class="line">    console.log(&apos;FNnum:&apos;+num); // 11</span><br><span class="line">&#125;</span><br><span class="line">var num = 10;</span><br><span class="line">handleNum(num);</span><br><span class="line">console.log(&apos;num:&apos;+num); // 10</span><br></pre></td></tr></table></figure></p>
+<h2 id="引用类型值传递"><a href="#引用类型值传递" class="headerlink" title="引用类型值传递"></a>引用类型值传递</h2><p>对象传递的是地址, 函数内外的变量会根据引用访问同一个对象, 因为堆中对应的地址只有一个.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function handleObj(obj) &#123;</span><br><span class="line">    obj.name = &apos;jack&apos;;</span><br><span class="line">    console.log(&apos;FNobj:&apos;+JSON.stringify(obj.name)); // jack</span><br><span class="line">&#125;</span><br><span class="line">var parson = new Object();</span><br><span class="line">handleObj(parson);</span><br><span class="line">console.log(&apos;parson:&apos;+JSON.stringify(parson.name)); // jack</span><br></pre></td></tr></table></figure></p>
+<p>看到这个例子后, 很多人会认为, 在局部作用域修改的对象会在全局作用域中反映出来, 就说明引用类型是按引用传递的, 再看接下来一个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function handleObj(obj) &#123;</span><br><span class="line">    obj.name = &apos;jack&apos;;</span><br><span class="line">    // -------------------------</span><br><span class="line">    obj = new Object();</span><br><span class="line">    obj.name = &apos;ruth&apos;</span><br><span class="line">    // -------------------------</span><br><span class="line">    console.log(&apos;FNobj:&apos; + JSON.stringify(obj.name)); // ruth</span><br><span class="line">&#125;</span><br><span class="line">var person = new Object();</span><br><span class="line">handleObj(person);</span><br><span class="line">console.log(&apos;person:&apos; + JSON.stringify(person.name)); // jack</span><br></pre></td></tr></table></figure></p>
 <p>这个例子与上面的例子唯一的不同就是添加了两行代码, 一行是为obj重新定义了一个新的对象, 另一行是为这个新对象重新设置了name的属性为’ruth’.</p>
 <p> 如果引用类型是按照引用传递的话, 全局变量的person的name属性也会修改为’ruth’才对, 但是person的name属性值依然是’jack’;</p>
 <blockquote>
@@ -659,7 +646,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

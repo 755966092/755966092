@@ -88,12 +88,14 @@
 
 
 <meta name="description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一段自动转换rem的代码">
 <meta property="og:url" content="http://yoursite.com/2017/03/08/一段自动转换rem的代码/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
 <meta property="og:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
-<meta property="og:updated_time" content="2017-03-08T15:41:39.459Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一段自动转换rem的代码">
 <meta name="twitter:description" content="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了一定要注意，移动端页面头部一定要引入&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&amp;quot;/&amp;gt">
@@ -430,7 +432,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      152
+                      164
                     </span>
               
 
@@ -466,7 +468,7 @@
 
       
         <h1 id="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"><a href="#写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了" class="headerlink" title="写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了"></a>写移动端页面的时候，引入这段js代码，就无须再担心不同屏幕的适配问题了</h1><h1 id="一定要注意，移动端页面头部一定要引入"><a href="#一定要注意，移动端页面头部一定要引入" class="headerlink" title="一定要注意，移动端页面头部一定要引入"></a>一定要注意，移动端页面头部一定要引入</h1><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0&quot;/&gt;</code></p>
-<h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">                    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</div><div class="line">                    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                        <span class="keyword">var</span> clientWidth = docEl.clientWidth;</div><div class="line">                        <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</div><div class="line">                        docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">640</span>) + <span class="string">'px'</span>;</div><div class="line">                        <span class="comment">//这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单</span></div><div class="line">                    &#125;;</div><div class="line">            <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">            win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</div><div class="line">            doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</div><div class="line">        &#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</div></pre></td></tr></table></figure>
+<h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">                    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">                    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                        <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">                        <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">                        docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">640</span>) + <span class="string">'px'</span>;</span><br><span class="line">                        <span class="comment">//这里的640 是根据设计稿的宽度来订的，设计稿宽度如果是750，64就改成750，很简单</span></span><br><span class="line">                    &#125;;</span><br><span class="line">            <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">            win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">            doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">        &#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -632,7 +634,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

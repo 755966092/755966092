@@ -87,49 +87,18 @@
 
 
 
-<meta name="description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
+<meta name="description" content="react特性- 虚拟DOM - 组件化  borwser.js  将JSX语法转换为js语法 react.js 核心库 react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;   JSX语法 借助React环境运行 jsx标签就是HTML标签 jsx语法转换，  j">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react学习（1）">
 <meta property="og:url" content="http://yoursite.com/2017/02/27/react学习（1）/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
-<meta property="og:updated_time" content="2017-02-28T07:02:55.957Z">
+<meta property="og:description" content="react特性- 虚拟DOM - 组件化  borwser.js  将JSX语法转换为js语法 react.js 核心库 react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;   JSX语法 借助React环境运行 jsx标签就是HTML标签 jsx语法转换，  j">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react学习（1）">
-<meta name="twitter:description" content="react特性- 虚拟DOM
-- 组件化
-
-borwser.js  将JSX语法转换为js语法
-react.js 核心库
-react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;
-
-
-JSX语法
-借助React环境运行
-jsx标签就是HTML标签
-jsx语法转换，  j">
+<meta name="twitter:description" content="react特性- 虚拟DOM - 组件化  borwser.js  将JSX语法转换为js语法 react.js 核心库 react-dom.js 提供与dom有关的功能123&amp;lt;script type=&quot;text/bable&quot;&amp;gt;    //bable  转换编译器 &amp;lt;/script&amp;gt;   JSX语法 借助React环境运行 jsx标签就是HTML标签 jsx语法转换，  j">
 
 
 
@@ -463,7 +432,7 @@ jsx语法转换，  j">
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      417
+                      479
                     </span>
               
 
@@ -503,7 +472,7 @@ jsx语法转换，  j">
 </code></pre><ul>
 <li><code>borwser.js</code>  将JSX语法转换为js语法</li>
 <li><code>react.js</code> 核心库</li>
-<li><code>react-dom.js</code> 提供与dom有关的功能<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/bable"</span>&gt;</div><div class="line">    <span class="comment">//bable  转换编译器 </span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<li><code>react-dom.js</code> 提供与dom有关的功能<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/bable"</span>&gt;</span><br><span class="line">    <span class="comment">//bable  转换编译器 </span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="JSX语法"><a href="#JSX语法" class="headerlink" title="JSX语法"></a>JSX语法</h2><ol>
@@ -517,7 +486,7 @@ jsx语法转换，  j">
 </li>
 <li>React.createClass（｛｝）方法创建组建类</li>
 <li>每个组件必须实现自己的render方法，输入一个定义好的模版；返回值为null，false，组件模版</li>
-<li>只能包含一个顶层标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> var HelloReact = React.createClass(&#123;</div><div class="line">     render:function()&#123;</div><div class="line">         return (</div><div class="line">                &lt;h1&gt;组件&lt;/h1&gt;</div><div class="line">                &lt;p&gt;内容&lt;/p&gt;</div><div class="line">            )</div><div class="line">     &#125;</div><div class="line"> &#125;)</div><div class="line"> ReactDOM.render（</div><div class="line">    &lt;HelloReact /&gt;,</div><div class="line">    document.getElementById(&quot;id&quot;);</div><div class="line">）</div></pre></td></tr></table></figure>
+<li>只能包含一个顶层标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> var HelloReact = React.createClass(&#123;</span><br><span class="line">     render:function()&#123;</span><br><span class="line">         return (</span><br><span class="line">                &lt;h1&gt;组件&lt;/h1&gt;</span><br><span class="line">                &lt;p&gt;内容&lt;/p&gt;</span><br><span class="line">            )</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;)</span><br><span class="line"> ReactDOM.render（</span><br><span class="line">    &lt;HelloReact /&gt;,</span><br><span class="line">    document.getElementById(&quot;id&quot;);</span><br><span class="line">）</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="组件样式"><a href="#组件样式" class="headerlink" title="组件样式"></a>组件样式</h2><pre><code>- 内联样式
@@ -528,11 +497,11 @@ jsx语法转换，  j">
 <li>key，中不能出现“-”</li>
 <li>key驼峰命名</li>
 <li>value如果是字符串要加引号</li>
-<li>value是数字，不需要带单位<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//这个样式需要写在头部的style标签之内</div><div class="line">.xzq ｛</div><div class="line">    background: #fff;</div><div class="line">｝</div><div class="line">//样式对象</div><div class="line">var sty = &#123;</div><div class="line">    height: 100,</div><div class="line">    background: &apos;#f0f&apos;</div><div class="line">&#125;</div><div class="line">var HelloReact = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return ( </div><div class="line">            //内联样式</div><div class="line">            &lt;div style=&#123;&#123;background:&apos;#f00&apos;,height: 200&#125;&#125;&gt;内联样式和</div><div class="line">                //对象样式</div><div class="line">                &lt;div style=&#123;sty&#125;&gt;对象样式&lt;/div&gt;</div><div class="line">                //选择器样式</div><div class="line">                &lt;div className=&quot;a&quot;&gt;选择器样式&lt;/div&gt;</div><div class="line">            &lt;/div&gt;);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//渲染标签</div><div class="line">ReactDOM.render(</div><div class="line">    &lt;HelloReact /&gt;,</div><div class="line">    document.getElementById(&apos;container&apos;)</div><div class="line">    )</div></pre></td></tr></table></figure>
+<li>value是数字，不需要带单位<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//这个样式需要写在头部的style标签之内</span><br><span class="line">.xzq ｛</span><br><span class="line">    background: #fff;</span><br><span class="line">｝</span><br><span class="line">//样式对象</span><br><span class="line">var sty = &#123;</span><br><span class="line">    height: 100,</span><br><span class="line">    background: &apos;#f0f&apos;</span><br><span class="line">&#125;</span><br><span class="line">var HelloReact = React.createClass(&#123;</span><br><span class="line">    render: function()&#123;</span><br><span class="line">        return ( </span><br><span class="line">            //内联样式</span><br><span class="line">            &lt;div style=&#123;&#123;background:&apos;#f00&apos;,height: 200&#125;&#125;&gt;内联样式和</span><br><span class="line">                //对象样式</span><br><span class="line">                &lt;div style=&#123;sty&#125;&gt;对象样式&lt;/div&gt;</span><br><span class="line">                //选择器样式</span><br><span class="line">                &lt;div className=&quot;a&quot;&gt;选择器样式&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">//渲染标签</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;HelloReact /&gt;,</span><br><span class="line">    document.getElementById(&apos;container&apos;)</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="复合组件"><a href="#复合组件" class="headerlink" title="复合组件"></a>复合组件</h2><pre><code>创建多个组建合成一个组建，首先定义子组件，然后定义复合组件
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var WebName = React.createClass(&#123;</div><div class="line">    render: function() &#123;</div><div class="line">        return &lt;h1&gt;蓝天白云&lt;/h1&gt;</div><div class="line">    &#125;</div><div class="line">&#125;)  </div><div class="line">var WebLink = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return &lt;a href=&quot;#&quot;&gt;www.yuanjingzhuang.com&lt;/a&gt;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">var WenShow = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;WebName/&gt;</div><div class="line">                &lt;WebLink/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">ReactDOM.render(</div><div class="line">    &lt;WenShow /&gt;,</div><div class="line">    document.getElementById(&quot;container&quot;)</div><div class="line">    )</div></pre></td></tr></table></figure>
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var WebName = React.createClass(&#123;</span><br><span class="line">    render: function() &#123;</span><br><span class="line">        return &lt;h1&gt;蓝天白云&lt;/h1&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)  </span><br><span class="line">var WebLink = React.createClass(&#123;</span><br><span class="line">    render: function()&#123;</span><br><span class="line">        return &lt;a href=&quot;#&quot;&gt;www.yuanjingzhuang.com&lt;/a&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">var WenShow = React.createClass(&#123;</span><br><span class="line">    render: function()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;WebName/&gt;</span><br><span class="line">                &lt;WebLink/&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;WenShow /&gt;,</span><br><span class="line">    document.getElementById(&quot;container&quot;)</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -695,7 +664,7 @@ jsx语法转换，  j">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

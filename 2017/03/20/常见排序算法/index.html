@@ -87,46 +87,18 @@
 
 
 
-<meta name="description" content="排序算法
-冒泡排序 , 选择排序 , 插入排序, 快速排序
-
-冒泡排序:
-最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。
-
-
-举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。
-首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。
-同理4和8交换，变成5,3,4,8,6,3和4无需交换。
-5">
+<meta name="description" content="排序算法 冒泡排序 , 选择排序 , 插入排序, 快速排序  冒泡排序: 最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。   举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。 首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。 同理4和8交换，变成5,3,4,8,6,3和4无需交换。 5">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见排序算法">
 <meta property="og:url" content="http://yoursite.com/2017/03/20/常见排序算法/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="排序算法
-冒泡排序 , 选择排序 , 插入排序, 快速排序
-
-冒泡排序:
-最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。
-
-
-举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。
-首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。
-同理4和8交换，变成5,3,4,8,6,3和4无需交换。
-5">
-<meta property="og:updated_time" content="2017-03-20T14:03:20.883Z">
+<meta property="og:description" content="排序算法 冒泡排序 , 选择排序 , 插入排序, 快速排序  冒泡排序: 最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。   举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。 首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。 同理4和8交换，变成5,3,4,8,6,3和4无需交换。 5">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见排序算法">
-<meta name="twitter:description" content="排序算法
-冒泡排序 , 选择排序 , 插入排序, 快速排序
-
-冒泡排序:
-最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。
-
-
-举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。
-首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。
-同理4和8交换，变成5,3,4,8,6,3和4无需交换。
-5">
+<meta name="twitter:description" content="排序算法 冒泡排序 , 选择排序 , 插入排序, 快速排序  冒泡排序: 最简单的排序之一了，其大体思想就是通过与相邻元素的比较和交换来把小的数交换到最前面。这个过程类似于水泡向上升一样，因此而得名。   举个栗子，对5,3,8,6,4这个无序序列进行冒泡排序。 首先从后向前冒泡，4和6比较，把4交换到前面，序列变成5,3,8,4,6。 同理4和8交换，变成5,3,4,8,6,3和4无需交换。 5">
 
 
 
@@ -460,7 +432,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      1,458
+                      1,513
                     </span>
               
 
@@ -509,7 +481,7 @@
 <li>对剩下的序列依次冒泡就会得到一个有序序列。</li>
 <li>冒泡排序的时间复杂度为O(n^2)。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">6</span>,<span class="number">3</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j&lt; arr.length - <span class="number">1</span>; j++) &#123;</div><div class="line">            <span class="keyword">if</span> (arr[i] &lt; arr[j])&#123;</div><div class="line">                <span class="keyword">var</span> temp = arr[i];</div><div class="line">                arr[i] = arr[j];</div><div class="line">                arr[j] = temp;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line">fn(arr); <span class="comment">// [0,1,2,3,4,5,6,7,8,9]</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">7</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">6</span>,<span class="number">3</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j&lt; arr.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] &lt; arr[j])&#123;</span><br><span class="line">                <span class="keyword">var</span> temp = arr[i];</span><br><span class="line">                arr[i] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line">fn(arr); <span class="comment">// [0,1,2,3,4,5,6,7,8,9]</span></span><br></pre></td></tr></table></figure>
 <h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><blockquote>
 <p>选择排序的思想其实和冒泡排序有点类似，都是在一次排序后把最小的元素放到最前面。但是过程不同，冒泡排序是通过相邻的比较和交换。而选择排序是通过对整体的选择。-</p>
 </blockquote>
@@ -518,7 +490,7 @@
 <li>首先要选择5以外的最小数来和5交换，也就是选择3和5交换，一次排序后就变成了3,5,8,6,4.</li>
 <li>对剩下的序列一次进行选择和交换，最终就会得到一个有序序列。</li>
 <li>其实选择排序可以看成冒泡排序的优化，因为其目的相同，只是选择排序只有在确定了最小数的前提下才进行交换，大大减少了交换的次数。</li>
-<li>选择排序的时间复杂度为O(n^2)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> min = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</div><div class="line">        min = i;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span> (arr[j] &lt; arr[min]) &#123;</div><div class="line">                min = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (min != i) &#123;</div><div class="line">            <span class="keyword">var</span> temp = arr[i];</div><div class="line">            arr[i] = arr[min];</div><div class="line">            arr[min] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>选择排序的时间复杂度为O(n^2)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> min = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &lt; arr[min]) &#123;</span><br><span class="line">                min = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (min != i) &#123;</span><br><span class="line">            <span class="keyword">var</span> temp = arr[i];</span><br><span class="line">            arr[i] = arr[min];</span><br><span class="line">            arr[min] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><blockquote>
@@ -530,7 +502,7 @@
 <li>然后3要插到5前面，把5后移一位，变成3,5,8,6,4.想一下整理牌的时候应该也是这样吧</li>
 <li>然后8不用动，6插在8前面，8后移一位，4插在5前面，从5开始都向后移一位。</li>
 <li>注意在插入一个数的时候要保证这个数前面的数已经有序。</li>
-<li>简单插入排序的时间复杂度也是O(n^2)。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</div><div class="line">        <span class="keyword">var</span> j = i;</div><div class="line">        <span class="keyword">var</span> target = arr[i];</div><div class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; target &lt; arr[j<span class="number">-1</span>]) &#123;</div><div class="line">            arr[j] = arr[j<span class="number">-1</span>];</div><div class="line">            j--;</div><div class="line">        &#125;</div><div class="line">        arr[j] = target;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>简单插入排序的时间复杂度也是O(n^2)。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> j = i;</span><br><span class="line">        <span class="keyword">var</span> target = arr[i];</span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; target &lt; arr[j<span class="number">-1</span>]) &#123;</span><br><span class="line">            arr[j] = arr[j<span class="number">-1</span>];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j] = target;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><blockquote>
@@ -544,7 +516,7 @@
 <li>4,3,5,6,8 一次划分后达到了左边比5小，右边比5大的目的。之后对左右子序列递归排序，最终得到有序序列。</li>
 <li>上面留下来了一个问题为什么一定要j指针先动呢？首先这也不是绝对的，这取决于基准数的位置，因为在最后两个指针相遇的时候，要交换基准数到相遇的位置。一般选取第一个数作为基准数，那么就是在左边，所以最后相遇的数要和基准数交换，那么相遇的数一定要比基准数小。所以j指针先移动才能先找到比基准数小的数。<br>快速排序是不稳定的，其时间平均时间复杂度是O(nlgn)。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (arr.length &lt;= <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> arr</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</div><div class="line">    <span class="keyword">var</span> left = [], right = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (arr[i] &gt; pivot) &#123;</div><div class="line">            right.push(arr[i])</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            left.push(arr[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn(right).concat([pivot], fn(left))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> arr</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">var</span> pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> left = [], right = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt; pivot) &#123;</span><br><span class="line">            right.push(arr[i])</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fn(right).concat([pivot], fn(left))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -711,7 +683,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

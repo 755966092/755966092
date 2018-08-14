@@ -87,24 +87,20 @@
 
 
 
-<meta name="description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。
-在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。
-Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
+<meta name="description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。 在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。 Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组：进化与性能">
 <meta property="og:url" content="http://yoursite.com/2017/10/21/深入JavaScript数组：进化与性能/index.html">
 <meta property="og:site_name" content="Mr.Yuan">
-<meta property="og:description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。
-在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。
-Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
+<meta property="og:description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。 在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。 Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20171021214312841?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171021214401442?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-21T13:57:13.148Z">
+<meta property="og:updated_time" content="2018-06-10T13:21:29.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组：进化与性能">
-<meta name="twitter:description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。
-在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。
-Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
+<meta name="twitter:description" content="正式开始前需要声明，本文并不是要讲解 JavaScript 数组基础知识，也不会涉及语法和使用案例。本文讲得更多的是内存、优化、语法差异、性能、近来的演进。 在使用 JavaScript 前，我对 C、C++、C# 这些已经颇为熟悉。与许多 C/C++ 开发者一样，JavaScript 给我的第一印象并不好。 Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20171021214312841?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI4NDQ0ODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
@@ -439,7 +435,7 @@ Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      1,568
+                      1,608
                     </span>
               
 
@@ -491,23 +487,23 @@ Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
 <p>因此，如果你的代码写得不太糟，JavaScript Array 对象在幕后依然保持着真正的数组形式，这对现代 JS 开发者来说极为重要。</p>
 <p>此外，数组跟随 ES2015/ES6 有了更多的演进。TC39 决定引入类型化数组（Typed Arrays），于是我们就有了 ArrayBuffer。</p>
 <p>ArrayBuffer 提供一块连续内存供我们随意操作。然而，直接操作内存还是太复杂、偏底层。于是便有了处理 ArrayBuffer 的视图（View）。目前已有一些可用视图，未来还会有更多加入。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var buffer = new ArrayBuffer(8);</div><div class="line">var view   = new Int32Array(buffer);</div><div class="line">view[0] = 100;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var buffer = new ArrayBuffer(8);</span><br><span class="line">var view   = new Int32Array(buffer);</span><br><span class="line">view[0] = 100;</span><br></pre></td></tr></table></figure>
 <p>了解更多关于类型化数组（Typed Arrays）的知识，请访问 MDN 文档。</p>
 <p>高性能、高效率的类型化数组在 WebGL 之后被引入。WebGL 工作者遇到了极大的性能问题，即如何高效处理二进制数据。另外，你也可以使用 SharedArrayBuffer 在多个 Web Worker 进程之间共享数据，以提升性能。</p>
 <p>从简单的哈希映射到现在的 SharedArrayBuffer，这相当棒吧？</p>
 <h1 id="旧式数组-vs-类型化数组：性能"><a href="#旧式数组-vs-类型化数组：性能" class="headerlink" title="旧式数组 vs 类型化数组：性能"></a>旧式数组 vs 类型化数组：性能</h1><p>前面已经讨论了 JavaScript 数组的演进，现在来测试现代数组到底能给我们带来多大收益。下面是我在 Mac 上使用 Node.js 8.4.0 进行的一些微型测试结果。</p>
-<h2 id="旧式数组：插入"><a href="#旧式数组：插入" class="headerlink" title="旧式数组：插入"></a>旧式数组：插入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var LIMIT = 10000000;</div><div class="line">var arr = new Array(LIMIT);</div><div class="line">console.time(&quot;Array insertion time&quot;);</div><div class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</div><div class="line">   arr[i] = i;</div><div class="line">&#125;</div><div class="line">console.timeEnd(&quot;Array insertion time&quot;);</div></pre></td></tr></table></figure>
+<h2 id="旧式数组：插入"><a href="#旧式数组：插入" class="headerlink" title="旧式数组：插入"></a>旧式数组：插入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var LIMIT = 10000000;</span><br><span class="line">var arr = new Array(LIMIT);</span><br><span class="line">console.time(&quot;Array insertion time&quot;);</span><br><span class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</span><br><span class="line">   arr[i] = i;</span><br><span class="line">&#125;</span><br><span class="line">console.timeEnd(&quot;Array insertion time&quot;);</span><br></pre></td></tr></table></figure>
 <p>用时：55ms</p>
-<h2 id="Typed-Array：插入"><a href="#Typed-Array：插入" class="headerlink" title="Typed Array：插入"></a>Typed Array：插入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var LIMIT = 10000000;</div><div class="line">var buffer = new ArrayBuffer(LIMIT * 4);</div><div class="line">var arr = new Int32Array(buffer);</div><div class="line">console.time(&quot;ArrayBuffer insertion time&quot;);</div><div class="line">for (var i = 0; i &lt; LIMIT; i++) &#123;</div><div class="line">   arr[i] = i;</div><div class="line">&#125;</div><div class="line">console.timeEnd(&quot;ArrayBuffer insertion time&quot;);</div></pre></td></tr></table></figure>
+<h2 id="Typed-Array：插入"><a href="#Typed-Array：插入" class="headerlink" title="Typed Array：插入"></a>Typed Array：插入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var LIMIT = 10000000;</span><br><span class="line">var buffer = new ArrayBuffer(LIMIT * 4);</span><br><span class="line">var arr = new Int32Array(buffer);</span><br><span class="line">console.time(&quot;ArrayBuffer insertion time&quot;);</span><br><span class="line">for (var i = 0; i &lt; LIMIT; i++) &#123;</span><br><span class="line">   arr[i] = i;</span><br><span class="line">&#125;</span><br><span class="line">console.timeEnd(&quot;ArrayBuffer insertion time&quot;);</span><br></pre></td></tr></table></figure>
 <p>用时：52ms</p>
 <p>擦，我看到了什么？旧式数组和 ArrayBuffer 的性能不相上下？不不不。请记住，前面提到过，现代编译器已经智能化，能够将元素类型相同的传统数组在内部转换成内存连续的数组。第一个例子正是如此。尽管使用了 new Array(LIMIT)，数组实际依然以现代数组形式存在。</p>
 <p>接着修改第一例子，将数组改成异构型（元素类型不完全一致）的，来看看是否存在性能差异。</p>
-<h2 id="旧式数组：插入（异构）"><a href="#旧式数组：插入（异构）" class="headerlink" title="旧式数组：插入（异构）"></a>旧式数组：插入（异构）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var LIMIT = 10000000;</div><div class="line">var arr = new Array(LIMIT);</div><div class="line">arr.push(&#123;a: 22&#125;);</div><div class="line">console.time(&quot;Array insertion time&quot;);</div><div class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</div><div class="line">   arr[i] = i;</div><div class="line">&#125;</div><div class="line">console.timeEnd(&quot;Array insertion time&quot;);</div></pre></td></tr></table></figure>
+<h2 id="旧式数组：插入（异构）"><a href="#旧式数组：插入（异构）" class="headerlink" title="旧式数组：插入（异构）"></a>旧式数组：插入（异构）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var LIMIT = 10000000;</span><br><span class="line">var arr = new Array(LIMIT);</span><br><span class="line">arr.push(&#123;a: 22&#125;);</span><br><span class="line">console.time(&quot;Array insertion time&quot;);</span><br><span class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</span><br><span class="line">   arr[i] = i;</span><br><span class="line">&#125;</span><br><span class="line">console.timeEnd(&quot;Array insertion time&quot;);</span><br></pre></td></tr></table></figure>
 <p>用时：1207ms</p>
 <p>改变发生在第 3 行，添加一条语句，将数组变为异构类型。其余代码保持不变。性能差异表现出来了，慢了 22 倍。</p>
-<h2 id="旧式数组：读取"><a href="#旧式数组：读取" class="headerlink" title="旧式数组：读取"></a>旧式数组：读取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var LIMIT = 10000000;</div><div class="line">var arr = new Array(LIMIT);</div><div class="line">arr.push(&#123;a: 22&#125;);</div><div class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</div><div class="line">    //arr[i] = i;</div><div class="line">    p = arr[i];</div><div class="line">&#125;</div><div class="line">console.timeEnd(&quot;Array read time&quot;);</div></pre></td></tr></table></figure>
+<h2 id="旧式数组：读取"><a href="#旧式数组：读取" class="headerlink" title="旧式数组：读取"></a>旧式数组：读取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var LIMIT = 10000000;</span><br><span class="line">var arr = new Array(LIMIT);</span><br><span class="line">arr.push(&#123;a: 22&#125;);</span><br><span class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</span><br><span class="line">    //arr[i] = i;</span><br><span class="line">    p = arr[i];</span><br><span class="line">&#125;</span><br><span class="line">console.timeEnd(&quot;Array read time&quot;);</span><br></pre></td></tr></table></figure>
 <p>用时：196ms</p>
-<h2 id="Typed-Array：读取"><a href="#Typed-Array：读取" class="headerlink" title="Typed Array：读取"></a>Typed Array：读取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var LIMIT = 10000000;</div><div class="line">var buffer = new ArrayBuffer(LIMIT * 4);</div><div class="line">var arr = new Int32Array(buffer);</div><div class="line">console.time(&quot;ArrayBuffer insertion time&quot;);</div><div class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</div><div class="line">    arr[i] = i;</div><div class="line">&#125;</div><div class="line">console.time(&quot;ArrayBuffer read time&quot;);</div><div class="line">for (var i = 0; i &lt; LIMIT; i++) &#123;</div><div class="line">    var p = arr[i];</div><div class="line">&#125;</div><div class="line">console.timeEnd(&quot;ArrayBuffer read time&quot;);</div></pre></td></tr></table></figure>
+<h2 id="Typed-Array：读取"><a href="#Typed-Array：读取" class="headerlink" title="Typed Array：读取"></a>Typed Array：读取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var LIMIT = 10000000;</span><br><span class="line">var buffer = new ArrayBuffer(LIMIT * 4);</span><br><span class="line">var arr = new Int32Array(buffer);</span><br><span class="line">console.time(&quot;ArrayBuffer insertion time&quot;);</span><br><span class="line">for (var i = 0; i&lt; LIMIT; i++) &#123;</span><br><span class="line">    arr[i] = i;</span><br><span class="line">&#125;</span><br><span class="line">console.time(&quot;ArrayBuffer read time&quot;);</span><br><span class="line">for (var i = 0; i &lt; LIMIT; i++) &#123;</span><br><span class="line">    var p = arr[i];</span><br><span class="line">&#125;</span><br><span class="line">console.timeEnd(&quot;ArrayBuffer read time&quot;);</span><br></pre></td></tr></table></figure>
 <p>用时：27ms</p>
 <h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>类型化数组的引入是<code>JavaScript</code>发展历程中的一大步。Int8Array，Uint8Array，Uint8ClampedArray，Int16Array，Uint16Array，Int32Array，Uint32Array，Float32Array，Float64Array，这些是类型化数组视图，使用原生字节序（与本机相同）。我们还可以使用 DataView 创建自定义视图窗口。希望未来会有更多帮助我们轻松操作 ArrayBuffer 的 DataView 库。</p>
 <p>JavaScript 数组的演进非常 nice。现在它们速度快、效率高、健壮，在内存分配时也足够智能。</p>
@@ -677,7 +673,7 @@ Array 是主要原因之一。JavaScript 数组不是连续（contiguous）的">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
